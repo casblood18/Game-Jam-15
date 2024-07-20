@@ -6,20 +6,21 @@ public class NPCInteract : MonoBehaviour
 {
     [SerializeField] private GameObject interactionBox;
     private bool inRadius = false;
-    private PlayerActions actions;
 
-    public void Awake()
+
+    private void OnEnable()
     {
-        actions = new PlayerActions();
+        InputManager.instance.OnInteractInput += InteractNPC;
     }
 
-    public void Update()
+    private void InteractNPC()
     {
-        if (inRadius && actions.Movement.Interact.IsPressed())
+        if (inRadius)
         {
             DialogueManager.Instance.StartDialogue();
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -39,14 +40,5 @@ public class NPCInteract : MonoBehaviour
             DialogueManager.Instance.EndDialogue();
             interactionBox.SetActive(false);
         }
-    }
-    private void OnEnable()
-    {
-        actions.Enable();
-    }
-
-    private void OnDisable()
-    {
-        actions.Disable();
     }
 }
