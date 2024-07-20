@@ -8,8 +8,9 @@ using System;
 [DefaultExecutionOrder(-1)]
 public class InputManager : MonoBehaviour
 {
-    [HideInInspector] public PlayerInputActions playerInputActions;
-    public static InputManager instance;
+        public static InputManager InputInstance;
+
+    [HideInInspector] public PlayerInputActions PlayerInputActions;
 
     public Action OnTeleportInput;
     public Action OnInteractInput;
@@ -19,24 +20,24 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-        playerInputActions = new PlayerInputActions();
+        InputInstance = this;
+        PlayerInputActions = new PlayerInputActions();
     }
 
     private void OnEnable()
     {
-        playerInputActions.Player.Move.Enable();
-        playerInputActions.Player.Teleport.Enable();
-        playerInputActions.Player.Heal.Enable();
-        playerInputActions.Player.Interact.Enable();
-        playerInputActions.Player.Roll.Enable();
-        playerInputActions.Player.Attack.Enable();
+        PlayerInputActions.Player.Move.Enable();
+        PlayerInputActions.Player.Teleport.Enable();
+        PlayerInputActions.Player.Heal.Enable();
+        PlayerInputActions.Player.Interact.Enable();
+        PlayerInputActions.Player.Roll.Enable();
+        PlayerInputActions.Player.Attack.Enable();
 
-        playerInputActions.Player.Teleport.performed += OnTeleport;
-        playerInputActions.Player.Heal.performed += OnHeal;
-        playerInputActions.Player.Interact.performed += OnInteract;
-        playerInputActions.Player.Roll.performed += OnRoll;
-        playerInputActions.Player.Attack.performed += OnAttack;
+        PlayerInputActions.Player.Teleport.performed += OnTeleport;
+        PlayerInputActions.Player.Heal.performed += OnHeal;
+        PlayerInputActions.Player.Interact.performed += OnInteract;
+        PlayerInputActions.Player.Roll.performed += OnRoll;
+        PlayerInputActions.Player.Attack.performed += OnAttack;
     }
 
     private void OnTeleport(InputAction.CallbackContext context)
@@ -62,17 +63,17 @@ public class InputManager : MonoBehaviour
 
     private void OnDisable()
     {
-        playerInputActions.Player.Move.Disable();
-        playerInputActions.Player.Heal.Disable();
-        playerInputActions.Player.Teleport.Disable();
-        playerInputActions.Player.Interact.Disable();
-        playerInputActions.Player.Roll.Disable();
-        playerInputActions.Player.Attack.Disable();
+        PlayerInputActions.Player.Move.Disable();
+        PlayerInputActions.Player.Heal.Disable();
+        PlayerInputActions.Player.Teleport.Disable();
+        PlayerInputActions.Player.Interact.Disable();
+        PlayerInputActions.Player.Roll.Disable();
+        PlayerInputActions.Player.Attack.Disable();
 
-        playerInputActions.Player.Teleport.performed -= OnTeleport;
-        playerInputActions.Player.Heal.performed -= OnHeal;
-        playerInputActions.Player.Interact.performed -= OnInteract;
-        playerInputActions.Player.Roll.performed -= OnRoll;
-        playerInputActions.Player.Attack.performed -= OnAttack;
+        PlayerInputActions.Player.Teleport.performed -= OnTeleport;
+        PlayerInputActions.Player.Heal.performed -= OnHeal;
+        PlayerInputActions.Player.Interact.performed -= OnInteract;
+        PlayerInputActions.Player.Roll.performed -= OnRoll;
+        PlayerInputActions.Player.Attack.performed -= OnAttack;
     }
 }

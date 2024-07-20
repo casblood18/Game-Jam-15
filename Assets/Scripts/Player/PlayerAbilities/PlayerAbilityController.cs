@@ -11,7 +11,7 @@ public class PlayerAbilityController : MonoBehaviour
     
     private void OnEnable()
     {
-        InputManager.instance.OnTeleportInput += OnTeleport;
+        InputManager.InputInstance.OnTeleportInput += OnTeleport;
     }
 
     private void Awake()
