@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerStat", menuName = "Player Stats")]
-public class PlayerStats : ScriptableObject
+public class PlayerStats : StatsBaseSO
 {
-    [Header("Health")]
-    public float Health;
-    public float MaxHealth;
-
     [Header("Mana")]
     public float Mana;
     public float MaxMana;
 
+    [ContextMenu("Reset player stats")]
     public void ResetStats()
     {
         Mana = MaxMana;

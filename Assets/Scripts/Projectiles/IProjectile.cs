@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IProjectile
 {
     float Damage { get; }
-    public void Moving();
+    void Moving();
 }

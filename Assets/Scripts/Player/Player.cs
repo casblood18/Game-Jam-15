@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamageTaken
+public class Player : MonoBehaviour
 {
+    public PlayerStats Stats => stats;
+
     [SerializeField] private PlayerStats stats;
     private PlayerAnimation animations;
-
-    public PlayerStats Stats => stats;
 
     private void Awake()
     {
@@ -19,10 +19,5 @@ public class Player : MonoBehaviour, IDamageTaken
     {
         animations.SetRevive();
         stats.ResetStats();
-    }
-
-    public void DamageTaken(float amount)
-    {
-        stats.Health -= amount;
     }
 }

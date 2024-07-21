@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IDamageTaken
+public class PlayerHealth : HealthBase
 {
+    public static Action<float> OnDamagePlayer;
     private Player player;
     private PlayerAnimation playerAnimator;
 
@@ -11,26 +13,30 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     {
         playerAnimator = GetComponent<PlayerAnimation>();
         player = GetComponent<Player>();
+
+        player.Stats.Health = player.Stats.MaxHealth;
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            DamageTaken(1f);
-        }
+        OnDamagePlayer += TakeDamage;
     }
-    public void DamageTaken(float damage)
+
+    private void OnDisable()
     {
-        player.Stats.Health -= damage;
-        if (player.Stats.Health <= 0f)
-        {
-            PlayerDeath();
-        }
-
+        OnDamagePlayer -= TakeDamage;
     }
 
-    private void PlayerDeath()
+    protected override void TakeDamage(float amount)
+    {
+        player.Stats.Health -= amount;
+
+        if (player.Stats.Health > 0f) return;
+
+        Death();
+    }
+
+    protected override void Death()
     {
         playerAnimator.SetDeadAnimation();
     }

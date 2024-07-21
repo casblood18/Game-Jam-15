@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class RedProjectile : MonoBehaviour, IProjectile
 {
+    public float Damage => damage;
+    public Vector3 Direction { get; set; }
+
     [SerializeField] private float speed;
     [SerializeField] private float lifeSpan;
     [SerializeField] public float damage;
 
     CollisionManager collisionManager;
-    public float Damage => damage;
-    public Vector3 Direction { get; set; }
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
