@@ -36,4 +36,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
+    [ContextMenu("Delete playerprefs")]
+    public void DeletePlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
