@@ -21,12 +21,12 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void OnEnable()
     {
-        InputManager.InputInstance.OnInteractInput += ContinueDialogue;
+        InputManager.instance.OnInteractInput += ContinueDialogue;
     }
 
     private void OnDisable()
     {
-        InputManager.InputInstance.OnInteractInput -= ContinueDialogue;
+        InputManager.instance.OnInteractInput -= ContinueDialogue;
     }
 
     public void LoadDialogue()

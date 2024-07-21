@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private float moveSpeed;
 
-    private Vector2 movementDirection => InputManager.InputInstance.PlayerInputActions.Player.Move.ReadValue<Vector2>().normalized;
+    private Vector2 movementDirection => InputManager.instance.PlayerInputActions.Player.Move.ReadValue<Vector2>().normalized;
 
     private Rigidbody2D rg2d;
     private PlayerAnimation playerAnimation;
