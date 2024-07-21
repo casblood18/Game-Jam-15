@@ -33,8 +33,12 @@ public class BossHealth : HealthBase
     {
         stats.Health -= amount;
 
-        if (stats.Health > 0f) return;
-        
+        if (stats.Health > 0f)
+        {
+            BossAI.OnCheckStage?.Invoke(stats.Health);
+            return;
+        }
+
         Death();
     }
 }
