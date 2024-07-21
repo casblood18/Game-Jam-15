@@ -5,8 +5,9 @@ using System;
 [DefaultExecutionOrder(-1)]
 public class InputManager : MonoBehaviour
 {
-    [HideInInspector] public PlayerInputActions playerInputActions;
-    public static InputManager instance;
+    public static InputManager InputInstance;
+
+    [HideInInspector] public PlayerInputActions PlayerInputActions;
 
     public Action OnTeleportInput;
     public Action OnInteractInput;
@@ -16,60 +17,64 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-        playerInputActions = new PlayerInputActions();
+        InputInstance = this;
     }
 
     private void OnEnable()
     {
-        playerInputActions.Player.Move.Enable();
-        playerInputActions.Player.Teleport.Enable();
-        playerInputActions.Player.Heal.Enable();
-        playerInputActions.Player.Interact.Enable();
-        playerInputActions.Player.Roll.Enable();
-        playerInputActions.Player.Attack.Enable();
+        LoadInput();
+        
+        PlayerInputActions.Enable();
 
-        playerInputActions.Player.Teleport.performed += OnTeleport;
-        playerInputActions.Player.Heal.performed += OnHeal;
-        playerInputActions.Player.Interact.performed += OnInteract;
-        playerInputActions.Player.Roll.performed += OnRoll;
-        playerInputActions.Player.Attack.performed += OnAttack;
+        PlayerInputActions.Player.Teleport.performed += OnTeleport;
+        PlayerInputActions.Player.Heal.performed += OnHeal;
+        PlayerInputActions.Player.Interact.performed += OnInteract;
+        PlayerInputActions.Player.Roll.performed += OnRoll;
+        PlayerInputActions.Player.Attack.performed += OnAttack;
+    }
+
+    private void OnDisable()
+    {
+        PlayerInputActions.Disable();
+
+        PlayerInputActions.Player.Teleport.performed -= OnTeleport;
+        PlayerInputActions.Player.Heal.performed -= OnHeal;
+        PlayerInputActions.Player.Interact.performed -= OnInteract;
+        PlayerInputActions.Player.Roll.performed -= OnRoll;
+        PlayerInputActions.Player.Attack.performed -= OnAttack;
     }
 
     private void OnTeleport(InputAction.CallbackContext context)
     {
         OnTeleportInput?.Invoke();
     }
+
     private void OnHeal(InputAction.CallbackContext context)
     {
         OnHealInput?.Invoke();
     }
+
     private void OnInteract(InputAction.CallbackContext context)
     {
         OnInteractInput?.Invoke();
     }
+
     private void OnRoll(InputAction.CallbackContext context)
     {
         OnRollInput?.Invoke();
     }
+
     private void OnAttack(InputAction.CallbackContext context)
     {
         OnAttackInput?.Invoke();
     }
 
-    private void OnDisable()
+    private void LoadInput()
     {
-        playerInputActions.Player.Move.Disable();
-        playerInputActions.Player.Heal.Disable();
-        playerInputActions.Player.Teleport.Disable();
-        playerInputActions.Player.Interact.Disable();
-        playerInputActions.Player.Roll.Disable();
-        playerInputActions.Player.Attack.Disable();
+        PlayerInputActions = new PlayerInputActions();
 
-        playerInputActions.Player.Teleport.performed -= OnTeleport;
-        playerInputActions.Player.Heal.performed -= OnHeal;
-        playerInputActions.Player.Interact.performed -= OnInteract;
-        playerInputActions.Player.Roll.performed -= OnRoll;
-        playerInputActions.Player.Attack.performed -= OnAttack;
+        string rebinds = PlayerPrefs.GetString("rebinds");
+
+        if (!string.IsNullOrEmpty(rebinds)) PlayerInputActions.asset.LoadBindingOverridesFromJson(rebinds);
     }
 }
