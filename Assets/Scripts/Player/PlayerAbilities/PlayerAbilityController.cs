@@ -3,19 +3,51 @@ using UnityEngine;
 public class PlayerAbilityController : MonoBehaviour
 {
     [Header("Prefab")]
+    [SerializeField] private Light _light;
     [SerializeField] GameObject _teleportMarker;
 
+    #region TeleportVariables
     private bool _isTeleporting;
     private int _teleportNum;
     private GameObject _teleportObject;
-    
+    #endregion
+
+    private bool _isRollActivate;
+
     private void OnEnable()
     {
-        InputManager.InputInstance.OnTeleportInput += OnTeleport;
+        InputManager.instance.OnTeleportInput += OnTeleport;
+        InputManager.instance.OnRollInput += OnRoll;
+    }
+    private void OnDisable()
+    {
+        InputManager.instance.OnTeleportInput -= OnTeleport;
+        InputManager.instance.OnRollInput -= OnRoll;
     }
 
     private void Awake()
     {
+        InitTeleportMarker();
+    }
+    private void Start()
+    {
+        SetRollAbility(true);
+    }
+
+    public void SetRollAbility(bool value)
+    {
+        if (value)
+        {
+            _isRollActivate = true;
+            _light.Activate();
+        }
+            
+    }
+
+    #region Teleport
+    private void InitTeleportMarker()
+    {
+        //Initiate Teleport Marker when game awake
         _teleportObject = Instantiate(_teleportMarker);
         _teleportObject.SetActive(false);
         _teleportNum = 1;
@@ -41,7 +73,6 @@ public class PlayerAbilityController : MonoBehaviour
         _isTeleporting = !_isTeleporting;
     }
 
-
     /// <summary>
     /// Charge teleport ability with default 1 usage.
     /// </summary>
@@ -49,5 +80,14 @@ public class PlayerAbilityController : MonoBehaviour
     {
         _teleportNum += charge;
     }
+    #endregion
 
+    private void OnRoll()
+    {
+        if (_isRollActivate) 
+        { 
+            this.transform.position = _light.shadow.targetPosition; 
+        }
+        
+    }
 }

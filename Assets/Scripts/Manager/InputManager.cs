@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
@@ -8,7 +5,7 @@ using System;
 [DefaultExecutionOrder(-1)]
 public class InputManager : MonoBehaviour
 {
-    public static InputManager InputInstance;
+    public static InputManager instance;
 
     [HideInInspector] public PlayerInputActions PlayerInputActions;
 
@@ -20,7 +17,7 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        InputInstance = this;
+        instance = this;
     }
 
     private void OnEnable()
