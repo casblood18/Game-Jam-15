@@ -11,6 +11,7 @@ public class BossAI : MonoBehaviour
     public Transform PlayerTransform => playerTransform;
     public GameObject ConeObject => coneObject;
     public float MovementSpeed => movementSpeed;
+    public Transform MiddlePoint => middlePoint.transform;
 
     public RedProjectile RedProjectile => redProjectile;
     public BlueProjectile BlueProjectile => blueProjectile;
@@ -32,6 +33,7 @@ public class BossAI : MonoBehaviour
     [Space(5)]
     [SerializeField] private float movementSpeed;
     [SerializeField] private GameObject coneObject;
+    [SerializeField] private GameObject middlePoint;
 
     private StageBaseSO currentStage;
     private ushort currentStageIndex;

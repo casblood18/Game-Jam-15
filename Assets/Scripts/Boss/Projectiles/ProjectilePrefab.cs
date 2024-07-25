@@ -29,6 +29,7 @@ public class ProjectilePrefab : MonoBehaviour
         spriteRenderer.sprite = currentProjectile.ProjectileSprite;
         transform.localScale = new(currentProjectile.Size, currentProjectile.Size, 1);
 
+        if (!canEnableMixing) return;
         StartCoroutine(EnableMixing());
     }
 
@@ -58,6 +59,8 @@ public class ProjectilePrefab : MonoBehaviour
 
     private void MixProjectile(ProjectilePrefab collidedProjectile)
     {
+        if (currentProjectile == null || collidedProjectile.currentProjectile == null) return;
+
         ProjectileEnum mixedVariant = currentProjectile.MixedVariant(collidedProjectile.currentProjectile);
 
         if (mixedVariant == ProjectileEnum.None) return;

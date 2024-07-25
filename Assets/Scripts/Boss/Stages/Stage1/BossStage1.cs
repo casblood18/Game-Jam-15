@@ -27,7 +27,7 @@ public class BossStage1 : StageBaseSO
             for (int i = 0; i < numberOfProjectiles; i++)
             {
                 float randomAngleX = Random.Range(-coneAngle, coneAngle);
-float randomAngleY = Random.Range(-coneAngle, coneAngle);
+                float randomAngleY = Random.Range(-coneAngle, coneAngle);
                 Vector3 randomDirection = Quaternion.Euler(randomAngleX, randomAngleY, 0) * directionToPlayer;
 
                 Vector3 spawnPosition = boss.BossTransform.position;
