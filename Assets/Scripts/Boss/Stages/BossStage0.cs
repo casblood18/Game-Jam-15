@@ -15,10 +15,12 @@ public class BossStage0 : StageBaseSO
     [Space(10)]
     [SerializeField] private ushort simpleAttackAmount = 3;
 
+    private bool isNewWave = false;
+
     public override IEnumerator Attack(BossAI boss)
     {
         //first 3 "longer" waves - projectiles can't be mixed
-       // yield return PerformAttack(boss, longerAttackDelay, simpleAttackAmount, projectilesAmount, false);
+        yield return PerformAttack(boss, longerAttackDelay, simpleAttackAmount, projectilesAmount, false);
 
         //then 3 "shorter" waves - projectiles can be mixed
         yield return PerformAttack(boss, shorterAttackDelay, simpleAttackAmount, projectilesAmount, true);
@@ -32,6 +34,7 @@ public class BossStage0 : StageBaseSO
         {
             Vector3 center = boss.BossTransform.position;
 
+            isNewWave = true;
             for (int i = 0; i < projectilesAmount; i++)
             {
                 float angle = i * Mathf.PI * 2 / projectilesAmount;
@@ -42,8 +45,8 @@ public class BossStage0 : StageBaseSO
 
                 GameObject instance = ProjectilePooling.Instance.GetProjectile(center, Quaternion.identity);
 
-                ProjectileBaseSO randomProjectile = GetRandomProjectile(boss);
-
+                ProjectileBaseSO randomProjectile = GetRandomProjectile(boss, projectilesAmount, isNewWave);
+                isNewWave = false;
                 randomProjectile.CanBeMixed = false;
 
                 instance.GetComponent<ProjectilePrefab>().SetCurrentProjectile(randomProjectile, canBeMixed);

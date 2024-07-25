@@ -69,14 +69,12 @@ public class ProjectilePrefab : MonoBehaviour
         currentProjectile = mixedProjectiles.Find(x => x.ProjectileType == mixedVariant);
         SetCurrentProjectile(currentProjectile, true);
 
-        Debug.Log($"Projectile: {currentProjectile.ProjectileType}");
         ProjectilePooling.Instance.ReleaseProjectile(collidedProjectile.gameObject);
     }
 
     private IEnumerator EnableMixing()
     {
         yield return new WaitForSeconds(mixingDelay);
-        Debug.Log("Enable mixing");
         currentProjectile.CanBeMixed = true;
     }
 }
