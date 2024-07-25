@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage0
   m_EditorClassIdentifier: 
   MinimumHealth: 100
-  longerAttackDelay: 5
-  shorterAttackDelay: 2
+  longerAttackDelay: 4
+  shorterAttackDelay: 1.5
   projectilesAmount: 18
   simpleAttackAmount: 3

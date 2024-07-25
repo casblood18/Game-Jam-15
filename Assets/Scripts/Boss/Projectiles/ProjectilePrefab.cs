@@ -7,7 +7,6 @@ public class ProjectilePrefab : MonoBehaviour
 {
     public ProjectileBaseSO ProjectileBase => currentProjectile;
 
-    [HideInInspector]
     public bool IsMixing = false;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [Tooltip("After the projectile is spawned, how long does it take to enable mixing")]

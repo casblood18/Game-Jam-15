@@ -9,6 +9,8 @@ public class BlueProjectile : ProjectileBaseSO
 
         if (collidedProjectile is YellowProjectile)
             return ProjectileEnum.Green;
+        else if (collidedProjectile is RedProjectile)
+            return ProjectileEnum.Purple;
 
         return ProjectileEnum.None;
     }
