@@ -8,6 +8,10 @@ public class BossAI : MonoBehaviour
     public static Action<float> OnCheckStage;
 
     public Transform BossTransform => transform;
+    public Transform PlayerTransform => playerTransform;
+    public GameObject ConeObject => coneObject;
+    public float MovementSpeed => movementSpeed;
+
     public RedProjectile RedProjectile => redProjectile;
     public BlueProjectile BlueProjectile => blueProjectile;
     public YellowProjectile YellowProjectile => yellowProjectile;
@@ -25,8 +29,14 @@ public class BossAI : MonoBehaviour
     [SerializeField] private OrangeProjectile orangeProjectile;
     [SerializeField] private GreenProjectile greenProjectile;
 
+    [Space(5)]
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private GameObject coneObject;
+
     private StageBaseSO currentStage;
     private ushort currentStageIndex;
+
+    private Transform playerTransform;
 
     private void OnEnable()
     {
@@ -43,7 +53,14 @@ public class BossAI : MonoBehaviour
         currentStageIndex = 0;
         currentStage = stagesList.Stages[currentStageIndex];
 
+        playerTransform = GameObject.FindWithTag("Player").transform;
+
         StartCoroutine(currentStage.Attack(this));
+    }
+
+    private void Update()
+    {
+        currentStage.Movement(this);
     }
 
     private void CheckStage(float health)

@@ -35,6 +35,7 @@ public class BossStage0 : StageBaseSO
             Vector3 center = boss.BossTransform.position;
 
             isNewWave = true;
+            
             for (int i = 0; i < projectilesAmount; i++)
             {
                 float angle = i * Mathf.PI * 2 / projectilesAmount;
