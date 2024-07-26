@@ -23,6 +23,7 @@ public class HUD : MonoBehaviour
         public const string DIALOGUE_NAME = "hud-dialogue-name";
         public const string PLAYER_HEALTH_BAR = "player-health-bar";
         public const string PLAYER_HEALTH_BAR_STICK = "player-health-bar-stick";
+        public const string PLAYER_HEALTH_BAR_CONTAINER = "player-health-bar-container";
     }
 
 
@@ -51,7 +52,6 @@ public class HUD : MonoBehaviour
     private VisualElement _playerAvatar;
     private ProgressBar _playerHealthBar;
     private ProgressBar _playerHealthBarStick;
-
     private void OnEnable()
     {
         InputManager.Instance.OnAttackInput += OnAttack;
@@ -89,6 +89,9 @@ public class HUD : MonoBehaviour
     {
         if (Player.Instance != null) 
         UpdateSprite();
+    }
+    private void Update()
+    {
         UpdateHealthBarPosition();
     }
     private void UpdateHealthBarPosition()
@@ -157,6 +160,10 @@ public class HUD : MonoBehaviour
 
         _playerHealthBar.title = _playerHealthBar.highValue + "/" + _playerHealthBar.highValue;
         _playerHealthBarStick.title = _playerHealthBar.highValue + "/" + _playerHealthBar.highValue;
+
+        var container = _playerHealthBarStick.Q<VisualElement>(className: "unity-progress-bar__container");
+        Debug.Log("container: " + container.name);
+        container.style.width = 100f;
     }
 
     
