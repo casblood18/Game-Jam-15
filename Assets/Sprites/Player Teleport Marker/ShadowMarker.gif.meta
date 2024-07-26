@@ -212,7 +212,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ShadowMarker_0: 7183095162979864709
+      ShadowMarker_1: 696391442527662809
+      ShadowMarker_2: 4721846686295970612
+      ShadowMarker_3: -8513679755100606359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

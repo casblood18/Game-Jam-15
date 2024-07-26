@@ -15,6 +15,7 @@ public class PlayerStats : ScriptableObject
 
     public void ResetStats()
     {
+        Debug.Log("reset");
         Mana = MaxMana;
         Health = MaxHealth;
     }

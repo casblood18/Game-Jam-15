@@ -212,7 +212,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PurpleSmall_0008_0: -8781926224407085049
+      PurpleSmall_0008_1: 2804916167501825687
+      PurpleSmall_0008_2: 5393444587234664393
+      PurpleSmall_0008_3: 91881965190700210
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
