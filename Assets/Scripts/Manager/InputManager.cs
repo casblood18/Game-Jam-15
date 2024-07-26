@@ -16,15 +16,15 @@ public class InputManager : Singleton<InputManager>
 
     private void OnEnable()
     {
-        LoadInput();
+            LoadInput();
         
         PlayerInputActions.Enable();
 
+        PlayerInputActions.Player.Attack.performed += OnAttack;
         PlayerInputActions.Player.Teleport.performed += OnTeleport;
         PlayerInputActions.Player.Heal.performed += OnHeal;
         PlayerInputActions.Player.Interact.performed += OnInteract;
         PlayerInputActions.Player.Roll.performed += OnRoll;
-        PlayerInputActions.Player.Attack.performed += OnAttack;
     }
 
     private void OnDisable()
