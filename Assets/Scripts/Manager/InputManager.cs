@@ -3,22 +3,16 @@ using UnityEngine.InputSystem;
 using System;
 
 [DefaultExecutionOrder(-1)]
-public class InputManager : MonoBehaviour
+public class InputManager : Singleton<InputManager>
 {
-    public static InputManager instance;
-
     [HideInInspector] public PlayerInputActions PlayerInputActions;
 
     public Action OnTeleportInput;
     public Action OnInteractInput;
     public Action OnHealInput;
-    public Action OnRollInput;
+    public Action OnDodgeInput;
     public Action OnAttackInput;
 
-    private void Awake()
-    {
-        instance = this;
-    }
 
     private void OnEnable()
     {
@@ -61,7 +55,7 @@ public class InputManager : MonoBehaviour
 
     private void OnRoll(InputAction.CallbackContext context)
     {
-        OnRollInput?.Invoke();
+        OnDodgeInput?.Invoke();
     }
 
     private void OnAttack(InputAction.CallbackContext context)

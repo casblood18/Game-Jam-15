@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamageTaken
+public class Player : Singleton<Player>, IDamageTaken
 {
     [SerializeField] private PlayerStats stats;
     private PlayerAnimation animations;
 
     public PlayerStats Stats => stats;
+    public SpriteRenderer playerSpriteRenderer;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         animations = GetComponent<PlayerAnimation>();
+        playerSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void ResetPlayer()

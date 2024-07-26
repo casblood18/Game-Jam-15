@@ -10,12 +10,12 @@ public class PauseMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.instance.PlayerInputActions.UI.PauseMenu.performed += EnableDisablePauseMenu;
+        InputManager.Instance.PlayerInputActions.UI.PauseMenu.performed += EnableDisablePauseMenu;
     }
 
     private void OnDisable()
     {
-        InputManager.instance.PlayerInputActions.UI.PauseMenu.performed -= EnableDisablePauseMenu;
+        InputManager.Instance.PlayerInputActions.UI.PauseMenu.performed -= EnableDisablePauseMenu;
     }
 
     private void EnableDisablePauseMenu(InputAction.CallbackContext context)

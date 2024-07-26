@@ -1,0 +1,25 @@
+.hud-attack {
+}
+
+.hud-teleport {
+}
+
+.hud-dodge {
+}
+
+.hud-dialogue {
+    display: flex;
+}
+
+.hud-boss-blood {
+}
+
+.hud-dialogue-text {
+}
+
+.hud-dialogue-name {
+}
+
+.unity-progress-bar {
+    background-color: rgba(0, 0, 0, 0);
+}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed4b69054470c4693554f74e5a1bad, type: 3}
   m_Name: NPC Man
   m_EditorClassIdentifier: 
-  Name: MANDY
-  Avatar: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  Name: Lucy
+  Avatar: {fileID: 1923424174, guid: c4bf43e5892b010498b313ae7cab66a3, type: 3}
   Dialogue:
   - 1
   - 2
