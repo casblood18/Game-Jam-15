@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class Player : Singleton<Player>, IDamageTaken
+public class Player : Singleton<Player>
 {
     [SerializeField] private PlayerStats stats;
     private PlayerAnimation animations;
@@ -16,16 +16,14 @@ public class Player : Singleton<Player>, IDamageTaken
         base.Awake();
         animations = GetComponent<PlayerAnimation>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        
+        ResetPlayer();
     }
 
     public void ResetPlayer()
     {
-        animations.SetRevive();
         stats.ResetStats();
+        animations.SetRevive();
     }
 
-    public void DamageTaken(float amount)
-    {
-        stats.Health -= amount;
-    }
 }
