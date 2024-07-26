@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class Light : MonoBehaviour
+public class PlayerLight : MonoBehaviour
 {
     [SerializeField] Shadow _shadow;
     [SerializeField] private Transform _player;
