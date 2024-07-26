@@ -13,11 +13,9 @@ public class InputManager : Singleton<InputManager>
     public Action OnDodgeInput;
     public Action OnAttackInput;
 
-
     private void OnEnable()
     {
-            LoadInput();
-        
+        LoadInput();
         PlayerInputActions.Enable();
 
         PlayerInputActions.Player.Attack.performed += OnAttack;

@@ -46,7 +46,6 @@ public class PlayerAbilityController : MonoBehaviour
             _isDodgeActivate = true;
             _light.Activate();
         }
-            
     }
 
     #region Teleport
@@ -70,7 +69,6 @@ public class PlayerAbilityController : MonoBehaviour
             _teleportObject.transform.position = this.transform.position;
             teleportNum--;
             _HUD.UpdateTeleportUI(teleportNum);
-
         }
         else
         {
@@ -102,7 +100,6 @@ public class PlayerAbilityController : MonoBehaviour
             Debug.Log("player dodge");
             this.transform.position = _light.shadow.targetPosition; 
         }
-        
     }
     private void OnAttack()
     {

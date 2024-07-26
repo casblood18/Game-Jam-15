@@ -30,7 +30,6 @@ public class HUD : MonoBehaviour
         public const string PLAYER_HEALTH_BAR_CONTAINER = "player-health-bar-container";
     }
 
-
     private static class UINames
     {
         public const string ATTACK = "Attack";
@@ -42,7 +41,6 @@ public class HUD : MonoBehaviour
     }
 
     [SerializeField] private UIDocument _uiDocument;
-
 
     //UI
     private VisualElement _root;
@@ -86,7 +84,6 @@ public class HUD : MonoBehaviour
         _playerHealthBar = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR);
         _playerHealthBarStick = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR_STICK);
         _teleportNumLabel = _root.Q<Label>(UINames.TELEPORT_NUM);
-        Debug.Log(_teleportNumLabel.name);
 
         UpdateHealthBarPosition();
         OnPlayerInit();
@@ -150,7 +147,6 @@ public class HUD : MonoBehaviour
     }
     #endregion
 
-
     public void OnPlayerHealthChanged(float healthValue)
     {
         _playerHealthBar.value = healthValue;
@@ -159,7 +155,6 @@ public class HUD : MonoBehaviour
         _playerHealthBarStick.title = _playerHealthBar.value + "/" + _playerHealthBar.highValue;
     }
     
-
     #region Ability
     private void OnAttack()
     {
