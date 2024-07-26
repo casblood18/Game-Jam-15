@@ -13,18 +13,16 @@ public class InputManager : Singleton<InputManager>
     public Action OnDodgeInput;
     public Action OnAttackInput;
 
-
     private void OnEnable()
     {
         LoadInput();
-        
         PlayerInputActions.Enable();
 
+        PlayerInputActions.Player.Attack.performed += OnAttack;
         PlayerInputActions.Player.Teleport.performed += OnTeleport;
         PlayerInputActions.Player.Heal.performed += OnHeal;
         PlayerInputActions.Player.Interact.performed += OnInteract;
         PlayerInputActions.Player.Roll.performed += OnRoll;
-        PlayerInputActions.Player.Attack.performed += OnAttack;
     }
 
     private void OnDisable()

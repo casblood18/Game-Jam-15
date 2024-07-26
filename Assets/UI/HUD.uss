@@ -11,9 +11,6 @@
     display: flex;
 }
 
-.hud-boss-blood {
-}
-
 .hud-dialogue-text {
 }
 
@@ -84,4 +81,7 @@
 
 .player-health-bar-stick {
     width: 107px;
+}
+
+.boss-health-bar {
 }
