@@ -22,7 +22,7 @@ public class HUD : MonoBehaviour
     private static class UIClassNames
     {
         public const string DIALOGUE = "hud-dialogue";
-        public const string BOSS_BLOOD = "hud-boss-blood";
+        public const string BOSS_HEALTH_BAR = "boss-health-bar";
         public const string DIALOGUE_TEXT = "hud-dialogue-text";
         public const string DIALOGUE_NAME = "hud-dialogue-name";
         public const string PLAYER_HEALTH_BAR = "player-health-bar";
@@ -48,7 +48,7 @@ public class HUD : MonoBehaviour
     private VisualElement _teleportUI;
     private VisualElement _dodgeUI;
     private VisualElement _dialogueUI;
-    private VisualElement _bossBloodUI;
+    private VisualElement _bossHealthBar;
     private Label _dialogueText;
     private Label _dialogueName;
     private VisualElement _NPCSprite;
@@ -75,7 +75,7 @@ public class HUD : MonoBehaviour
         _teleportUI = _root.Q<VisualElement>(UINames.TELEPORT);
         _dodgeUI = _root.Q<VisualElement>(UINames.DODGE);
         _dialogueUI = _root.Q<VisualElement>(className: UIClassNames.DIALOGUE);
-        _bossBloodUI = _root.Q<VisualElement>(className: UIClassNames.BOSS_BLOOD);
+        _bossHealthBar = _root.Q<VisualElement>(className: UIClassNames.BOSS_HEALTH_BAR);
         _dialogueText = _root.Q<Label>(className: UIClassNames.DIALOGUE_TEXT);
         _dialogueName = _root.Q<Label>(className: UIClassNames.DIALOGUE_NAME);
         _NPCSprite = _root.Q<VisualElement>(UINames.NPC_SPRITE);
@@ -93,7 +93,12 @@ public class HUD : MonoBehaviour
     private void InitializeUI()
     {
         SetDialogueUI(false);
-        _bossBloodUI.style.display = DisplayStyle.None;
+        //_bossHealthBar.style.display = DisplayStyle.None;
+        var container = _bossHealthBar.Q<VisualElement>(className: "unity-progress-bar__container");
+        container.style.width = 700f;
+        container.style.maxHeight = StyleKeyword.None;
+        container.style.height = 50f;
+
     }
     public void OnPlayerInit()
     {
