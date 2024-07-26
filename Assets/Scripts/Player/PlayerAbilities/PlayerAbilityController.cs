@@ -16,13 +16,13 @@ public class PlayerAbilityController : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.instance.OnTeleportInput += OnTeleport;
-        InputManager.instance.OnRollInput += OnRoll;
+        InputManager.Instance.OnTeleportInput += OnTeleport;
+        InputManager.Instance.OnDodgeInput += OnRoll;
     }
     private void OnDisable()
     {
-        InputManager.instance.OnTeleportInput -= OnTeleport;
-        InputManager.instance.OnRollInput -= OnRoll;
+        InputManager.Instance.OnTeleportInput -= OnTeleport;
+        InputManager.Instance.OnDodgeInput -= OnRoll;
     }
 
     private void Awake()
