@@ -5,7 +5,7 @@ public class PlayerAbilityController : MonoBehaviour
 {
     [SerializeField] HUD _HUD;
     [Header("Prefab")]
-    [SerializeField] private Light _light;
+    [SerializeField] private PlayerLight _light;
     [SerializeField] GameObject _teleportMarker;
 
     #region TeleportVariables
