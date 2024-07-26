@@ -5,10 +5,10 @@ using UnityEngine;
 public class CollisionManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    Player player;
+    PlayerHealth _playerHealth;
     void Start()
     {
-        player = GetComponent<Player>();
+        _playerHealth = GetComponent<PlayerHealth>();
     }
 
     public void HandleCollision(GameObject collide1, GameObject collide2)
@@ -38,7 +38,7 @@ public class CollisionManager : MonoBehaviour
             && collide2.CompareTag("Player"))
         {
             IProjectile projectile = collide1.GetComponent<IProjectile>();
-            player.DamageTaken(projectile.Damage);
+            _playerHealth.DamageTaken(projectile.Damage);
         }
     }
 }

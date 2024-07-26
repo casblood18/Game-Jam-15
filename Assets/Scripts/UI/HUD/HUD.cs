@@ -11,12 +11,18 @@ public class HUD : MonoBehaviour
     private bool _isAttack, _isTeleport, _isDodge;
     private Dictionary<VisualElement, Coroutine> _activeAnimations = new Dictionary<VisualElement, Coroutine>();
 
+    //test
+    [SerializeField] private float _playerHealthOffsetOnY = 90f;
+
+    private PlayerHealth _playerHealth;
     private static class UIClassNames
     {
         public const string DIALOGUE = "hud-dialogue";
         public const string BOSS_BLOOD = "hud-boss-blood";
         public const string DIALOGUE_TEXT = "hud-dialogue-text";
         public const string DIALOGUE_NAME = "hud-dialogue-name";
+        public const string PLAYER_HEALTH_BAR = "player-health-bar";
+        public const string PLAYER_HEALTH_BAR_STICK = "player-health-bar-stick";
     }
 
 
@@ -43,6 +49,8 @@ public class HUD : MonoBehaviour
     private Label _dialogueName;
     private VisualElement _NPCSprite;
     private VisualElement _playerAvatar;
+    private ProgressBar _playerHealthBar;
+    private ProgressBar _playerHealthBarStick;
 
     private void OnEnable()
     {
@@ -69,6 +77,11 @@ public class HUD : MonoBehaviour
         _dialogueName = _root.Q<Label>(className: UIClassNames.DIALOGUE_NAME);
         _NPCSprite = _root.Q<VisualElement>(UINames.NPC_SPRITE);
         _playerAvatar = _root.Q<VisualElement>(UINames.Player_AVATAR);
+        _playerHealth = Player.Instance.GetComponent<PlayerHealth>();
+        _playerHealthBar = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR);
+        _playerHealthBarStick = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR_STICK);
+        UpdateHealthBarPosition();
+        OnPlayerInit();
         InitializeUI();
     }
 
@@ -76,7 +89,18 @@ public class HUD : MonoBehaviour
     {
         if (Player.Instance != null) 
         UpdateSprite();
+        UpdateHealthBarPosition();
     }
+    private void UpdateHealthBarPosition()
+    {
+        Vector3 screenPosition = Camera.main.WorldToScreenPoint(Player.Instance.transform.position);
+        Vector2 uiPosition = new Vector2(screenPosition.x, Screen.height - screenPosition.y);
+
+        // Update the health bar's position
+        _playerHealthBarStick.style.left = uiPosition.x - _playerHealthBarStick.resolvedStyle.width/2;
+        _playerHealthBarStick.style.top = uiPosition.y - _playerHealthBarStick.resolvedStyle.height / 2 + _playerHealthOffsetOnY;
+    }
+
     private void UpdateSprite()
     {
         
@@ -108,8 +132,6 @@ public class HUD : MonoBehaviour
     {
         _dialogueName.text = _npcName;
         _NPCSprite.style.backgroundImage = new StyleBackground(ncpAvatar);
-
-
     }
 
     private Texture2D SpriteToTexture2D(object npcAvatar)
@@ -117,6 +139,27 @@ public class HUD : MonoBehaviour
         throw new NotImplementedException();
     }
 
+    public void OnPlayerHealthChanged(float healthValue)
+    {
+        _playerHealthBar.value = healthValue;
+        _playerHealthBarStick.value = healthValue;
+        _playerHealthBar.title = _playerHealthBar.value + "/" + _playerHealthBar.highValue;
+        _playerHealthBarStick.title = _playerHealthBar.value + "/" + _playerHealthBar.highValue;
+    }
+    public void OnPlayerInit()
+    {
+        
+        _playerHealthBar.highValue = Player.Instance.Stats.MaxHealth;
+        _playerHealthBarStick.highValue = Player.Instance.Stats.MaxHealth;
+
+        _playerHealthBar.value = Player.Instance.Stats.MaxHealth;
+        _playerHealthBarStick.value = Player.Instance.Stats.MaxHealth;
+
+        _playerHealthBar.title = _playerHealthBar.highValue + "/" + _playerHealthBar.highValue;
+        _playerHealthBarStick.title = _playerHealthBar.highValue + "/" + _playerHealthBar.highValue;
+    }
+
+    
     private void OnAttack()
     {
         AnimateSkillUI(_attackUI, "AnimateAttack");
