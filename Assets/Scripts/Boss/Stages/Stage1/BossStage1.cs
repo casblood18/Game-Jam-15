@@ -50,8 +50,6 @@ public class BossStage1 : StageBaseSO
         }
     }
 
-
-
     public override void Movement(BossAI boss)
     {
         if (currentDestination == null || Vector3.Distance(boss.BossTransform.position, currentDestination.position) <= 0.1f)

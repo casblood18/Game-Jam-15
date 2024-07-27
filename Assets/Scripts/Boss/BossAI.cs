@@ -7,6 +7,7 @@ public class BossAI : MonoBehaviour
 {
     public static Action<float> OnCheckStage;
 
+    public BossPaternPaths BossPaternPaths => bossPaternPaths;
     public Transform BossTransform => transform;
     public Transform PlayerTransform => playerTransform;
     public GameObject ConeObject => coneObject;
@@ -34,6 +35,8 @@ public class BossAI : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private GameObject coneObject;
     [SerializeField] private GameObject middlePoint;
+
+    [SerializeField] private BossPaternPaths bossPaternPaths;
 
     private StageBaseSO currentStage;
     private ushort currentStageIndex;

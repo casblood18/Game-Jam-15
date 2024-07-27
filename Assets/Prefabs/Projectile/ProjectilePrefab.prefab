@@ -139,7 +139,7 @@ MonoBehaviour:
   IsMixing: 0
   spriteRenderer: {fileID: 6860668718041247452}
   animatorController: {fileID: 8621095070978266389}
-  mixingDelay: 0.1
+  mixingDelay: 0
   mixedProjectiles:
   - {fileID: 11400000, guid: 0b5e95b7b741d0240aae30642e39925b, type: 2}
   - {fileID: 11400000, guid: 0cccb256cc23b68879d6f692e8542cd3, type: 2}
