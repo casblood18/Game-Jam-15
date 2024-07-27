@@ -10,7 +10,6 @@ public class PlayerHealth : HealthBase
     private Player player;
     private PlayerAnimation playerAnimator;
     private float _playerHealth;
-    private float _playerHealthMax;
 
     [SerializeField] HUD _HUD;
 
@@ -18,9 +17,8 @@ public class PlayerHealth : HealthBase
     {
         playerAnimator = GetComponent<PlayerAnimation>();
         player = GetComponent<Player>();
-        player.Stats.Health = player.Stats.MaxHealth;
+
         _playerHealth = player.Stats.MaxHealth;
-        _playerHealthMax = player.Stats.MaxHealth;
     }
 
     private void OnEnable()
@@ -31,27 +29,15 @@ public class PlayerHealth : HealthBase
     private void OnDisable()
     {
         OnDamagePlayer -= TakeDamage;
+    }
 
-        _playerHealth -= damage;
+    protected override void TakeDamage(float damage)
+    {
         _HUD.OnPlayerHealthChanged(_playerHealth);
 
-        UpdatePlayerStat();
-        if (_playerHealth <= 0f)
-        {
-            PlayerDeath();
-        }
-    }
-    
-    private void UpdatePlayerStat()
-    {
-        player.Stats.Health = _playerHealth;
-    }
+       _playerHealth -= damage;
 
-    protected override void TakeDamage(float amount)
-    {
-        player.Stats.Health -= amount;
-
-        if (player.Stats.Health > 0f) return;
+        if (_playerHealth> 0f) return;
 
         Death();
     }
