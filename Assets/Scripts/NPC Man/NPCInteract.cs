@@ -13,8 +13,8 @@ public class NPCInteract : MonoBehaviour
     private bool inRadius = false;
     public NPCDialogue npcDialogue => _npcDialogue;
 
-    private void OnEnable() => InputManager.instance.OnInteractInput += InteractNPC;
-
+    private void OnEnable() => InputManager.Instance.OnInteractInput += InteractNPC;
+    private void OnDisable() => InputManager.Instance.OnInteractInput -= InteractNPC;
     private void InteractNPC()
     {
         if (!inRadius) return;

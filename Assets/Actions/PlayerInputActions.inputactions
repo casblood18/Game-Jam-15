@@ -42,18 +42,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Roll",
+                    "name": "Attack",
                     "type": "Button",
-                    "id": "9e1efd38-a7e8-46ff-98f4-3948b96f7bf2",
+                    "id": "83a7dd71-7d28-43ac-a3ac-1252735a4ebc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Roll",
                     "type": "Button",
-                    "id": "83a7dd71-7d28-43ac-a3ac-1252735a4ebc",
+                    "id": "9e1efd38-a7e8-46ff-98f4-3948b96f7bf2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",

@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Singleton<Player>
 {
     public PlayerStats Stats => stats;
 
     [SerializeField] private PlayerStats stats;
     private PlayerAnimation animations;
 
-    private void Awake()
+    public SpriteRenderer playerSpriteRenderer;
+
+    protected override void Awake()
     {
+        base.Awake();
         animations = GetComponent<PlayerAnimation>();
+        playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        
+        ResetPlayer();
     }
 
     public void ResetPlayer()
     {
-        animations.SetRevive();
         stats.ResetStats();
+        animations.SetRevive();
     }
 }

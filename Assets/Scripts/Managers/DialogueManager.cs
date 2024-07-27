@@ -1,14 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
-    [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private TextMeshProUGUI npcName;
-    [SerializeField] private TextMeshProUGUI npcDialogue;
+    [SerializeField] private HUD _HUD;
+
     public NPCInteract NPC { get; set; }
 
     private Queue<string> dialogueQueue = new Queue<string>();
@@ -21,12 +17,12 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void OnEnable()
     {
-        InputManager.instance.OnInteractInput += ContinueDialogue;
+        InputManager.Instance.OnInteractInput += ContinueDialogue;
     }
 
     private void OnDisable()
     {
-        InputManager.instance.OnInteractInput -= ContinueDialogue;
+        InputManager.Instance.OnInteractInput -= ContinueDialogue;
     }
 
     public void LoadDialogue()
@@ -42,10 +38,10 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         if (dialogueStarted) return;
         LoadDialogue();
-        dialoguePanel.SetActive(true);
+        _HUD.SetDialogueUI(true);
         dialogueStarted = true;
-        npcName.text = NPC.npcDialogue.Name;
-        npcDialogue.text = dialogueQueue.Peek();
+        _HUD.SetDialogueNPC(NPC.npcDialogue.Name, NPC.npcDialogue.Avatar);
+        _HUD.SetDialogueContext(dialogueQueue.Peek());
     }
 
     private void ContinueDialogue()
@@ -63,13 +59,13 @@ public class DialogueManager : Singleton<DialogueManager>
             return;
         }
 
-        npcDialogue.text = dialogueQueue.Dequeue();
+        _HUD.SetDialogueContext(dialogueQueue.Dequeue());
     }
 
     public void EndDialogue()
     {
         dialogueStarted = false;
-        dialoguePanel.SetActive(false);
+        _HUD.SetDialogueUI(false);
         dialogueQueue.Clear();
     }
 }

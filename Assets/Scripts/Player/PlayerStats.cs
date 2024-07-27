@@ -12,6 +12,7 @@ public class PlayerStats : StatsBaseSO
     [ContextMenu("Reset player stats")]
     public void ResetStats()
     {
+        Debug.Log("reset");
         Mana = MaxMana;
         Health = MaxHealth;
     }

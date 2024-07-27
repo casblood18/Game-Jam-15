@@ -3,7 +3,6 @@ using UnityEngine;
 public class Shadow : MonoBehaviour
 {
     private Transform _lightSourceTransform;
-    private SpriteRenderer _playerCurrSprite;
     private SpriteRenderer _shadowSprite;
     public Vector3 targetPosition { get; private set; }
     private bool _enabled;
@@ -18,14 +17,13 @@ public class Shadow : MonoBehaviour
 
     private void Awake()
     {
-        _playerCurrSprite = transform.parent.GetComponent<SpriteRenderer>();
         _shadowSprite = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     private void UpdateSprite()
     {
-        if (_shadowSprite.sprite != _playerCurrSprite.sprite)
-            _shadowSprite.sprite = _playerCurrSprite.sprite;
+        if (_shadowSprite.sprite != Player.Instance.playerSpriteRenderer.sprite)
+            _shadowSprite.sprite = Player.Instance.playerSpriteRenderer.sprite;
     }
 
     void Update()
