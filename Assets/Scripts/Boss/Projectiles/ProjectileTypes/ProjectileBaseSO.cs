@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 
@@ -13,6 +14,9 @@ public abstract class ProjectileBaseSO : ScriptableObject
 
     [Space(10)]
     public Sprite ProjectileSprite;
+    public AnimatorController ProjectileAnimator;
     public float Size;
+
+
     public abstract ProjectileEnum MixedVariant(ProjectileBaseSO collidedProjectile);
 }

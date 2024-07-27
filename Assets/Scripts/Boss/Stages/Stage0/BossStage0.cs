@@ -35,7 +35,7 @@ public class BossStage0 : StageBaseSO
             Vector3 center = boss.BossTransform.position;
 
             isNewWave = true;
-            
+
             for (int i = 0; i < projectilesAmount; i++)
             {
                 float angle = i * Mathf.PI * 2 / projectilesAmount;
@@ -44,7 +44,11 @@ public class BossStage0 : StageBaseSO
 
                 Vector2 direction = new(Mathf.Cos(angle + randomAngle), Mathf.Sin(angle + randomAngle));
 
-                GameObject instance = ProjectilePooling.Instance.GetProjectile(center, Quaternion.identity);
+
+                float rotationAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f;
+                Quaternion rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+
+                GameObject instance = ProjectilePooling.Instance.GetProjectile(center, rotation);
 
                 ProjectileBaseSO randomProjectile = GetRandomProjectile(boss, projectilesAmount, isNewWave);
                 isNewWave = false;

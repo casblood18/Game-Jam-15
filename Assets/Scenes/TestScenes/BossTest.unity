@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 722065079}
   - component: {fileID: 722065080}
   - component: {fileID: 722065081}
+  - component: {fileID: 722065082}
   m_Layer: 0
   m_Name: '***BOSS***'
   m_TagString: Untagged
@@ -526,7 +527,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 3.1, y: 3.1, z: 3.1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1955790846}
@@ -573,7 +574,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d08c52c09554ca8418a86627f4bd14e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fadf24d0494a0d7449ee0bdd185e1209, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -619,6 +620,28 @@ MonoBehaviour:
   movementSpeed: 5
   coneObject: {fileID: 1955790845}
   middlePoint: {fileID: 1458379928}
+--- !u!95 &722065082
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722065077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce6497680681a32029758ca2d8d4b371, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &809223274
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +932,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -30657613
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1546907172, guid: 494c81e87368b1a428001c754d973e49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -971,6 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff75099bf25d694196376c94d3d67a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _HUD: {fileID: 0}
 --- !u!114 &1222831706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 258098c8f3a3e2840a253a1f4dfa9aa4, type: 2}
+  playerSpriteRenderer: {fileID: 1222831702}
 --- !u!58 &1222831708
 CircleCollider2D:
   m_ObjectHideFlags: 0

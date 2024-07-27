@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class ProjectilePrefab : MonoBehaviour
@@ -9,6 +10,7 @@ public class ProjectilePrefab : MonoBehaviour
 
     public bool IsMixing = false;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animatorController;
     [Tooltip("After the projectile is spawned, how long does it take to enable mixing")]
     [SerializeField] private float mixingDelay;
     [Space(5)]
@@ -27,9 +29,12 @@ public class ProjectilePrefab : MonoBehaviour
 
         IsMixing = false;
         spriteRenderer.sprite = currentProjectile.ProjectileSprite;
+        animatorController.runtimeAnimatorController = currentProjectile.ProjectileAnimator;
+
         transform.localScale = new(currentProjectile.Size, currentProjectile.Size, 1);
 
         if (!canEnableMixing) return;
+        
         StartCoroutine(EnableMixing());
     }
 

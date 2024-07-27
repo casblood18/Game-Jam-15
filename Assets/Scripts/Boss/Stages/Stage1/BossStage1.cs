@@ -32,7 +32,10 @@ public class BossStage1 : StageBaseSO
 
                 Vector3 spawnPosition = boss.BossTransform.position;
 
-                GameObject instance = ProjectilePooling.Instance.GetProjectile(spawnPosition, Quaternion.identity);
+                float rotationAngle = Mathf.Atan2(randomDirection.y, randomDirection.x) * Mathf.Rad2Deg + 180f;
+                Quaternion rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+
+                GameObject instance = ProjectilePooling.Instance.GetProjectile(spawnPosition, rotation);
                 ProjectileBaseSO randomProjectile = GetRandomProjectile(boss, numberOfProjectiles, true);
                 randomProjectile.CanBeMixed = false;
                 instance.GetComponent<ProjectilePrefab>().SetCurrentProjectile(randomProjectile, true);

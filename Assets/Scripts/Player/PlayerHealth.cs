@@ -33,11 +33,12 @@ public class PlayerHealth : HealthBase
 
     protected override void TakeDamage(float damage)
     {
-        _HUD.OnPlayerHealthChanged(_playerHealth);
+        if (_HUD != null)
+            _HUD.OnPlayerHealthChanged(_playerHealth);
 
-       _playerHealth -= damage;
+        _playerHealth -= damage;
 
-        if (_playerHealth> 0f) return;
+        if (_playerHealth > 0f) return;
 
         Death();
     }

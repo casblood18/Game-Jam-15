@@ -11,7 +11,7 @@ public class BossStage2 : StageBaseSO
     public override IEnumerator Attack(BossAI boss)
     {
         yield return new WaitForSeconds(attackDelay);
-        
+
         while (true)
         {
             yield return PerformAttack(boss, boss.RedProjectile);
@@ -38,7 +38,10 @@ public class BossStage2 : StageBaseSO
 
             Vector2 direction = new(Mathf.Cos(angle), Mathf.Sin(angle));
 
-            GameObject instance = ProjectilePooling.Instance.GetProjectile(center, Quaternion.identity);
+            float rotationAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f;
+            Quaternion rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+
+            GameObject instance = ProjectilePooling.Instance.GetProjectile(center, rotation);
 
             projectile.CanBeMixed = false;
 
