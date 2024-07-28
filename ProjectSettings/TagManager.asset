@@ -16,8 +16,8 @@ TagManager:
   - UI
   - NPC
   - Map Stuff
-  - 
-  - 
+  - Shadow
+  - islandGround
   - 
   - 
   - 
@@ -43,6 +43,15 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 3158693843
+    locked: 0
+  - name: islandGround
+    uniqueID: 3400199719
+    locked: 0
+  - name: Shadow
+    uniqueID: 1998863577
+    locked: 0
+  - name: Map Stuff
+    uniqueID: 1091582479
     locked: 0
   - name: Default
     uniqueID: 0

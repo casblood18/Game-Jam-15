@@ -80,7 +80,7 @@ public class HUD : MonoBehaviour
         _dialogueName = _root.Q<Label>(className: UIClassNames.DIALOGUE_NAME);
         _NPCSprite = _root.Q<VisualElement>(UINames.NPC_SPRITE);
         _playerAvatar = _root.Q<VisualElement>(UINames.PLAYER_AVATAR);
-        _playerHealth = Player.Instance.GetComponent<PlayerHealth>();
+        //_playerHealth = Player.Instance.GetComponent<PlayerHealth>();
         _playerHealthBar = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR);
         _playerHealthBarStick = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR_STICK);
         _teleportNumLabel = _root.Q<Label>(UINames.TELEPORT_NUM);
@@ -93,7 +93,7 @@ public class HUD : MonoBehaviour
     private void InitializeUI()
     {
         SetDialogueUI(false);
-        //_bossHealthBar.style.display = DisplayStyle.None;
+        _bossHealthBar.style.display = DisplayStyle.None;
         var container = _bossHealthBar.Q<VisualElement>(className: "unity-progress-bar__container");
         container.style.width = 700f;
         container.style.maxHeight = StyleKeyword.None;
@@ -124,7 +124,8 @@ public class HUD : MonoBehaviour
     }
     private void Update()
     {
-        UpdateHealthBarPosition();
+        if (Player.Instance != null && Camera.main != null)
+            UpdateHealthBarPosition();
     }
 
     private void UpdateHealthBarPosition()
@@ -139,7 +140,6 @@ public class HUD : MonoBehaviour
 
     private void UpdateSprite()
     {
-        
         StyleBackground newSprite =  new StyleBackground(Player.Instance.playerSpriteRenderer.sprite);
         
         if (_playerAvatar.style.backgroundImage != newSprite)

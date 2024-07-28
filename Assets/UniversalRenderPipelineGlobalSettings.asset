@@ -15,7 +15,8 @@ MonoBehaviour:
   m_AssetVersion: 3
   m_RenderingLayerNames:
   - Default
-  m_ValidRenderingLayers: 1
+  - islandGround
+  m_ValidRenderingLayers: 3
   lightLayerName0: 
   lightLayerName1: 
   lightLayerName2: 
@@ -24,7 +25,7 @@ MonoBehaviour:
   lightLayerName5: 
   lightLayerName6: 
   lightLayerName7: 
-  m_ShaderVariantLogLevel: 0
+  m_ShaderVariantLogLevel: 2
   m_ExportShaderVariants: 1
   m_StripDebugVariants: 1
   m_StripUnusedPostProcessingVariants: 0
