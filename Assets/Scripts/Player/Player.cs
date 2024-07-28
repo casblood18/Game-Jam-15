@@ -1,22 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Player : Singleton<Player>
 {
     [SerializeField] private PlayerStats stats;
-    private PlayerAnimation animations;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private PlayerAnimation animations;
 
     public PlayerStats Stats => stats;
-    public SpriteRenderer playerSpriteRenderer;
+    [HideInInspector] public SpriteRenderer playerSpriteRenderer;
+    [HideInInspector] public PlayerAnimation playerAnimation;
 
     protected override void Awake()
     {
         base.Awake();
-        animations = GetComponent<PlayerAnimation>();
-        playerSpriteRenderer = GetComponent<SpriteRenderer>();
-        
+        playerSpriteRenderer = _spriteRenderer;
+        playerAnimation = animations;
         ResetPlayer();
     }
 

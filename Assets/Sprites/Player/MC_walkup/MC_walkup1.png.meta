@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MC_walkup1_0: 5411909779653955242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

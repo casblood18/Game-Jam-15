@@ -11,13 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementDirection => InputManager.Instance.PlayerInputActions.Player.Move.ReadValue<Vector2>().normalized;
 
     private Rigidbody2D rg2d;
-    private PlayerAnimation playerAnimation;
     private Player player;
 
     private void Awake()
     {
         player = GetComponent<Player>();
-        playerAnimation = GetComponent<PlayerAnimation>();
         
         rg2d = GetComponent<Rigidbody2D>();
     }
@@ -42,12 +40,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (movementDirection == new Vector2(0, 0))
         {
-            playerAnimation.SetMovingAnimation(false);
+            player.playerAnimation.SetMovingAnimation(false);
             return;
         }
 
-        playerAnimation.SetMovingAnimation(true);
-        playerAnimation.SetMoveDirection(movementDirection);
+        player.playerAnimation.SetMovingAnimation(true);
+        player.playerAnimation.SetMoveDirection(movementDirection);
     }
 
 }

@@ -36,6 +36,11 @@ public class Shadow : MonoBehaviour
         Vector3 direction = (_lightSourceTransform.position - transform.position);
         float _distanceToLight = direction.magnitude;
 
+        //Fip: when delta y<0,flip y; x<0,flip x
+        if (direction.y < 0) _shadowSprite.flipX = false;
+        else _shadowSprite.flipX = true;
+        //if (direction.y < 0) _shadowSprite.flipY = true;
+        //else _shadowSprite.flipY = false;
         //Scale
         Vector3 _localScale = this.transform.localScale;
         _localScale.y = _distanceToLight / _offset;
@@ -46,8 +51,6 @@ public class Shadow : MonoBehaviour
         this.transform.rotation = Quaternion.Euler(0, 0, angle + 90);
 
         //Position
-        float shadowOffset = -0.5f;
-        transform.localPosition = direction.normalized * shadowOffset;
         targetPosition = this.transform.GetChild(0).position*2 - this.transform.position;
         
 
