@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private float moveSpeed;
 
-    private Vector2 movementDirection => InputManager.Instance.PlayerInputActions.Player.Move.ReadValue<Vector2>().normalized;
+    bool _isPlaying;
+    public Vector2 movementDirection => InputManager.Instance.PlayerInputActions.Player.Move.ReadValue<Vector2>().normalized;
 
     private Rigidbody2D rg2d;
     private Player player;
@@ -16,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<Player>();
-        
         rg2d = GetComponent<Rigidbody2D>();
     }
 
@@ -41,11 +41,19 @@ public class PlayerMovement : MonoBehaviour
         if (movementDirection == new Vector2(0, 0))
         {
             player.playerAnimation.SetMovingAnimation(false);
+            _isPlaying = false;
+            SoundManager.Instance.StopSound(Audio.footstep);
+
+
             return;
         }
 
         player.playerAnimation.SetMovingAnimation(true);
         player.playerAnimation.SetMoveDirection(movementDirection);
+
+        if (!_isPlaying) SoundManager.Instance.PlaySoundLooped(Audio.footstep);
+        _isPlaying = true;
+        
     }
 
 }

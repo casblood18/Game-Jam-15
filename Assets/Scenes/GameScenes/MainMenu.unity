@@ -2298,7 +2298,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 641d0c60c2d024002b68123b6a1f2a3d, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 271ed480d45a54a4c9b3ee796ce4d7e3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3310,6 +3310,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 930879803}
+    - target: {fileID: 2479311768233138475, guid: a5e43cb9d0a69c7a0a8f25acd6e40c16, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5164857613936616308, guid: a5e43cb9d0a69c7a0a8f25acd6e40c16, type: 3}
       propertyPath: m_Name
       value: PlayBtn

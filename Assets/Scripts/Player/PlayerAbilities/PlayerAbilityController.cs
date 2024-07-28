@@ -70,6 +70,7 @@ public class PlayerAbilityController : MonoBehaviour
             if (teleportNum == 0) return;
             
             Debug.Log("Teleport");
+            SoundManager.Instance.PlaySoundOnce(Audio.teleport);
             _HUD.OnTeleport();
             _teleportObject.transform.position = this.transform.position;
             teleportNum--;
@@ -78,6 +79,7 @@ public class PlayerAbilityController : MonoBehaviour
         else
         {
             Debug.Log("Teleport back");
+            SoundManager.Instance.PlaySoundOnce(Audio.teleport);
             _HUD.OnTeleport();
             this.transform.position = _teleportObject.transform.position;
         }
@@ -103,6 +105,7 @@ public class PlayerAbilityController : MonoBehaviour
         if (_isDodgeActivate) 
         {
             Debug.Log("player dodge");
+            SoundManager.Instance.PlaySoundOnce(Audio.dodge);
             this.transform.position = _light.shadow.targetPosition; 
         }
     }
@@ -110,6 +113,9 @@ public class PlayerAbilityController : MonoBehaviour
     {
         if (_HUD._attackFreeze) return;
         Debug.Log("player attack");
+
+        SoundManager.Instance.PlaySoundOnce(Audio.attack);
         //TODO: player attack Implementation
+
     }
 }

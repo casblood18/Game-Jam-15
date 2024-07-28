@@ -39,6 +39,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void StartDialogue()
     {
+        SoundManager.Instance.StopSound(Audio.dialogue);
+
         if (dialogueStarted) 
         {
             //Debug.Log("ContinueDialogue");
@@ -51,7 +53,9 @@ public class DialogueManager : Singleton<DialogueManager>
             _HUD.SetDialogueUI(true);
             dialogueStarted = true;
             _HUD.SetDialogueNPC(NPC.npcDialogue.Name, NPC.npcDialogue.Avatar);
+            SoundManager.Instance.PlaySoundOnce(Audio.interact);
             _HUD.SetDialogueContext(dialogueQueue.Dequeue());
+            SoundManager.Instance.PlaySoundOnce(Audio.dialogue);
         }
         
     }
@@ -69,8 +73,9 @@ public class DialogueManager : Singleton<DialogueManager>
             ResetDialogue();
             return;
         }
-
+        SoundManager.Instance.PlaySoundOnce(Audio.interact);
         _HUD.SetDialogueContext(dialogueQueue.Dequeue());
+        SoundManager.Instance.PlaySoundOnce(Audio.dialogue);
     }
 
     public void ResetDialogue()
