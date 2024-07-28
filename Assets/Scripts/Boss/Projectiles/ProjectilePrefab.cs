@@ -17,7 +17,7 @@ public class ProjectilePrefab : MonoBehaviour
     [SerializeField] private List<ProjectileBaseSO> mixedProjectiles;
 
     private ProjectileBaseSO currentProjectile;
-    private bool isPathMovementEnabled;
+    private bool isPathMovementEnabled = false;
     private Path currentPath;
     private ushort currentPathIndex;
 
@@ -32,13 +32,13 @@ public class ProjectilePrefab : MonoBehaviour
             transform.position += currentProjectile.Speed * Time.deltaTime * transform.forward;
         }
 
+        CheckIfOutOfView();
     }
 
     public void SetCurrentProjectile(ProjectileBaseSO newProjectile, bool canEnableMixing, Path path = null)
     {
         currentProjectile = newProjectile;
 
-        spriteRenderer.sprite = currentProjectile.ProjectileSprite;
         animatorController.runtimeAnimatorController = currentProjectile.ProjectileAnimator;
 
         transform.localScale = new Vector3(currentProjectile.Size, currentProjectile.Size, 1);
@@ -54,6 +54,13 @@ public class ProjectilePrefab : MonoBehaviour
         if (!canEnableMixing) return;
         StartCoroutine(EnableMixing());
     }
+
+    //Called in the mixed projectiles animations!
+    public void MixedProjectileAttack()
+    {
+        StartCoroutine(currentProjectile.ProjectileAttack(this.gameObject));
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -90,6 +97,7 @@ public class ProjectilePrefab : MonoBehaviour
         collidedProjectile.IsMixing = true;
 
         currentProjectile = mixedProjectiles.Find(x => x.ProjectileType == mixedVariant);
+
         SetCurrentProjectile(currentProjectile, true, currentPath);
 
         ProjectilePooling.Instance.ReleaseProjectile(collidedProjectile.gameObject);
@@ -114,11 +122,23 @@ public class ProjectilePrefab : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         if (Vector3.Distance(transform.position, targetPoint.position) > 0.1f) return;
+
         currentPathIndex++;
 
         if (currentPathIndex < currentPath.PathPoints.Count) return;
 
         isPathMovementEnabled = false;
         ProjectilePooling.Instance.ReleaseProjectile(gameObject);
+    }
+
+       private void CheckIfOutOfView()
+    {
+        if (Camera.main == null) return;
+        Vector3 viewportPosition = Camera.main.WorldToViewportPoint(transform.position);
+
+        if (viewportPosition.x < 0 || viewportPosition.x > 1 || viewportPosition.y < 0 || viewportPosition.y > 1)
+        {
+            ProjectilePooling.Instance.ReleaseProjectile(gameObject);
+        }
     }
 }

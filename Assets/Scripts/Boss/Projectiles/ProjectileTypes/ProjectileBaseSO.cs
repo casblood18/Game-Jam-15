@@ -13,10 +13,12 @@ public abstract class ProjectileBaseSO : ScriptableObject
     public float Damage = 10f;
 
     [Space(10)]
-    public Sprite ProjectileSprite;
+
     public AnimatorController ProjectileAnimator;
     public float Size;
 
 
     public abstract ProjectileEnum MixedVariant(ProjectileBaseSO collidedProjectile);
+
+    public abstract IEnumerator ProjectileAttack(GameObject bigProjectile);
 }

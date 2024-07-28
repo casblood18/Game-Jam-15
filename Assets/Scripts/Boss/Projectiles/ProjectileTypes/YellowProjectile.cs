@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ProjectileBase", menuName = "Projectiles/YellowProjectile", order = 1)]
@@ -8,5 +9,10 @@ public class YellowProjectile : ProjectileBaseSO
     {
         if (!CanBeMixed || !collidedProjectile.CanBeMixed) return ProjectileEnum.None;
         return ProjectileEnum.None;
+    }
+
+    public override IEnumerator ProjectileAttack(GameObject bigProjectile)
+    {
+        yield return null;
     }
 }

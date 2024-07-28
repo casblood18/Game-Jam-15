@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ProjectileBase", menuName = "Projectiles/BlueProjectile", order = 1)]
@@ -13,5 +14,10 @@ public class BlueProjectile : ProjectileBaseSO
             return ProjectileEnum.Purple;
 
         return ProjectileEnum.None;
+    }
+
+    public override IEnumerator ProjectileAttack(GameObject bigProjectile)
+    {
+        yield return null;
     }
 }

@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5a1c191619c43321a725e9cb4e9ca40, type: 3}
-  m_Name: Stage2
+  m_Script: {fileID: 11500000, guid: 0a28e6cc3ab616ec892b6eb20c921b4b, type: 3}
+  m_Name: GreenProjectileSmall
   m_EditorClassIdentifier: 
-  MinimumHealth: 65
-  attackDelay: 2
-  projectilesAmount: 20
+  ProjectileType: 0
+  CanBeMixed: 0
+  Speed: 10
+  Damage: 10
+  ProjectileAnimator: {fileID: 9100000, guid: c6a5c8ddc005d1f5781e1de52a29bbb4, type: 2}
+  Size: 1

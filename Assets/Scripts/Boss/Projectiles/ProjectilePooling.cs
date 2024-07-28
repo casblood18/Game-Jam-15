@@ -28,7 +28,7 @@ public class ProjectilePooling : MonoBehaviour
             actionOnRelease: OnReturnedToPool,
             actionOnDestroy: OnDestroyPoolObject,
             collectionCheck: false,
-            defaultCapacity: 20,
+            defaultCapacity: 30,
             maxSize: 150
         );
     }
