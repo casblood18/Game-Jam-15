@@ -93,7 +93,7 @@ public class HUD : MonoBehaviour
     private void InitializeUI()
     {
         SetDialogueUI(false);
-        //_bossHealthBar.style.display = DisplayStyle.None;
+        _bossHealthBar.style.display = DisplayStyle.None;
         var container = _bossHealthBar.Q<VisualElement>(className: "unity-progress-bar__container");
         container.style.width = 700f;
         container.style.maxHeight = StyleKeyword.None;

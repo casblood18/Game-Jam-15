@@ -36,7 +36,7 @@ public class PlayerAbilityController : MonoBehaviour
     private void Start()
     {
         ChargeTeleport(1);
-        SetDodgeAbility(true);
+        SetDodgeAbility(false);
     }
 
     public void SetDodgeAbility(bool value)
@@ -45,6 +45,11 @@ public class PlayerAbilityController : MonoBehaviour
         {
             _isDodgeActivate = true;
             _light.Activate();
+        }
+        else
+        {
+            _isDodgeActivate = false;
+            _light.Deactivate();
         }
     }
 

@@ -10,7 +10,13 @@ public class Shadow : MonoBehaviour
     public void Activate(Transform lightSource)
     {
         _lightSourceTransform = lightSource;
+        _shadowSprite.enabled = true;
         _enabled = true;
+    }
+    public void Deactivate()
+    {
+        _shadowSprite.enabled = false;
+        _enabled = false;
     }
 
     [SerializeField] private float _offset = 5f;
@@ -18,6 +24,7 @@ public class Shadow : MonoBehaviour
     private void Awake()
     {
         _shadowSprite = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _shadowSprite.enabled = false;
     }
 
     private void UpdateSprite()

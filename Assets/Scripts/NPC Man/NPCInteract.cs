@@ -13,13 +13,9 @@ public class NPCInteract : MonoBehaviour
     private bool inRadius = false;
     public NPCDialogue npcDialogue => _npcDialogue;
 
-    private void OnEnable() => InputManager.Instance.OnInteractInput += InteractNPC;
-    private void OnDisable() => InputManager.Instance.OnInteractInput -= InteractNPC;
-    private void InteractNPC()
+    public virtual void DialogueEnd()
     {
-        if (!inRadius) return;
-
-        DialogueManager.Instance.StartDialogue();
+        Debug.Log($"end dialogue with {npcDialogue.name}");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -37,8 +33,8 @@ public class NPCInteract : MonoBehaviour
         {
             inRadius = false;
             DialogueManager.Instance.NPC = null;
-            DialogueManager.Instance.EndDialogue();
             interactionBox.SetActive(false);
+            DialogueManager.Instance.ResetDialogue();
         }
     }
 }

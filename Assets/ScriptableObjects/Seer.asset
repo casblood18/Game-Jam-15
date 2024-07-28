@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffed4b69054470c4693554f74e5a1bad, type: 3}
+  m_Name: Seer
+  m_EditorClassIdentifier: 
+  Name: Seer
+  Avatar: {fileID: 1740964425354839054, guid: 413d78c73569f0d489e402e17a53a3ae, type: 3}
+  Dialogue:
+  - 'Praise Athena... a hero has arrived... You wield the light of Athena, a blessing
+    indeed '
+  - 'To reclaim the island, follow the pathway above to defeat Medusa if you dare
+    face the challenge... There is a powerful magical circle in the path below that
+    will help you in your journey, however, the plains have been claimed by the gorgons. '
+  - 'Along your journey, you will find alchemy tables. Use them to replenish your
+    strength and return to should you be felled. '
+  - 'Remember, young mage, light and shadow are but two sides of the same coin. Use
+    them both to your advantage. I wish you well in reclaiming our once prosperous
+    lands. '
