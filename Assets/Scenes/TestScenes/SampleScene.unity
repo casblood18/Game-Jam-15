@@ -3185,10 +3185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 258098c8f3a3e2840a253a1f4dfa9aa4, type: 2}
-  _spriteRenderer: {fileID: 0}
-  animations: {fileID: 0}
   playerSpriteRenderer: {fileID: 0}
-  playerAnimation: {fileID: 0}
 --- !u!70 &1222831708
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

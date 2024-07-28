@@ -476,22 +476,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      MC_teleport6_0: 3808751490141209065
-      MC_teleport6_1: -8919664456075083281
-      MC_teleport6_10: -1773996881959396575
-      MC_teleport6_11: -1462679607620981800
-      MC_teleport6_12: -3807775690011702118
-      MC_teleport6_13: 5056902868890644219
-      MC_teleport6_14: -7449654512206417908
-      MC_teleport6_2: -7990711963952557971
-      MC_teleport6_3: -9132069845294132037
-      MC_teleport6_4: 2119908975848706105
-      MC_teleport6_5: -5525176031528643043
-      MC_teleport6_6: 1257456369271975129
-      MC_teleport6_7: -5769273825974615137
-      MC_teleport6_8: -1020756139782384163
-      MC_teleport6_9: -2703115677877413717
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

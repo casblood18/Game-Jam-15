@@ -236,12 +236,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Buff_circle_0: -2900697058757377539
-      Buff_circle_1: 7717066106932812345
-      Buff_circle_2: 805100601341433863
-      Buff_circle_3: 1108143090064213324
-      Buff_circle_4: 1802437242127337513
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

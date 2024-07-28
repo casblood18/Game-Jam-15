@@ -236,12 +236,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Spawn_circle_0: 5859943904749296163
-      Spawn_circle_1: -8659797911394385882
-      Spawn_circle_2: 5444688419248884328
-      Spawn_circle_3: 4418206985131845997
-      Spawn_circle_4: -7687063943326634921
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
