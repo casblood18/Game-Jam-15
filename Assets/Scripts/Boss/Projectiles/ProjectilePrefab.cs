@@ -55,12 +55,19 @@ public class ProjectilePrefab : MonoBehaviour
         StartCoroutine(EnableMixing());
     }
 
+    #region  Animation methods
     //Called in the mixed projectiles animations!
     public void MixedProjectileAttack()
     {
         StartCoroutine(currentProjectile.ProjectileAttack(this.gameObject));
     }
 
+    public void ReleaseProjectile()
+    {
+        ProjectilePooling.Instance.ReleaseProjectile(gameObject);
+    }
+    #endregion
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -131,7 +138,7 @@ public class ProjectilePrefab : MonoBehaviour
         ProjectilePooling.Instance.ReleaseProjectile(gameObject);
     }
 
-       private void CheckIfOutOfView()
+    private void CheckIfOutOfView()
     {
         if (Camera.main == null) return;
         Vector3 viewportPosition = Camera.main.WorldToViewportPoint(transform.position);

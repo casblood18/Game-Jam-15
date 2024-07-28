@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: GreenProjectile
   m_EditorClassIdentifier: 
   ProjectileType: 3
-  CanBeMixed: 0
+  CanBeMixed: 1
   Speed: 10
   Damage: 10
   ProjectileAnimator: {fileID: 9100000, guid: 42f4a5afebf777b8190ac8dd3ad657b9, type: 2}
-  Size: 2
+  Size: 0.6
   smallGreenProjectile: {fileID: 11400000, guid: 720a569f22fc36e2396af2d1fd2f9409, type: 2}
   projectileAmount: 6

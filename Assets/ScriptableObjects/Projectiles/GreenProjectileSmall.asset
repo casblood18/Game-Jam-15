@@ -17,4 +17,4 @@ MonoBehaviour:
   Speed: 10
   Damage: 10
   ProjectileAnimator: {fileID: 9100000, guid: c6a5c8ddc005d1f5781e1de52a29bbb4, type: 2}
-  Size: 1
+  Size: 0.5
