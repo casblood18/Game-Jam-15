@@ -9,5 +9,6 @@ public class FirstNPC : NPCInteract
     {
         base.DialogueEnd();
         _bridgeBlock.SetActive(false);
+        Player.Instance.GetComponent<PlayerAbilityController>().SetDodgeAbility(true);
     }
 }
