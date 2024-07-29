@@ -108,6 +108,8 @@ public class PlayerAbilityController : MonoBehaviour
     {
         teleportNum = value;
         _HUD.UpdateTeleportUI(teleportNum);
+    }
+
     public void TeleportOut()
     {
         Debug.Log("Teleport back");

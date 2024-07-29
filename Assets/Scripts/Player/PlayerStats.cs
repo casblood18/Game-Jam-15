@@ -4,10 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerStat", menuName = "Player Stats")]
 public class PlayerStats : StatsBaseSO
 {
-    [Header("Health")]
-    public float Health;
-    public float MaxHealth;
-
     [Header("Teleport")]
     public int Teleport;
 

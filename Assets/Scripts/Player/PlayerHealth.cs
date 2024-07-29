@@ -33,10 +33,10 @@ public class PlayerHealth : HealthBase
         OnDamagePlayer += TakeDamage;
     }
 
-    private void OnDisable()
-    {
-        OnDamagePlayer -= TakeDamage;
-    }
+    //private void OnDisable()
+    //{
+    //    OnDamagePlayer -= TakeDamage;
+    //}
 
     protected override void TakeDamage(float damage)
     {
