@@ -7,8 +7,6 @@ public class Player : Singleton<Player>
     [SerializeField] private PlayerStats stats;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private PlayerAnimation animations;
-
-    public PlayerStats Stats => stats;
     [HideInInspector] public PlayerAnimation playerAnimation;
     public SpriteRenderer playerSpriteRenderer;
 

@@ -1,4 +1,6 @@
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerAbilityController : MonoBehaviour
@@ -15,6 +17,9 @@ public class PlayerAbilityController : MonoBehaviour
     #endregion
 
     private bool _isDodgeActivate;
+    [SerializeField] private PlayerAnimation playerAnimation;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private SpriteRenderer playerSprite;
 
     private void OnEnable()
     {
@@ -78,14 +83,19 @@ public class PlayerAbilityController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Teleport back");
-            SoundManager.Instance.PlaySoundOnce(Audio.teleport);
-            _HUD.OnTeleport();
-            this.transform.position = _teleportObject.transform.position;
+            playerAnimation.TeleportInAnimation();
         }
 
         _teleportObject.SetActive(!_isTeleporting);
         _isTeleporting = !_isTeleporting;
+    }
+
+    public void TeleportOut()
+    {
+        Debug.Log("Teleport back");
+        SoundManager.Instance.PlaySoundOnce(Audio.teleport);
+        _HUD.OnTeleport();
+        this.transform.position = _teleportObject.transform.position;
     }
 
     /// <summary>
@@ -104,18 +114,55 @@ public class PlayerAbilityController : MonoBehaviour
 
         if (_isDodgeActivate) 
         {
-            Debug.Log("player dodge");
+            ActivateRollAnimation();
             SoundManager.Instance.PlaySoundOnce(Audio.dodge);
             this.transform.position = _light.shadow.targetPosition; 
         }
     }
+
+    private void ActivateRollAnimation()
+    {
+        Vector2 moveInput = InputManager.Instance.PlayerInputActions.Player.Move.ReadValue<Vector2>();
+
+        // Check for horizontal movement
+        if (moveInput.x > 0)
+        {
+            playerSprite.flipX = false;
+        }
+        else if (moveInput.x < 0)
+        {
+            FlipXNormal();
+        }
+        playerAnimation.RollAnimation();
+    }
+
+    public void FlipXNormal()
+    {
+        playerSprite.flipX = true;
+    }
     private void OnAttack()
     {
         if (_HUD._attackFreeze) return;
-        Debug.Log("player attack");
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0;
+
+        CheckAttackAnimation(mousePosition);
+
+        Vector2 direction = (mousePosition - transform.position).normalized;
+
+        GameObject projectile = Instantiate(projectilePrefab, this.transform.position, Quaternion.identity);
+
+        Projectile proj = projectile.GetComponent<Projectile>();
+        proj.direction = direction;
 
         SoundManager.Instance.PlaySoundOnce(Audio.attack);
-        //TODO: player attack Implementation
+    }
 
+    private void CheckAttackAnimation(Vector3 mousePosition)
+    {
+        if (mousePosition.y < transform.position.y)
+        {
+            playerAnimation.SetAttackAnimation();
+        }
     }
 }
