@@ -4,15 +4,49 @@ using UnityEngine;
 
 public class MobProjectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float speed = 10f;
+    public float damage = 10f;
+    Vector3 direction;
+    public float destroyTime = 5f;
+
+    [SerializeField] private Transform target;
+
+    public void ProjectileDirection(Transform target)
     {
-        
+        this.target = target;
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+        direction = (target.position - transform.position).normalized;
+        StartCoroutine(DestroyAfterTime(destroyTime));
+    }
     void Update()
     {
-        
+        if (target != null)
+        {
+            transform.position += direction * speed * Time.deltaTime;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator DestroyAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        if (gameObject != null) 
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Apply damage to the player
+            Destroy(gameObject); 
+        }
     }
 }
