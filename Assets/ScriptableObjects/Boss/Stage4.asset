@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stage4
   m_EditorClassIdentifier: 
   MinimumHealth: 35
-  delayBetweenAttacks: 8
+  delayBetweenAttacks: 5
   numberOfProjectiles: 20

@@ -53,14 +53,11 @@ public class ProjectilePooling : MonoBehaviour
         Destroy(projectile);
     }
 
-   public GameObject GetProjectile(Vector3 position, Quaternion rotation)
+    public GameObject GetProjectile(Vector3 position, Quaternion rotation)
     {
         GameObject projectile = projectilePool.Get();
-        projectile.transform.position = position;
-        projectile.transform.rotation = rotation;
 
-        StartCoroutine(ReleaseProjectileAfterTime(projectile, projectileLifetime));
-
+        projectile.transform.SetPositionAndRotation(position, rotation);
         return projectile;
     }
 
@@ -70,9 +67,4 @@ public class ProjectilePooling : MonoBehaviour
         projectilePool.Release(projectile);
     }
 
-    private IEnumerator ReleaseProjectileAfterTime(GameObject projectile, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        ReleaseProjectile(projectile);
-    }
 }

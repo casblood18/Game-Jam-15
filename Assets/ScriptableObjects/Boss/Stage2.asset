@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinimumHealth: 65
   attackDelay: 2
-  projectilesAmount: 20
+  projectilesAmount: 18

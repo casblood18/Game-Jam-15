@@ -9,6 +9,10 @@ public class ProjectilePrefab : MonoBehaviour
     public ProjectileBaseSO ProjectileBase => currentProjectile;
 
     public bool IsMixing = false;
+    public bool CanBackshotMix = false;
+
+    public ushort SignedNumber => signedNumber;
+
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animatorController;
     [Tooltip("After the projectile is spawned, how long does it take to enable mixing")]
@@ -16,10 +20,26 @@ public class ProjectilePrefab : MonoBehaviour
     [Space(5)]
     [SerializeField] private List<ProjectileBaseSO> mixedProjectiles;
 
+    [Space(5)]
+    [SerializeField] private Collider2D col;
+    [SerializeField] private GameObject disableGO;
+
     private ProjectileBaseSO currentProjectile;
     private bool isPathMovementEnabled = false;
+    private bool canBeDestroyed = true;
+
     private Path currentPath;
     private ushort currentPathIndex;
+    private float customProjectileSpeed = 0.0f;
+    private ushort signedNumber = 0;
+
+    private List<Vector3> savedPathPoints;
+
+    void OnEnable()
+    {
+        disableGO.SetActive(false);
+        col.enabled = true;
+    }
 
     void Update()
     {
@@ -35,15 +55,32 @@ public class ProjectilePrefab : MonoBehaviour
         CheckIfOutOfView();
     }
 
-    public void SetCurrentProjectile(ProjectileBaseSO newProjectile, bool canEnableMixing, Path path = null)
+    public void SetCurrentProjectile(ProjectileBaseSO newProjectile, bool canEnableMixing, Path path = null, float customProjectileSpeed = 1f, bool canBeDestroyed = true, ushort signedNumber = 0)
     {
         currentProjectile = newProjectile;
+
+        this.signedNumber = signedNumber;
+        this.customProjectileSpeed = customProjectileSpeed;
+        this.canBeDestroyed = canBeDestroyed;
+
+        IsMixing = false;
 
         animatorController.runtimeAnimatorController = currentProjectile.ProjectileAnimator;
 
         transform.localScale = new Vector3(currentProjectile.Size, currentProjectile.Size, 1);
 
-        isPathMovementEnabled = path != null;
+        CanBackshotMix = false;
+
+
+        if (path != null)
+        {
+            SavePathPoints(path);
+            isPathMovementEnabled = true;
+        }
+        else
+        {
+            isPathMovementEnabled = false;
+        }
 
         if (isPathMovementEnabled)
         {
@@ -52,7 +89,20 @@ public class ProjectilePrefab : MonoBehaviour
         }
 
         if (!canEnableMixing) return;
+
         StartCoroutine(EnableMixing());
+    }
+
+    private void SavePathPoints(Path path)
+    {
+        savedPathPoints = new List<Vector3>();
+
+        foreach (var point in path.PathPoints)
+        {
+            savedPathPoints.Add(point.transform.position);
+        }
+
+        currentPathIndex = 0;
     }
 
     #region  Animation methods
@@ -67,14 +117,26 @@ public class ProjectilePrefab : MonoBehaviour
         ProjectilePooling.Instance.ReleaseProjectile(gameObject);
     }
     #endregion
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             DamagePlayer();
         }
-        else if (!IsMixing && other.CompareTag("Projectile"))
+        else if (other.CompareTag("Projectile") && CanBackshotMix && !IsMixing)
+        {
+            ProjectilePrefab projectilePrefab = other.GetComponent<ProjectilePrefab>();
+
+            projectilePrefab.currentProjectile.CanBeMixed = true;
+            this.currentProjectile.CanBeMixed = true;
+
+            if (projectilePrefab.SignedNumber == this.signedNumber)
+            {
+                MixProjectile(projectilePrefab);
+            }
+        }
+        else if (!IsMixing && other.CompareTag("Projectile") && !CanBackshotMix)
         {
             ProjectilePrefab projectilePrefab = other.GetComponent<ProjectilePrefab>();
 
@@ -82,6 +144,7 @@ public class ProjectilePrefab : MonoBehaviour
 
             MixProjectile(projectilePrefab);
         }
+
     }
 
     private void DamagePlayer()
@@ -118,24 +181,32 @@ public class ProjectilePrefab : MonoBehaviour
 
     private void MoveAlongPath()
     {
-        if (currentPath.PathPoints.Count == 0) return;
+        if (currentPathIndex >= savedPathPoints.Count) return;
 
-        Transform targetPoint = currentPath.PathPoints[currentPathIndex].transform;
-        float step = currentProjectile.Speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, step);
+        Vector3 targetPoint = savedPathPoints[currentPathIndex];
+        float step = (customProjectileSpeed > 0 ? customProjectileSpeed : currentProjectile.Speed) * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, targetPoint, step);
 
-        Vector3 direction = (targetPoint.position - transform.position);
+        Vector3 direction = targetPoint - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        if (Vector3.Distance(transform.position, targetPoint.position) > 0.1f) return;
+        if (Vector3.Distance(transform.position, targetPoint) <= 0.1f)
+        {
+            currentPathIndex++;
+        }
 
-        currentPathIndex++;
+        bool isLastPoint = currentPathIndex == savedPathPoints.Count - 1;
 
-        if (currentPathIndex < currentPath.PathPoints.Count) return;
-
-        isPathMovementEnabled = false;
-        ProjectilePooling.Instance.ReleaseProjectile(gameObject);
+        if (!canBeDestroyed && isLastPoint)
+        {
+            CanBackshotMix = true;
+        }
+        else if (canBeDestroyed && isLastPoint)
+        {
+            isPathMovementEnabled = false;
+            ProjectilePooling.Instance.ReleaseProjectile(gameObject);
+        }
     }
 
     private void CheckIfOutOfView()

@@ -52,12 +52,12 @@ public class PlayerHealth : HealthBase
 
     protected override void Death()
     {
-        Player.Instance.GetComponent<PlayerAbilityController>().SetDodgeAbility(false);
-        Player.Instance.playerAnimation.SetDeadAnimation();
-        //go to alchemy table
-        Debug.Log(RespawnManager.Instance);
-        RespawnManager.Instance.RespawnPlayer();
 
+        // Player.Instance.GetComponent<PlayerAbilityController>().SetDodgeAbility(false);
+        // Player.Instance.playerAnimation.SetDeadAnimation();
+        // //go to alchemy table
+        // Debug.Log(RespawnManager.Instance);
+        // RespawnManager.Instance.RespawnPlayer();
 
     }
 

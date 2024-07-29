@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Stage4", menuName = "BossStage/Stage4", order = 1)]
 public class BossStage4 : StageBaseSO
 {
-
     [SerializeField] private float delayBetweenAttacks;
     [SerializeField] private int numberOfProjectiles;
 

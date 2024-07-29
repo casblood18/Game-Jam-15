@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        ReadMovement();
+        //ReadMovement();
     }
 
     private void FixedUpdate()

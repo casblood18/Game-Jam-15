@@ -23,7 +23,6 @@ public class BossStage2 : StageBaseSO
             yield return PerformAttack(boss, boss.YellowProjectile);
             yield return new WaitForSeconds(attackDelay);
         }
-
     }
 
     private IEnumerator PerformAttack(BossAI boss, ProjectileBaseSO projectile)
@@ -33,8 +32,6 @@ public class BossStage2 : StageBaseSO
         for (int i = 0; i < projectilesAmount; i++)
         {
             float angle = i * Mathf.PI * 2 / projectilesAmount;
-
-            float randomAngle = UnityEngine.Random.Range(0f, 360f);
 
             Vector2 direction = new(Mathf.Cos(angle), Mathf.Sin(angle));
 
@@ -52,6 +49,7 @@ public class BossStage2 : StageBaseSO
                 rb.velocity = direction * projectile.Speed;
             }
         }
+        
         yield return null;
     }
 
