@@ -1,14 +1,15 @@
-
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IDamageTaken
+public class PlayerHealth : HealthBase
 {
+    public static Action<float> OnDamagePlayer;
     private Player player;
     private PlayerAnimation playerAnimator;
     private float _playerHealth;
-    private float _playerHealthMax;
 
     [SerializeField] HUD _HUD;
 
@@ -18,33 +19,31 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
         player = GetComponent<Player>();
 
         _playerHealth = player.Stats.MaxHealth;
-        _playerHealthMax = player.Stats.MaxHealth;
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            DamageTaken(1f);
-        }
+        OnDamagePlayer += TakeDamage;
     }
-    public void DamageTaken(float damage)
+
+    private void OnDisable()
     {
+        OnDamagePlayer -= TakeDamage;
+    }
+
+    protected override void TakeDamage(float damage)
+    {
+        if (_HUD != null)
+            _HUD.OnPlayerHealthChanged(_playerHealth);
+
         _playerHealth -= damage;
-        _HUD.OnPlayerHealthChanged(_playerHealth);
 
-        UpdatePlayerStat();
-        if (_playerHealth <= 0f)
-        {
-            PlayerDeath();
-        }
-    }
-    private void UpdatePlayerStat()
-    {
-        player.Stats.Health = _playerHealth;
+        if (_playerHealth > 0f) return;
+
+        Death();
     }
 
-    private void PlayerDeath()
+    protected override void Death()
     {
         playerAnimator.SetDeadAnimation();
     }

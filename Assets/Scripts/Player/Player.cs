@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Player : Singleton<Player>
 {
+    public PlayerStats Stats => stats;
+
     [SerializeField] private PlayerStats stats;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private PlayerAnimation animations;
 
     public PlayerStats Stats => stats;
-    [HideInInspector] public SpriteRenderer playerSpriteRenderer;
     [HideInInspector] public PlayerAnimation playerAnimation;
+    public SpriteRenderer playerSpriteRenderer;
 
     protected override void Awake()
     {
@@ -23,5 +25,4 @@ public class Player : Singleton<Player>
         stats.ResetStats();
         animations.SetRevive();
     }
-
 }
