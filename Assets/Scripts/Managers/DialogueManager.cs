@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,24 +11,16 @@ public class DialogueManager : Singleton<DialogueManager>
     private Queue<string> dialogueQueue = new Queue<string>();
     private bool dialogueStarted = false;
 
+    public Action OnDialogueEnd;
     protected override void Awake()
     {
         base.Awake();
     }
 
-    private void OnEnable()
-    {
-        InputManager.Instance.OnInteractInput += ContinueDialogue;
-    }
-
-    private void OnDisable()
-    {
-        InputManager.Instance.OnInteractInput -= ContinueDialogue;
-    }
-
     public void LoadDialogue()
     {
         if (NPC.npcDialogue.Dialogue.Length <= 0) return;
+
         foreach (string sentence in NPC.npcDialogue.Dialogue)
         {
             dialogueQueue.Enqueue(sentence);
@@ -36,36 +29,51 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void StartDialogue()
     {
-        if (dialogueStarted) return;
-        LoadDialogue();
-        _HUD.SetDialogueUI(true);
-        dialogueStarted = true;
-        _HUD.SetDialogueNPC(NPC.npcDialogue.Name, NPC.npcDialogue.Avatar);
-        _HUD.SetDialogueContext(dialogueQueue.Peek());
+        SoundManager.Instance.StopSound(Audio.dialogue);
+
+        if (dialogueStarted) 
+        {
+            //Debug.Log("ContinueDialogue");
+            ContinueDialogue(); 
+        }
+        else
+        {
+            //Debug.Log("start new dialogue");
+            LoadDialogue();
+            _HUD.SetDialogueUI(true);
+            dialogueStarted = true;
+            _HUD.SetDialogueNPC(NPC.npcDialogue.Name, NPC.npcDialogue.Avatar);
+            SoundManager.Instance.PlaySoundOnce(Audio.interact);
+            _HUD.SetDialogueContext(dialogueQueue.Dequeue());
+            SoundManager.Instance.PlaySoundOnce(Audio.dialogue);
+        }
+        
     }
 
     private void ContinueDialogue()
     {
         if (NPC == null)
         {
-            dialogueQueue.Clear();
+            ResetDialogue();
             return;
         }
-
         if (dialogueQueue.Count <= 0)
         {
-            EndDialogue();
-            dialogueStarted = false;
+            NPC.DialogueEnd();
+            ResetDialogue();
             return;
         }
-
+        SoundManager.Instance.PlaySoundOnce(Audio.interact);
         _HUD.SetDialogueContext(dialogueQueue.Dequeue());
+        SoundManager.Instance.PlaySoundOnce(Audio.dialogue);
     }
 
-    public void EndDialogue()
+    public void ResetDialogue()
     {
+        if (!dialogueStarted) return;
         dialogueStarted = false;
         _HUD.SetDialogueUI(false);
         dialogueQueue.Clear();
+        Debug.Log("deactivate dialogue");
     }
 }

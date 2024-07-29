@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class PlayerInteractionController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Interactable interactingItem;
+
+    private void OnEnable()
     {
-        
+        InputManager.Instance.OnInteractInput += PlayerTryInteract;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        InputManager.Instance.OnInteractInput -= PlayerTryInteract;
+    }
+
+    private void PlayerTryInteract()
+    {
+        if (interactingItem != null) interactingItem.Interact();
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        other.TryGetComponent<Interactable>(out interactingItem);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        interactingItem = null;
     }
 }
