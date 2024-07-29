@@ -15,12 +15,18 @@ public class PlayerAnimation : MonoBehaviour
     private readonly int roll = Animator.StringToHash("Roll");
 
     private Animator animator;
-    //[SerializeField] public PlayerAbilityController playerAbilityController;
+    private PlayerAbilityController playerAbilityController;
+ 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
     }
 
+    private void Start()
+    {
+        playerAbilityController = Player.Instance.GetComponent<PlayerAbilityController>();
+    }
     public void SetDeadAnimation()
     {
         animator.SetTrigger(dead);
@@ -43,21 +49,21 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetTrigger(revive);
     }
 
-    //public void TeleportInAnimation()
-    //{
-    //    animator.Play("Teleport In");    
-    //}
+    public void TeleportInAnimation()
+    {
+        animator.Play("Teleport In");
+    }
 
-    //public void Teleport()
-    //{
-    //    playerAbilityController.TeleportOut();
-    //    TeleportOutAnimation();
-    //}
+    public void Teleport()
+    {
+        playerAbilityController.TeleportOut();
+        TeleportOutAnimation();
+    }
 
-    //public void TeleportOutAnimation()
-    //{
-    //    animator.Play("Teleport Out");
-    //}
+    public void TeleportOutAnimation()
+    {
+        animator.Play("Teleport Out");
+    }
 
     public void SetAttackAnimation()
     {
@@ -75,8 +81,8 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetTrigger(roll);
     }
 
-    //public void RotateNormal()
-    //{
-    //    playerAbilityController.FlipXNormal();
-    //}
+    public void RotateNormal()
+    {
+        playerAbilityController.FlipXNormal();
+    }
 }
