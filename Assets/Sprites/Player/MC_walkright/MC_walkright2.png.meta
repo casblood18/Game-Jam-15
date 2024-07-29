@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MC_walkright2_0: -385729353919832702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

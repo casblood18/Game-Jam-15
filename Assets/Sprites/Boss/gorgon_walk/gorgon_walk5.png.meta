@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gorgon_walk5_0: 6892047256130743376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

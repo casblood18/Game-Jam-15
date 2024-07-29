@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      serpent(mob)_walkup3_0: 6805969951305253182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

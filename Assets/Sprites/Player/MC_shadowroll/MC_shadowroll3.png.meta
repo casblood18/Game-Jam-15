@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MC_shadowroll3_0: 1213725177456114649
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

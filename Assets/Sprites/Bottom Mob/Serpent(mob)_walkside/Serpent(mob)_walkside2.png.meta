@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Serpent(mob)_walkside2_0: -2044671815453162526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

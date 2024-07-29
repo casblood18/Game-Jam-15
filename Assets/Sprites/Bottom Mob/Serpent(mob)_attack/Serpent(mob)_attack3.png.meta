@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Serpent(mob)_attack3_0: 4282135993069112486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

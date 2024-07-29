@@ -188,7 +188,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MC_teleport7_0: -9076207681688521148
+      MC_teleport7_1: 3922203053137330982
+      MC_teleport7_2: -7624807643559964679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
