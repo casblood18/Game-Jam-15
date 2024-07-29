@@ -2,6 +2,7 @@
 using System;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerHealth : MonoBehaviour, IDamageTaken
 {
@@ -51,10 +52,12 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
     private void PlayerDeath()
     {
+        Player.Instance.GetComponent<PlayerAbilityController>().SetDodgeAbility(false);
         Player.Instance.playerAnimation.SetDeadAnimation();
         //go to alchemy table
         Debug.Log(RespawnManager.Instance);
         RespawnManager.Instance.RespawnPlayer();
+
 
     }
 

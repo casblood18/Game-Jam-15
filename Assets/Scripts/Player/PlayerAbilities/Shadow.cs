@@ -29,6 +29,7 @@ public class Shadow : MonoBehaviour
 
     private void UpdateSprite()
     {
+        if (Player.Instance.playerSpriteRenderer.sprite == null) return;
         if (_shadowSprite.sprite != Player.Instance.playerSpriteRenderer.sprite)
             _shadowSprite.sprite = Player.Instance.playerSpriteRenderer.sprite;
     }

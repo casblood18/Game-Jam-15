@@ -1,13 +1,16 @@
 using UnityEngine;
+using System.Collections;
 using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerAbilityController : MonoBehaviour
 {
     [SerializeField] HUD _HUD;
+    [SerializeField] float offSet = 0.1f;
     [Header("Prefab")]
     [SerializeField] private PlayerLight _light;
     [SerializeField] GameObject _teleportMarker;
     private Player player;
+    RaycastHit2D hit;
 
     #region TeleportVariables
     private bool _isTeleporting;
@@ -16,6 +19,9 @@ public class PlayerAbilityController : MonoBehaviour
     #endregion
 
     private bool _isDodgeActivate;
+    public bool _isDodgeGet;
+
+    [SerializeField] private LayerMask _layerMask;
 
     private void OnEnable()
     {
@@ -47,13 +53,13 @@ public class PlayerAbilityController : MonoBehaviour
         ChargeTeleport(1);
         SetDodgeAbility(false);
     }
-
     public void SetDodgeAbility(bool value)
     {
         if (value)
         {
             _isDodgeActivate = true;
             _light.Activate();
+            _isDodgeGet = true;
         }
         else
         {
@@ -117,11 +123,37 @@ public class PlayerAbilityController : MonoBehaviour
 
         if (_isDodgeActivate) 
         {
+            CheckOutOfRange();
             Debug.Log("player dodge");
             SoundManager.Instance.PlaySoundOnce(Audio.dodge);
-            this.transform.position = _light.shadow.targetPosition; 
         }
     }
+    //private void OnDrawGizmos()
+    //{
+    //    Debug.DrawRay(transform.position, _light.shadow.targetPosition - this.transform.position, Color.red);
+    //}
+    private void CheckOutOfRange()
+    {
+        
+        float rayLength = Vector2.Distance(player.FootPosition.position, _light.shadow.targetPosition);
+        Vector2 direction = (_light.shadow.targetPosition - player.FootPosition.position).normalized;
+        hit = Physics2D.Raycast(player.FootPosition.position, direction, rayLength, _layerMask);
+        
+        // Check if the raycast hits something
+        if (hit.collider != null)
+        {
+            //Debug.Log("Raycast hit: " + hit.collider.name);
+            //Debug.DrawRay(transform.position, direction * rayLength, Color.blue);
+            Vector2 targetPos = hit.point - direction * offSet + new Vector2(0, 0.528f);
+            this.transform.position = targetPos;
+        }
+        else
+        {
+            Vector3 targetPos = _light.shadow.targetPosition + new Vector3(0, 0.528f, 0);
+            this.transform.position = targetPos;
+        }
+    }
+
     private void OnAttack()
     {
         if (_HUD._attackFreeze) return;
