@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerStat", menuName = "Player Stats")]
-public class PlayerStats : ScriptableObject
+public class PlayerStats : StatsBaseSO
 {
     [Header("Health")]
     public float Health;
@@ -17,6 +17,7 @@ public class PlayerStats : ScriptableObject
 
 
     public Action OnResetPlayerStats;
+    [ContextMenu("Reset player stats")]
     public void ResetStats()
     {
         Debug.Log("reset");
