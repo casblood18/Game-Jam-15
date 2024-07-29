@@ -7,6 +7,7 @@ public class PlayerAbilityController : MonoBehaviour
     [Header("Prefab")]
     [SerializeField] private PlayerLight _light;
     [SerializeField] GameObject _teleportMarker;
+    private Player player;
 
     #region TeleportVariables
     private bool _isTeleporting;
@@ -21,16 +22,24 @@ public class PlayerAbilityController : MonoBehaviour
         InputManager.Instance.OnAttackInput += OnAttack;
         InputManager.Instance.OnTeleportInput += OnTeleport;
         InputManager.Instance.OnDodgeInput += OnDodge;
+        player.Stats.OnResetPlayerStats += ResetPlayerAbility;
     }
     private void OnDisable()
     {
         InputManager.Instance.OnAttackInput -= OnAttack;
         InputManager.Instance.OnTeleportInput -= OnTeleport;
         InputManager.Instance.OnDodgeInput -= OnDodge;
+        player.Stats.OnResetPlayerStats -= ResetPlayerAbility;
+    }
+    private void ResetPlayerAbility()
+    {
+        Debug.Log("reset player teleport to " + Player.Instance.Stats.Teleport);
+        UpdateTeleportNum(Player.Instance.Stats.Teleport);
     }
 
     private void Awake()
     {
+        player = GetComponent<Player>();
         InitTeleportMarker();
     }
     private void Start()
@@ -68,13 +77,12 @@ public class PlayerAbilityController : MonoBehaviour
         if (!_isTeleporting)
         {
             if (teleportNum == 0) return;
-            
+
             Debug.Log("Teleport");
             SoundManager.Instance.PlaySoundOnce(Audio.teleport);
             _HUD.OnTeleport();
             _teleportObject.transform.position = this.transform.position;
-            teleportNum--;
-            _HUD.UpdateTeleportUI(teleportNum);
+            UpdateTeleportNum(teleportNum-1);
         }
         else
         {
@@ -88,13 +96,18 @@ public class PlayerAbilityController : MonoBehaviour
         _isTeleporting = !_isTeleporting;
     }
 
+    private void UpdateTeleportNum(int value)
+    {
+        teleportNum = value;
+        _HUD.UpdateTeleportUI(teleportNum);
+    }
+
     /// <summary>
     /// Charge teleport ability with default 1 usage.
     /// </summary>
     public void ChargeTeleport(int charge = 1)
     {
-        teleportNum += charge;
-        _HUD.UpdateTeleportUI(teleportNum);
+        UpdateTeleportNum(teleportNum + charge);
     }
     #endregion
 

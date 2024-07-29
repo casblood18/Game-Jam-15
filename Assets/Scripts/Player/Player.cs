@@ -15,6 +15,9 @@ public class Player : Singleton<Player>
         base.Awake();
         playerSpriteRenderer = _spriteRenderer;
         playerAnimation = animations;
+    }
+    private void Start()
+    {
         ResetPlayer();
     }
 
