@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class PlayerAnimation : MonoBehaviour
     private readonly int moving = Animator.StringToHash("IsMoving");
     private readonly int dead = Animator.StringToHash("Dead");
     private readonly int revive = Animator.StringToHash("Revive");
+    private readonly int attack = Animator.StringToHash("Attack");
+    private readonly int teleport = Animator.StringToHash("Teleporting");
+    private readonly int roll = Animator.StringToHash("Roll");
 
     private Animator animator;
+    //[SerializeField] public PlayerAbilityController playerAbilityController;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -37,4 +42,41 @@ public class PlayerAnimation : MonoBehaviour
         SetMoveDirection(Vector2.down);
         animator.SetTrigger(revive);
     }
+
+    //public void TeleportInAnimation()
+    //{
+    //    animator.Play("Teleport In");    
+    //}
+
+    //public void Teleport()
+    //{
+    //    playerAbilityController.TeleportOut();
+    //    TeleportOutAnimation();
+    //}
+
+    //public void TeleportOutAnimation()
+    //{
+    //    animator.Play("Teleport Out");
+    //}
+
+    public void SetAttackAnimation()
+    {
+        animator.SetTrigger(attack);
+    }
+
+    public void PlayIdle()
+    {
+        animator.SetBool(attack, false);
+        //animator.Play("Idle Animation");
+    }
+
+    public void RollAnimation()
+    {
+        animator.SetTrigger(roll);
+    }
+
+    //public void RotateNormal()
+    //{
+    //    playerAbilityController.FlipXNormal();
+    //}
 }
