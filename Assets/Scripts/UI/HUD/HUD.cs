@@ -84,7 +84,6 @@ public class HUD : MonoBehaviour
         _playerHealthBar = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR);
         _playerHealthBarStick = _root.Q<ProgressBar>(className: UIClassNames.PLAYER_HEALTH_BAR_STICK);
         _teleportNumLabel = _root.Q<Label>(UINames.TELEPORT_NUM);
-
         UpdateHealthBarPosition();
         OnPlayerInit();
         InitializeUI();

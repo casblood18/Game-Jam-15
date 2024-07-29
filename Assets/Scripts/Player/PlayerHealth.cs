@@ -2,11 +2,11 @@
 using System;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerHealth : MonoBehaviour, IDamageTaken
 {
     private Player player;
-    private PlayerAnimation playerAnimator;
     private float _playerHealth;
     private float _playerHealthMax;
 
@@ -14,13 +14,19 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
     private void Awake()
     {
-        playerAnimator = GetComponent<PlayerAnimation>();
         player = GetComponent<Player>();
-
+        
         _playerHealth = player.Stats.MaxHealth;
         _playerHealthMax = player.Stats.MaxHealth;
     }
-
+    private void OnEnable()
+    {
+        player.Stats.OnResetPlayerStats += ResetPlayerHealth;
+    }
+    private void OnDisable()
+    {
+        player.Stats.OnResetPlayerStats -= ResetPlayerHealth;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -46,7 +52,20 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
     private void PlayerDeath()
     {
-        playerAnimator.SetDeadAnimation();
+        Player.Instance.GetComponent<PlayerAbilityController>().SetDodgeAbility(false);
+        Player.Instance.playerAnimation.SetDeadAnimation();
+        //go to alchemy table
+        Debug.Log(RespawnManager.Instance);
+        RespawnManager.Instance.RespawnPlayer();
+
+
+    }
+
+    private void ResetPlayerHealth()
+    {
+        Debug.Log("reset player health to " + player.Stats.Health);
+        _playerHealth = player.Stats.Health;
+        _HUD.OnPlayerHealthChanged(_playerHealth);
     }
 
 }

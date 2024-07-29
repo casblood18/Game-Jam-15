@@ -17,16 +17,6 @@ public class DialogueManager : Singleton<DialogueManager>
         base.Awake();
     }
 
-    private void OnEnable()
-    {
-        InputManager.Instance.OnInteractInput += StartDialogue;
-    }
-
-    private void OnDisable()
-    {
-        InputManager.Instance.OnInteractInput -= StartDialogue;
-    }
-
     public void LoadDialogue()
     {
         if (NPC.npcDialogue.Dialogue.Length <= 0) return;

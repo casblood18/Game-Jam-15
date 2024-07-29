@@ -4,37 +4,40 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NPCInteract : MonoBehaviour
+public class NPCInteract : Interactable
 {
     [SerializeField] private NPCDialogue _npcDialogue;
-    [SerializeField] private GameObject interactionBox;
-    [SerializeField] private TextMeshProUGUI interactionText;
 
-    private bool inRadius = false;
     public NPCDialogue npcDialogue => _npcDialogue;
 
+    
+    private void StartDialogue()
+    {
+        if (inRadius)
+            DialogueManager.Instance.StartDialogue();
+    }
     public virtual void DialogueEnd()
     {
         Debug.Log($"end dialogue with {npcDialogue.name}");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player")) return;
-
+        base.OnTriggerEnter2D(other);
         DialogueManager.Instance.NPC = this;
-        inRadius = true;
-        interactionBox.SetActive(true);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    protected override void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            inRadius = false;
-            DialogueManager.Instance.NPC = null;
-            interactionBox.SetActive(false);
-            DialogueManager.Instance.ResetDialogue();
-        }
+        base.OnTriggerExit2D(other);
+        DialogueManager.Instance.NPC = null;
+        DialogueManager.Instance.ResetDialogue();
+        
+    }
+
+    public override void Interact()
+    {
+        base.Interact();
+        StartDialogue();
     }
 }
