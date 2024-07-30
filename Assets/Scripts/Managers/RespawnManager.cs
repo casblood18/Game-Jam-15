@@ -23,7 +23,6 @@ public class RespawnManager : Singleton<RespawnManager>
     }
     private void Start()
     {
-        Debug.Log(alchemyTables.Length);
         alchemyTableDic.Add(table.forestTable, alchemyTables[0]);
         alchemyTableDic.Add(table.bossTable, alchemyTables[1]);
         _respawnDestination = alchemyTableDic[table.forestTable];

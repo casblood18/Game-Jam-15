@@ -16,11 +16,9 @@ MonoBehaviour:
   Avatar: {fileID: -4224191113791194064, guid: 5c54e08dd5f2c294684342c754ba8d65, type: 3}
   Dialogue:
   - 'Welcome, hero of shadow magic, we have been awaiting your arrival. '
-  - 'This island, once a sanctuary of alchemists, now lies in shadow. Medusa has
-    come for vengeance; her magical abilities know no bounds.
-
-    I shall grant
-    you the light artifact, a beacon in the shadows, use it well to exemplify your
-    magical abilities. '
+  - This island, once a sanctuary of alchemists, now lies in shadow. Medusa has come
+    for vengeance; her magical abilities know no bounds.
+  - 'I shall grant you the light artifact, a beacon in the shadows, use it well to
+    exemplify your magical abilities. '
   - 'Seek the seer in the town ahead. He will guide you on your journey. May wisdom
     light your path. '

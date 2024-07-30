@@ -12,7 +12,7 @@ public class HUD : MonoBehaviour
     [SerializeField] private float _playerHealthOffsetOnY = 90f;
     [SerializeField] private float _coolDownAttack = 0.2f;
     [SerializeField] private float _coolDownTeleport = 1f;
-    private float _coolDownDodge => Player.Instance.playerAbilityController.dodgeSafeDuration;
+    [SerializeField] private float _coolDownDodge =1f;
 
     public bool _attackFreeze;
     public bool _teleportFreeze;

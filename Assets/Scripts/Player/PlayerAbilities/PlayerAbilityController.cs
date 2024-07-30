@@ -24,9 +24,8 @@ public class PlayerAbilityController : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private GameObject projectilePrefab;
 
-    //test
+  
     [SerializeField] private float _dodgePositionDelay = 0.1f;
-    [SerializeField] public float dodgeSafeDuration = 1.3f;
     private void OnEnable()
     {
         InputManager.Instance.OnAttackInput += OnAttack;
@@ -51,27 +50,13 @@ public class PlayerAbilityController : MonoBehaviour
     private void Awake()
     {
         InitTeleportMarker();
+        _cameraFollow = Camera.main.GetComponent<CameraFollow>();
     }
     private void Start()
     {
-        ChargeTeleport(1);
         SetDodgeAbility(false);
     }
-    public void SetDodgeAbility(bool value)
-    {
-        if (value)
-        {
-            _isDodgeActivate = true;
-            _light.Activate();
-            _isDodgeGet = true;
-        }
-        else
-        {
-            _isDodgeActivate = false;
-            _light.Deactivate();
-        }
-    }
-
+    
     #region Teleport
     private void InitTeleportMarker()
     {
@@ -96,24 +81,30 @@ public class PlayerAbilityController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Teleport back");
+            Debug.Log("Teleporting");
+            MovingAbilityPreparation();
             Player.Instance.playerAnimation.TeleportInAnimation();
             SoundManager.Instance.PlaySoundOnce(Audio.teleport);
             _HUD.OnTeleport();
-            this.transform.position = _teleportObject.transform.position;
         }
 
         _teleportObject.SetActive(!_isTeleporting);
         _isTeleporting = !_isTeleporting;
     }
+
+    public void MovingAbilityPreparation()
+    {
+        Player.Instance.playerMovement.CanMove = false;
+        _light.shadow.Deactivate();
+    }
+
     public void TeleportOut()
     {
-        Debug.Log("Teleport back");
+        Debug.Log("Teleport second animation");
         SoundManager.Instance.PlaySoundOnce(Audio.teleport);
         _HUD.OnTeleport();
         this.transform.position = _teleportObject.transform.position;
     }
-
     private void UpdateTeleportNum(int value)
     {
         teleportNum = value;
@@ -129,6 +120,21 @@ public class PlayerAbilityController : MonoBehaviour
     }
     #endregion
 
+    #region Dodge
+    public void SetDodgeAbility(bool value)
+    {
+        if (value)
+        {
+            _isDodgeActivate = true;
+            _light.Activate();
+            _isDodgeGet = true;
+        }
+        else
+        {
+            _isDodgeActivate = false;
+            _light.Deactivate();
+        }
+    }
     private void OnDodge()
     {
 
@@ -136,11 +142,9 @@ public class PlayerAbilityController : MonoBehaviour
 
         if (_isDodgeActivate)
         {
-            Player.Instance.playerMovement.CanMove = false;
-            _light.shadow.Deactivate();
+            MovingAbilityPreparation();
             ActivateRollAnimation();
 
-            StartCoroutine(EnableDodgeAfterAnimation(dodgeSafeDuration));
 
             CheckOutOfRange();
             SoundManager.Instance.PlaySoundOnce(Audio.dodge);
@@ -149,20 +153,37 @@ public class PlayerAbilityController : MonoBehaviour
     }
 
     // Coroutine to handle the delay
-    IEnumerator EnableDodgeAfterAnimation(float delay)
+    public void EnableDodgeAfterAnimation()
     {
-        yield return new WaitForSeconds(delay);
         Player.Instance.playerAnimation.FlipXNormal();
-        _light.shadow.Activate();
+        MovingAbilityFinish();
         Debug.Log("EnableDodgeAfterAnimation");
     }
+
+    public void MovingAbilityFinish()
+    {
+        StartCoroutine(WaitForCameraRange());
+        
+    }
+    private CameraFollow _cameraFollow;
+    IEnumerator WaitForCameraRange()
+    {
+        while (!_cameraFollow.InCameraRange)
+        {
+            yield return null;
+        }
+        if (_isDodgeGet) _light.shadow.Activate();
+
+        Player.Instance.playerMovement.CanMove = true;
+        Debug.Log("finishAnimation");
+    }
+
     IEnumerator TransferPlayerInDodge(float delay)
     {
         yield return new WaitForSeconds(delay);
         this.transform.position = targetPos;
         Debug.Log("TransferPlayerInDodge");
-        yield return new WaitForSeconds(0.3f);
-        Player.Instance.playerMovement.CanMove = true;
+        
     }
     Vector2 targetPos;
     private void CheckOutOfRange()
@@ -189,6 +210,7 @@ public class PlayerAbilityController : MonoBehaviour
     {
         Player.Instance.playerAnimation.RollAnimation();
     }
+    #endregion
 
     private void OnAttack()
     {
