@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[DefaultExecutionOrder(-1)]
 public class Player : Singleton<Player>
 {
     [SerializeField] private PlayerStats stats;
