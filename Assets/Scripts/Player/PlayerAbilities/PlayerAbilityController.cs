@@ -68,7 +68,7 @@ public class PlayerAbilityController : MonoBehaviour
         else
         {
             _isDodgeActivate = false;
-            _light.shadow.Deactivate();
+            _light.Deactivate();
         }
     }
 
