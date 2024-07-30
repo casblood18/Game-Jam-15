@@ -27,11 +27,10 @@ public class Projectile : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
-        //else if (other.CompareTag("MapStuff"))
-        //{
-        //    Destroy(gameObject);
-        //}
+        else if (other.CompareTag("Boss"))
+        {
+            BossHealth.OnDamageBoss?.Invoke(damage);
+        }
     }
 
     private IEnumerator DestroyAfterTime(float time)

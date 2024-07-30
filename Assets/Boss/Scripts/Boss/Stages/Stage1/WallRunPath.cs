@@ -23,5 +23,5 @@ public class WallRunPath : MonoBehaviour
         return points[currentPointIndex].transform;
     }
 
-        public List<GameObject> GetPoints() => points;
+    public List<GameObject> GetPoints() => points;
 }

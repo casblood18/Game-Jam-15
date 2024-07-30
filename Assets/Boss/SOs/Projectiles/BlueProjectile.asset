@@ -16,6 +16,5 @@ MonoBehaviour:
   CanBeMixed: 0
   Speed: 3
   Damage: 10
-  ProjectileSprite: {fileID: 21300000, guid: 2da2d15ce082e12448ac493c55a33f0f, type: 3}
   ProjectileAnimator: {fileID: 9100000, guid: 1384b7a96649e3907ad11a586ae5219e, type: 2}
   Size: 0.5

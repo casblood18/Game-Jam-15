@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596f009f629797a3083c44fe028950a7, type: 3}
   m_Name: Stage1
   m_EditorClassIdentifier: 
-  MinimumHealth: 80
+  MinimumHealth: 350
   delayBetweenAttacks: 3
   numberOfProjectiles: 10
   coneAngle: 90

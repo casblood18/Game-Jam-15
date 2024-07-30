@@ -67,7 +67,7 @@ public class ProjectilePrefab : MonoBehaviour
 
         animatorController.runtimeAnimatorController = currentProjectile.ProjectileAnimator;
 
-        transform.localScale = new Vector3(currentProjectile.Size, currentProjectile.Size, 1);
+        transform.localScale = new Vector3(currentProjectile.Size / 4, currentProjectile.Size / 4, 1);
 
         CanBackshotMix = false;
 
