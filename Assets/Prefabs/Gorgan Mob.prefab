@@ -126,12 +126,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  resetRadius: 4
+  resetRadius: 8
   detectionRadius: 6
   attackRadius: 5
   moveSpeed: 3
   projectilePrefab: {fileID: 4026472253752420869, guid: b21a7bce427239347b814de808aedbe7, type: 3}
-  shootDelay: 0.5
+  shootDelay: 0.35
   health: 100
   spriteRenderer: {fileID: 6293288800068088227}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
