@@ -605,8 +605,8 @@ GameObject:
   - component: {fileID: 4984288089254782489}
   - component: {fileID: 2800463468023938328}
   - component: {fileID: 7355618617567611162}
-  - component: {fileID: 7288271313072689564}
   - component: {fileID: 8471902929620362855}
+  - component: {fileID: 5488472937857106270}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -726,8 +726,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   projectilePrefab: {fileID: 9122551341415574536, guid: 0d2a0f890a4a20742b0cd58d48d1e16e, type: 3}
---- !u!61 &7288271313072689564
-BoxCollider2D:
+--- !u!114 &8471902929620362855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7441113644733763663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f475ca46d23c674d89dfc97053a35dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &5488472937857106270
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -736,7 +748,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: abd79620e9de0964d83d4a7f819d1c14, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -756,31 +768,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.018882751, y: -0.010378003}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.92694855, y: 1.0726464}
-  m_EdgeRadius: 0
---- !u!114 &8471902929620362855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7441113644733763663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f475ca46d23c674d89dfc97053a35dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Offset: {x: -0.0000009536743, y: -0.087818384}
+  m_Size: {x: 0.34727287, y: 0.82436323}
+  m_Direction: 0

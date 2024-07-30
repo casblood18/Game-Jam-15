@@ -94,9 +94,6 @@ public class PlayerAbilityController : MonoBehaviour
         {
             Debug.Log("Teleport back");
             Player.Instance.playerAnimation.TeleportInAnimation();
-            SoundManager.Instance.PlaySoundOnce(Audio.teleport);
-            _HUD.OnTeleport();
-            this.transform.position = _teleportObject.transform.position;
         }
 
         _teleportObject.SetActive(!_isTeleporting);
