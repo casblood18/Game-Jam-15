@@ -83,6 +83,10 @@ public class PlayerAnimation : MonoBehaviour
 
     public void RotateNormal()
     {
-        playerAbilityController.FlipXNormal();
+        FlipXNormal();
+    }
+    public void FlipXNormal()
+    {
+        Player.Instance.playerSpriteRenderer.flipX = false;
     }
 }

@@ -1,13 +1,14 @@
 using UnityEngine;
 using System.Collections;
 using static UnityEngine.Rendering.DebugUI;
+using UnityEditor;
 
 public class PlayerAbilityController : MonoBehaviour
 {
     [SerializeField] HUD _HUD;
     [SerializeField] float offSet = 0.1f;
     [Header("Prefab")]
-    [SerializeField] private PlayerLight _light;
+    [SerializeField] public PlayerLight _light;
     [SerializeField] GameObject _teleportMarker;
     RaycastHit2D hit;
 
@@ -23,6 +24,9 @@ public class PlayerAbilityController : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private GameObject projectilePrefab;
 
+    //test
+    [SerializeField] private float _dodgePositionDelay = 0.1f;
+    [SerializeField] public float dodgeSafeDuration = 1.3f;
     private void OnEnable()
     {
         InputManager.Instance.OnAttackInput += OnAttack;
@@ -64,7 +68,7 @@ public class PlayerAbilityController : MonoBehaviour
         else
         {
             _isDodgeActivate = false;
-            _light.Deactivate();
+            _light.shadow.Deactivate();
         }
     }
 
@@ -127,21 +131,40 @@ public class PlayerAbilityController : MonoBehaviour
 
     private void OnDodge()
     {
+
         if (_HUD._DodgeFreeze) return;
 
-        if (_isDodgeActivate) 
+        if (_isDodgeActivate)
         {
-            CheckOutOfRange();
+            Player.Instance.playerMovement.CanMove = false;
+            _light.shadow.Deactivate();
             ActivateRollAnimation();
+
+            StartCoroutine(EnableDodgeAfterAnimation(dodgeSafeDuration));
+
+            CheckOutOfRange();
             SoundManager.Instance.PlaySoundOnce(Audio.dodge);
+
         }
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    Debug.DrawRay(transform.position, _light.shadow.targetPosition - this.transform.position, Color.red);
-    //}
-
+    // Coroutine to handle the delay
+    IEnumerator EnableDodgeAfterAnimation(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Player.Instance.playerAnimation.FlipXNormal();
+        _light.shadow.Activate();
+        Debug.Log("EnableDodgeAfterAnimation");
+    }
+    IEnumerator TransferPlayerInDodge(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        this.transform.position = targetPos;
+        Debug.Log("TransferPlayerInDodge");
+        yield return new WaitForSeconds(0.3f);
+        Player.Instance.playerMovement.CanMove = true;
+    }
+    Vector2 targetPos;
     private void CheckOutOfRange()
     {
         
@@ -152,37 +175,19 @@ public class PlayerAbilityController : MonoBehaviour
         // Check if the raycast hits something
         if (hit.collider != null)
         {
-            //Debug.Log("Raycast hit: " + hit.collider.name);
-            //Debug.DrawRay(transform.position, direction * rayLength, Color.blue);
-            Vector2 targetPos = hit.point - direction * offSet + new Vector2(0, 0.528f);
-            this.transform.position = targetPos;
+            targetPos = hit.point - direction * offSet + new Vector2(0, 0.528f);
+            StartCoroutine(TransferPlayerInDodge(_dodgePositionDelay));
         }
         else
         {
-            Vector3 targetPos = _light.shadow.targetPosition + new Vector3(0, 0.528f, 0);
-            this.transform.position = targetPos;
+            targetPos = _light.shadow.targetPosition + new Vector3(0, 0.528f, 0);
+            StartCoroutine(TransferPlayerInDodge(_dodgePositionDelay));
         }
     }
 
     private void ActivateRollAnimation()
     {
-        Vector2 moveInput = InputManager.Instance.PlayerInputActions.Player.Move.ReadValue<Vector2>();
-
-        // Check for horizontal movement
-        if (moveInput.x > 0)
-        {
-            Player.Instance.playerSpriteRenderer.flipX = false;
-        }
-        else if (moveInput.x < 0)
-        {
-            FlipXNormal();
-        }
         Player.Instance.playerAnimation.RollAnimation();
-    }
-
-    public void FlipXNormal()
-    {
-        Player.Instance.playerSpriteRenderer.flipX = true;
     }
 
     private void OnAttack()
