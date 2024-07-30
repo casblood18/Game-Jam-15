@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageTaken
 {
+    public static Action<float> OnDamagePlayer;
     private Player player;
     private float _playerHealth;
     private float _playerHealthMax;
@@ -19,18 +21,17 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     private void OnEnable()
     {
         player.Stats.OnResetPlayerStats += ResetPlayerHealth;
+
+        OnDamagePlayer += DamageTaken;
     }
+
     private void OnDisable()
     {
         player.Stats.OnResetPlayerStats -= ResetPlayerHealth;
+
+        OnDamagePlayer -= DamageTaken;
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            DamageTaken(1f);
-        }
-    }
+
     public void DamageTaken(float damage)
     {
         _playerHealth -= damage;
