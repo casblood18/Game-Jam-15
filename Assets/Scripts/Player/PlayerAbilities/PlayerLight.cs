@@ -31,7 +31,7 @@ public class PlayerLight : MonoBehaviour
 
     private void Update()
     {
-        if (!_enabled) return;
+        if (!_enabled || PauseMenu.IsPauseMenuEnabled) return;
 
         Vector2 cursorScreenPosition = Input.mousePosition;
         Vector2 cursorWorldPosition = Camera.main.ScreenToWorldPoint(cursorScreenPosition);

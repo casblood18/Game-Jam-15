@@ -2,32 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public abstract class Interactable : MonoBehaviour
 {
+    protected TextMeshProUGUI InteractionText;
+    protected bool InRadius = false;
+
     [SerializeField] private GameObject _interactionBox;
     [SerializeField] private TextMeshProUGUI interactionText;
-    protected bool inRadius = false;
-    protected GameObject InteractionBox;
+
+    void Start()
+    {
+        InteractionText = interactionText;
+        
+        interactionText.text = "Press " + InputManager.Instance.PlayerInputActions.Player.Interact.GetBindingDisplayString() + " to interact";
+    }
 
     public virtual void Interact()
     {
-        if (!inRadius) return;
+        if (!InRadius) return;
     }
+
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        inRadius = true;
+        InRadius = true;
         _interactionBox.SetActive(true);
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        InRadius = true;
+
     }
 
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            inRadius = false;
-            _interactionBox.SetActive(false);
-        }
-        else return;
+        if (!other.CompareTag("Player")) return;
+
+        InRadius = false;
+        _interactionBox.SetActive(false);
     }
 }
