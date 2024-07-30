@@ -9,6 +9,7 @@ TagManager:
   - Yellow
   - Enemy
   - MapStuff
+  - Projectile
   layers:
   - Default
   - TransparentFX

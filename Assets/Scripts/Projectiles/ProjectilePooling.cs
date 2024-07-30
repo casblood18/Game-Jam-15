@@ -1,0 +1,70 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Pool;
+
+public class ProjectilePooling : MonoBehaviour
+{
+    public static ProjectilePooling Instance;
+
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private float projectileLifetime;
+    private ObjectPool<GameObject> projectilePool;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        projectilePool = new ObjectPool<GameObject>(
+            createFunc: CreatePooledItem,
+            actionOnGet: OnTakeFromPool,
+            actionOnRelease: OnReturnedToPool,
+            actionOnDestroy: OnDestroyPoolObject,
+            collectionCheck: false,
+            defaultCapacity: 30,
+            maxSize: 150
+        );
+    }
+
+    private GameObject CreatePooledItem()
+    {
+        return Instantiate(projectilePrefab);
+    }
+
+    private void OnTakeFromPool(GameObject projectile)
+    {
+        projectile.SetActive(true);
+    }
+
+    private void OnReturnedToPool(GameObject projectile)
+    {
+        projectile.SetActive(false);
+    }
+
+    private void OnDestroyPoolObject(GameObject projectile)
+    {
+        Destroy(projectile);
+    }
+
+    public GameObject GetProjectile(Vector3 position, Quaternion rotation)
+    {
+        GameObject projectile = projectilePool.Get();
+
+        projectile.transform.SetPositionAndRotation(position, rotation);
+        return projectile;
+    }
+
+
+    public void ReleaseProjectile(GameObject projectile)
+    {
+        projectilePool.Release(projectile);
+    }
+
+}
