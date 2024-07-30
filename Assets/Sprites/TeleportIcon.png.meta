@@ -127,6 +127,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -308,7 +320,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TeleportIcon_0: -644413867610376191
+      TeleportIcon_1: -7110433807374865299
+      TeleportIcon_2: -2139457575576299941
+      TeleportIcon_3: -9080467001338416908
+      TeleportIcon_4: -2138338645774314569
+      TeleportIcon_5: -3175246173429903877
+      TeleportIcon_6: -7713692281443098191
+      TeleportIcon_7: 8032134396629496351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
