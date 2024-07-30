@@ -5,6 +5,7 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    
     private readonly int moveX = Animator.StringToHash("MoveX");
     private readonly int moveY = Animator.StringToHash("MoveY");
     private readonly int moving = Animator.StringToHash("IsMoving");
@@ -20,7 +21,6 @@ public class PlayerAnimation : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-
     }
 
     private void Start()
@@ -46,6 +46,10 @@ public class PlayerAnimation : MonoBehaviour
     public void SetRevive()
     {
         SetMoveDirection(Vector2.down);
+        if (Player.Instance.GetComponent<PlayerHealth>().PlayerIsDead)
+        {
+            Player.Instance.playerAbilityController.MovingAbilityPreparation();
+        }
         animator.SetTrigger(revive);
     }
 
@@ -54,15 +58,11 @@ public class PlayerAnimation : MonoBehaviour
         animator.Play("Teleport In");
     }
 
-    public void Teleport()
+    public void TeleportOut()
     {
+        Debug.Log("teleport out");
+        animator.Play("TeleportOut");
         playerAbilityController.TeleportOut();
-        TeleportOutAnimation();
-    }
-
-    public void TeleportOutAnimation()
-    {
-        animator.Play("Teleport Out");
     }
 
     public void SetAttackAnimation()
@@ -81,10 +81,21 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetTrigger(roll);
     }
 
-    public void RotateNormal()
+    public void DodgeAnimationFinish()
     {
-        FlipXNormal();
+        Player.Instance.playerAbilityController.EnableDodgeAfterAnimation();
     }
+    public void DeadAnimationFinished()
+    {
+        Debug.Log("finishAnimationFrom Action");
+        Player.Instance.playerAbilityController.MovingAbilityFinish();
+    }
+    public void MovingAbilityFinish()
+    {
+        Debug.Log("finishAnimationFrom Action");
+        Player.Instance.playerAbilityController.MovingAbilityFinish();
+    }
+
     public void FlipXNormal()
     {
         Player.Instance.playerSpriteRenderer.flipX = false;

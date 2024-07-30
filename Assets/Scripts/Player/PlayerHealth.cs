@@ -1,8 +1,4 @@
-
-using System;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerHealth : MonoBehaviour, IDamageTaken
 {
@@ -10,6 +6,7 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     private float _playerHealth;
     private float _playerHealthMax;
 
+    public bool PlayerIsDead;
     [SerializeField] HUD _HUD;
 
     private void Awake()
@@ -52,17 +49,17 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
     private void PlayerDeath()
     {
-        Player.Instance.GetComponent<PlayerAbilityController>().SetDodgeAbility(false);
+        PlayerIsDead = true;
+        Player.Instance.GetComponent<PlayerAbilityController>().MovingAbilityPreparation();
+        Player.Instance.playerAbilityController.MovingAbilityPreparation();
         Player.Instance.playerAnimation.SetDeadAnimation();
         //go to alchemy table
-        Debug.Log(RespawnManager.Instance);
         RespawnManager.Instance.RespawnPlayer();
-
-
     }
 
     private void ResetPlayerHealth()
     {
+        PlayerIsDead = false;
         Debug.Log("reset player health to " + player.Stats.Health);
         _playerHealth = player.Stats.Health;
         _HUD.OnPlayerHealthChanged(_playerHealth);
