@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Projectile
+  - Red
+  - Blue
+  - Yellow
+  - Enemy
+  - MapStuff
   layers:
   - Default
   - TransparentFX
@@ -16,7 +20,7 @@ TagManager:
   - Map Stuff
   - Shadow
   - islandGround
-  - 
+  - PlayerProjectile
   - 
   - 
   - 

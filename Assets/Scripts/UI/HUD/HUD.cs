@@ -12,7 +12,7 @@ public class HUD : MonoBehaviour
     [SerializeField] private float _playerHealthOffsetOnY = 90f;
     [SerializeField] private float _coolDownAttack = 0.2f;
     [SerializeField] private float _coolDownTeleport = 1f;
-    [SerializeField] private float _coolDownDodge = 0.5f;
+    [SerializeField] private float _coolDownDodge =1f;
 
     public bool _attackFreeze;
     public bool _teleportFreeze;
@@ -225,23 +225,23 @@ public class HUD : MonoBehaviour
     }
     private IEnumerator AnimateDodge()
     {
+        Debug.Log("StartDodge");
         _DodgeFreeze = true;
         float elapsedTime = 0;
-        float duration = _coolDownDodge;
         float currentValue = 0;
         float startValue = 0;
         float endValue = 1;
         var radialElement = _dodgeUI.Q<RadialFillElement>();
-        while (elapsedTime < duration)
+        while (elapsedTime < _coolDownDodge)
         {
             elapsedTime += Time.deltaTime;
-            currentValue = Mathf.Lerp(startValue, endValue, elapsedTime / duration);
+            currentValue = Mathf.Lerp(startValue, endValue, elapsedTime / _coolDownDodge);
             radialElement.value = currentValue;
             yield return null;
         }
         currentValue = 0;
         radialElement.value = currentValue;
-        //Debug.Log("DodgeFinish");
+        Debug.Log("DodgeFinish");
         _DodgeFreeze = false;
     }
     #endregion

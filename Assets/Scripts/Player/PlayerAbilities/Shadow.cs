@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Shadow : MonoBehaviour
 {
-    private Transform _lightSourceTransform;
+    [SerializeField] private Transform _lightSourceTransform;
     private SpriteRenderer _shadowSprite;
     public Vector3 targetPosition { get; private set; }
     private bool _enabled;
 
-    public void Activate(Transform lightSource)
+
+    public void Activate()
     {
-        _lightSourceTransform = lightSource;
         _shadowSprite.enabled = true;
         _enabled = true;
     }
