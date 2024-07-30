@@ -67,7 +67,7 @@ public class PlayerAnimation : MonoBehaviour
 
     public void SetAttackAnimation()
     {
-        animator.SetTrigger(attack);
+        //animator.SetTrigger(attack);
     }
 
     public void PlayIdle()
