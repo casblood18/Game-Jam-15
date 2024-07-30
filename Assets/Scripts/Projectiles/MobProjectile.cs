@@ -45,8 +45,12 @@ public class MobProjectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Apply damage to the player
-            Destroy(gameObject); 
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.DamageTaken(damage);
+            }
+            Destroy(gameObject);
         }
     }
 }

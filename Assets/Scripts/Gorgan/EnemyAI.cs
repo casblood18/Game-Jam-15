@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour
     private bool canShoot = true;
     public float shootDelay = 0.5f;
 
+    public float health = 100;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -70,7 +72,7 @@ public class EnemyAI : MonoBehaviour
         if (!isChasing)
         {
             MoveToWaypoint();
-            animator.SetBool("IsWalking", true); // Set animation parameter for walking
+            animator.SetBool("IsWalking", true); 
         }
     }
 
@@ -133,5 +135,14 @@ public class EnemyAI : MonoBehaviour
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, resetRadius);
+    }
+
+    public void DamageTaken(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
