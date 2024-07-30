@@ -1,15 +1,14 @@
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
-public class PlayerHealth : HealthBase
+public class PlayerHealth : MonoBehaviour, IDamageTaken
 {
-    public static Action<float> OnDamagePlayer;
     private Player player;
     private float _playerHealth;
+    private float _playerHealthMax;
 
     [SerializeField] HUD _HUD;
 
@@ -18,6 +17,7 @@ public class PlayerHealth : HealthBase
         player = GetComponent<Player>();
         
         _playerHealth = player.Stats.MaxHealth;
+        _playerHealthMax = player.Stats.MaxHealth;
     }
     private void OnEnable()
     {
@@ -27,30 +27,30 @@ public class PlayerHealth : HealthBase
     {
         player.Stats.OnResetPlayerStats -= ResetPlayerHealth;
     }
-
     private void Update()
     {
-        OnDamagePlayer += TakeDamage;
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            DamageTaken(1f);
+        }
     }
-
-    //private void OnDisable()
-    //{
-    //    OnDamagePlayer -= TakeDamage;
-    //}
-
-    protected override void TakeDamage(float damage)
+    public void DamageTaken(float damage)
     {
-        if (_HUD != null)
-            _HUD.OnPlayerHealthChanged(_playerHealth);
-
         _playerHealth -= damage;
+        _HUD.OnPlayerHealthChanged(_playerHealth);
 
-        if (_playerHealth > 0f) return;
-
-        Death();
+        UpdatePlayerStat();
+        if (_playerHealth <= 0f)
+        {
+            PlayerDeath();
+        }
+    }
+    private void UpdatePlayerStat()
+    {
+        player.Stats.Health = _playerHealth;
     }
 
-    protected override void Death()
+    private void PlayerDeath()
     {
         Player.Instance.GetComponent<PlayerAbilityController>().SetDodgeAbility(false);
         Player.Instance.playerAnimation.SetDeadAnimation();
