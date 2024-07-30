@@ -10,7 +10,6 @@ public class BossPaternPaths : MonoBehaviour
     public Path GetRandomPath()
     {
         int randomIndex = UnityEngine.Random.Range(0, paths.Count);
-        
         return paths[randomIndex];
     }
 }

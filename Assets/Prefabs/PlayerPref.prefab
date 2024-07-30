@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cdfa5d156ed1542b6cd25827b52b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lightSourceTransform: {fileID: 0}
+  _lightSourceTransform: {fileID: 3457824892584059003}
   _offset: 2.76
 --- !u!1 &7441113644733763663
 GameObject:
@@ -624,7 +624,7 @@ Transform:
   m_GameObject: {fileID: 7441113644733763663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.83, y: 3.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -708,7 +708,9 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 3753358771726374305}
   animations: {fileID: 6241622279993576072}
   footPosition: {fileID: 5891711753887662081}
-  _playerAnimator: {fileID: 0}
+
+  _playerAnimator: {fileID: 1600436702916771993}
+
 --- !u!114 &7355618617567611162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +733,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   projectilePrefab: {fileID: 9122551341415574536, guid: 0d2a0f890a4a20742b0cd58d48d1e16e, type: 3}
-  _dodgePositionDelay: 0.1
+
+  _dodgePositionDelay: 0.3
+
 --- !u!61 &7288271313072689564
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -25,8 +25,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Color normalColor;
     [SerializeField] private Color damageColor;
 
+
+    [SerializeField] HealthBar _healthBar;
+
     void Start()
     {
+        _healthBar.InitHealthBar(health);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         if (waypoints.Length > 0)
@@ -145,6 +149,8 @@ public class EnemyAI : MonoBehaviour
     public void DamageTaken(float damage)
     {
         health -= damage;
+        _healthBar.UpdateHealthBar(health);
+        Debug.Log("health:" + health);
         if (health <= 0)
         {
             Destroy(gameObject);

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3146245331926738177}
   - component: {fileID: 8823453239361358729}
   - component: {fileID: 1605070189085591240}
-  - component: {fileID: 5832829702224801806}
+  - component: {fileID: -6150635005071439520}
   m_Layer: 0
   m_Name: Player Projectile
   m_TagString: Untagged
@@ -125,7 +125,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   damage: 10
   destroyTime: 1
---- !u!58 &5832829702224801806
+--- !u!58 &-6150635005071439520
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,5 +159,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.9204244}
-  m_Radius: 1.6395752
+  m_Offset: {x: -0.07863329, y: 0.73856044}
+  m_Radius: 1.227208

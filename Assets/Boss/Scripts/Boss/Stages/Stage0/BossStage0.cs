@@ -53,7 +53,6 @@ public class BossStage0 : StageBaseSO
                 ProjectileBaseSO randomProjectile = GetRandomProjectile(boss, projectilesAmount, isNewWave);
                 isNewWave = false;
 
-
                 instance.GetComponent<ProjectilePrefab>().SetCurrentProjectile(randomProjectile, canBeMixed);
 
                 if (instance.TryGetComponent<Rigidbody2D>(out var rb))

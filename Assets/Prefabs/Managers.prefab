@@ -825,7 +825,7 @@ MonoBehaviour:
   _playerHealthOffsetOnY: 90
   _coolDownAttack: 0.2
   _coolDownTeleport: 1
-  _coolDownDodge: 0.5
+  _coolDownDodge: 1
   _attackFreeze: 0
   _teleportFreeze: 0
   _DodgeFreeze: 0
