@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Red
-  - Blue
-  - Yellow
+  - Projectile
   layers:
   - Default
   - TransparentFX

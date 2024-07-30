@@ -28,6 +28,12 @@ public class PlayerLight : MonoBehaviour
         _enabled = false;
         _shadow.Deactivate();
     }
+    public void Deactivate()
+    {
+        lightSource.enabled = false;
+        _enabled = false;
+        _shadow.Deactivate();
+    }
 
     private void Update()
     {
