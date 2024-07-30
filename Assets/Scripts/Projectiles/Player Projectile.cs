@@ -18,20 +18,8 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            EnemyAI enemy = other.GetComponent<EnemyAI>();
-            if (enemy != null)
-            {
-                enemy.DamageTaken(damage);
-            }
-            Destroy(gameObject);
-        }
-
-        //else if (other.CompareTag("MapStuff"))
-        //{
-        //    Destroy(gameObject);
-        //}
+        //add damage dealing to enemy
+        Destroy(gameObject);
     }
 
     private IEnumerator DestroyAfterTime(float time)
