@@ -20,6 +20,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            Debug.Log("enemy hit");
             EnemyAI enemy = other.GetComponent<EnemyAI>();
             if (enemy != null)
             {
