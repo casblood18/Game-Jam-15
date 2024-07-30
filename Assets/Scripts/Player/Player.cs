@@ -26,8 +26,8 @@ public class Player : Singleton<Player>
 
     public void ResetPlayer()
     {
-        animations.SetRevive();
         stats.ResetStats();
+        animations.SetRevive();
     }
 
 }

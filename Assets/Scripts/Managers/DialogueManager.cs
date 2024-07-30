@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
+    public static bool IsDialogueActivated = false;
+
     [SerializeField] private HUD _HUD;
 
     public NPCInteract NPC { get; set; }
@@ -14,6 +16,7 @@ public class DialogueManager : Singleton<DialogueManager>
     public Action OnDialogueEnd;
     protected override void Awake()
     {
+        IsDialogueActivated = false;
         base.Awake();
     }
 
@@ -29,6 +32,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void StartDialogue()
     {
+        IsDialogueActivated = true;
+        
         SoundManager.Instance.StopSound(Audio.dialogue);
 
         if (dialogueStarted) 

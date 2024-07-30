@@ -10,15 +10,21 @@ public class NPCInteract : Interactable
 
     public NPCDialogue npcDialogue => _npcDialogue;
 
-    
+
     private void StartDialogue()
     {
-        if (inRadius)
-            DialogueManager.Instance.StartDialogue();
+        if (!InRadius) return;
+
+        DialogueManager.Instance.StartDialogue();
     }
+
     public virtual void DialogueEnd()
     {
+        DialogueManager.IsDialogueActivated = false;
+
         Debug.Log($"end dialogue with {npcDialogue.name}");
+
+        InteractionText.text = "Press " + InputManager.Instance.PlayerInputActions.Player.Interact.GetBindingDisplayString() + " to interact";
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
@@ -32,12 +38,20 @@ public class NPCInteract : Interactable
         base.OnTriggerExit2D(other);
         DialogueManager.Instance.NPC = null;
         DialogueManager.Instance.ResetDialogue();
-        
+
+        DialogueManager.IsDialogueActivated = false;
+        InteractionText.text = "Press " + InputManager.Instance.PlayerInputActions.Player.Interact.GetBindingDisplayString() + " to interact";
+
     }
 
     public override void Interact()
     {
         base.Interact();
+
+        if (PauseMenu.IsPauseMenuEnabled) return;
+
+        InteractionText.text = "Press " + InputManager.Instance.PlayerInputActions.Player.Interact.GetBindingDisplayString() + " to continue dialogue";
+
         StartDialogue();
     }
 }
