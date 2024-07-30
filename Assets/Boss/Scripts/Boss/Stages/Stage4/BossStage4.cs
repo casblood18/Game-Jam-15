@@ -42,6 +42,8 @@ public class BossStage4 : StageBaseSO
 
     public override void Movement(BossAI boss)
     {
+        if (boss.BossTransform.position == boss.MiddlePoint.position) return;
 
+        boss.BossTransform.position = Vector3.MoveTowards(boss.BossTransform.position, boss.MiddlePoint.position, boss.MovementSpeed * Time.deltaTime);
     }
 }

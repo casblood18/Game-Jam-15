@@ -20,10 +20,15 @@ public class EnemyAI : MonoBehaviour
 
     public float health = 100;
 
+    [Space(10)]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Color normalColor;
+    [SerializeField] private Color damageColor;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
         if (waypoints.Length > 0)
         {
             MoveToWaypoint();
@@ -72,7 +77,7 @@ public class EnemyAI : MonoBehaviour
         if (!isChasing)
         {
             MoveToWaypoint();
-            animator.SetBool("IsWalking", true); 
+            animator.SetBool("IsWalking", true);
         }
     }
 
@@ -144,5 +149,16 @@ public class EnemyAI : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private IEnumerator DamageSprite()
+    {
+        spriteRenderer.color = damageColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = normalColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = damageColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = normalColor;
     }
 }

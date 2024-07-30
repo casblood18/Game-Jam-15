@@ -40,7 +40,6 @@ public class BossStage2 : StageBaseSO
 
             GameObject instance = ProjectilePooling.Instance.GetProjectile(center, rotation);
 
-            projectile.CanBeMixed = false;
 
             instance.GetComponent<ProjectilePrefab>().SetCurrentProjectile(projectile, false);
 

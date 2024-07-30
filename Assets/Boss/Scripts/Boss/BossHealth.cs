@@ -9,6 +9,11 @@ public class BossHealth : MonoBehaviour
 
     [SerializeField] private float maxHealth;
 
+    [Space(10)]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Color normalColor;
+    [SerializeField] private Color damageColor;
+
     private float currentHealth;
 
     private void OnEnable()
@@ -30,6 +35,8 @@ public class BossHealth : MonoBehaviour
     {
         currentHealth -= amount;
 
+        StartCoroutine(DamageSprite());
+
         if (currentHealth > 0f)
         {
             BossAI.OnCheckStage?.Invoke(currentHealth);
@@ -44,4 +51,15 @@ public class BossHealth : MonoBehaviour
 
     }
 
+
+    private IEnumerator DamageSprite()
+    {
+        spriteRenderer.color = damageColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = normalColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = damageColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = normalColor;
+    }
 }

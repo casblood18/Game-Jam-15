@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cdfa5d156ed1542b6cd25827b52b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lightSourceTransform: {fileID: 0}
   _offset: 2.76
 --- !u!1 &7441113644733763663
 GameObject:
@@ -646,6 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  CanMove: 1
 --- !u!50 &5946286109881070959
 Rigidbody2D:
   serializedVersion: 4
@@ -685,7 +687,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff75099bf25d694196376c94d3d67a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerIsDead: 0
   _HUD: {fileID: 0}
+  spriteRenderer: {fileID: 3753358771726374305}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  damageColor: {r: 1, g: 0.17299783, b: 0.17299783, a: 1}
 --- !u!114 &2800463468023938328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,8 +708,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 3753358771726374305}
   animations: {fileID: 6241622279993576072}
   footPosition: {fileID: 5891711753887662081}
-  playerSpriteRenderer: {fileID: 0}
-  playerAnimation: {fileID: 0}
+  _playerAnimator: {fileID: 0}
 --- !u!114 &7355618617567611162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +731,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   projectilePrefab: {fileID: 9122551341415574536, guid: 0d2a0f890a4a20742b0cd58d48d1e16e, type: 3}
+  _dodgePositionDelay: 0.1
 --- !u!61 &7288271313072689564
 BoxCollider2D:
   m_ObjectHideFlags: 0

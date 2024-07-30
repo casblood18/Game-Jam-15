@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageTaken
@@ -10,6 +11,11 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
     public bool PlayerIsDead;
     [SerializeField] HUD _HUD;
+
+    [Space(10)]
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Color normalColor;
+    [SerializeField] Color damageColor;
 
     private void Awake()
     {
@@ -38,6 +44,9 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
         _HUD.OnPlayerHealthChanged(_playerHealth);
 
         UpdatePlayerStat();
+
+        StartCoroutine(DamageSprite());
+        
         if (_playerHealth <= 0f)
         {
             PlayerDeath();
@@ -65,5 +74,15 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
         _playerHealth = player.Stats.Health;
         _HUD.OnPlayerHealthChanged(_playerHealth);
     }
-
+    
+private IEnumerator DamageSprite()
+    {
+        spriteRenderer.color = damageColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = normalColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = damageColor;
+        yield return new WaitForSeconds(0.07f);
+        spriteRenderer.color = normalColor;
+    }
 }

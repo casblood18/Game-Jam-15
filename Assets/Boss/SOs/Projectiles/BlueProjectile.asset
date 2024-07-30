@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BlueProjectile
   m_EditorClassIdentifier: 
   ProjectileType: 0
-  CanBeMixed: 0
+  CanBeMixed: 1
   Speed: 3
-  Damage: 10
+  Damage: 1
   ProjectileAnimator: {fileID: 9100000, guid: 1384b7a96649e3907ad11a586ae5219e, type: 2}
   Size: 0.5

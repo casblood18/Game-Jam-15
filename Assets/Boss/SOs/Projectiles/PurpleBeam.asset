@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileType: 0
   CanBeMixed: 0
-  Speed: 10
-  Damage: 10
+  Speed: 5
+  Damage: 6
   ProjectileAnimator: {fileID: 9100000, guid: 28f11ec9a3a2fce05b6a2837c7f49c08, type: 2}
   Size: 1

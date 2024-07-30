@@ -14,13 +14,18 @@ public class PurpleProjectile : ProjectileBaseSO
 
     public override IEnumerator ProjectileAttack(GameObject bigProjectile)
     {
-        Vector2 forwardDirection = bigProjectile.transform.up;
-        float baseAngle = Mathf.Atan2(forwardDirection.y, forwardDirection.x) * Mathf.Rad2Deg;
-        GameObject smallProjectile = ProjectilePooling.Instance.GetProjectile(bigProjectile.transform.position, Quaternion.Euler(0, 0, baseAngle + 180f));
+        Vector2 playerPosition = Player.Instance.transform.position;
 
+        Vector2 directionToPlayer = playerPosition - (Vector2)bigProjectile.transform.position;
+
+        float angleToPlayer = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+        bigProjectile.transform.rotation = Quaternion.Euler(0, 0, angleToPlayer);
+
+        GameObject smallProjectile = ProjectilePooling.Instance.GetProjectile(bigProjectile.transform.position, Quaternion.Euler(0, 0, angleToPlayer + 180f));
         smallProjectile.GetComponent<ProjectilePrefab>().SetCurrentProjectile(purpleBeamPrefab, false);
 
         ProjectilePooling.Instance.ReleaseProjectile(bigProjectile);
         yield return null;
     }
+
 }

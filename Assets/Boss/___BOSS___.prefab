@@ -139,7 +139,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.1122, y: 0.1122, z: 0.2244}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2865028850690222904}
@@ -210,6 +210,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 400
+  spriteRenderer: {fileID: 5624654525859640331}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  damageColor: {r: 1, g: 0.236745, b: 0.236745, a: 1}
 --- !u!114 &3534639480588209700
 MonoBehaviour:
   m_ObjectHideFlags: 0
