@@ -1,14 +1,13 @@
 using UnityEngine;
 using System.Collections;
 using static UnityEngine.Rendering.DebugUI;
-using UnityEditor;
 
 public class PlayerAbilityController : MonoBehaviour
 {
     [SerializeField] HUD _HUD;
     [SerializeField] float offSet = 0.1f;
     [Header("Prefab")]
-    [SerializeField] public PlayerLight _light;
+    [SerializeField] private PlayerLight _light;
     [SerializeField] GameObject _teleportMarker;
     RaycastHit2D hit;
 
@@ -24,9 +23,6 @@ public class PlayerAbilityController : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private GameObject projectilePrefab;
 
-    //test
-    [SerializeField] private float _dodgePositionDelay = 0.1f;
-    [SerializeField] public float dodgeSafeDuration = 1.3f;
     private void OnEnable()
     {
         InputManager.Instance.OnAttackInput += OnAttack;
@@ -98,9 +94,6 @@ public class PlayerAbilityController : MonoBehaviour
         {
             Debug.Log("Teleport back");
             Player.Instance.playerAnimation.TeleportInAnimation();
-            SoundManager.Instance.PlaySoundOnce(Audio.teleport);
-            _HUD.OnTeleport();
-            this.transform.position = _teleportObject.transform.position;
         }
 
         _teleportObject.SetActive(!_isTeleporting);
@@ -131,40 +124,21 @@ public class PlayerAbilityController : MonoBehaviour
 
     private void OnDodge()
     {
-
         if (_HUD._DodgeFreeze) return;
 
-        if (_isDodgeActivate)
+        if (_isDodgeActivate) 
         {
-            Player.Instance.playerMovement.CanMove = false;
-            _light.shadow.Deactivate();
-            ActivateRollAnimation();
-
-            StartCoroutine(EnableDodgeAfterAnimation(dodgeSafeDuration));
-
             CheckOutOfRange();
+            ActivateRollAnimation();
             SoundManager.Instance.PlaySoundOnce(Audio.dodge);
-
         }
     }
 
-    // Coroutine to handle the delay
-    IEnumerator EnableDodgeAfterAnimation(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        Player.Instance.playerAnimation.FlipXNormal();
-        _light.shadow.Activate();
-        Debug.Log("EnableDodgeAfterAnimation");
-    }
-    IEnumerator TransferPlayerInDodge(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        this.transform.position = targetPos;
-        Debug.Log("TransferPlayerInDodge");
-        yield return new WaitForSeconds(0.3f);
-        Player.Instance.playerMovement.CanMove = true;
-    }
-    Vector2 targetPos;
+    //private void OnDrawGizmos()
+    //{
+    //    Debug.DrawRay(transform.position, _light.shadow.targetPosition - this.transform.position, Color.red);
+    //}
+
     private void CheckOutOfRange()
     {
         
@@ -175,19 +149,37 @@ public class PlayerAbilityController : MonoBehaviour
         // Check if the raycast hits something
         if (hit.collider != null)
         {
-            targetPos = hit.point - direction * offSet + new Vector2(0, 0.528f);
-            StartCoroutine(TransferPlayerInDodge(_dodgePositionDelay));
+            //Debug.Log("Raycast hit: " + hit.collider.name);
+            //Debug.DrawRay(transform.position, direction * rayLength, Color.blue);
+            Vector2 targetPos = hit.point - direction * offSet + new Vector2(0, 0.528f);
+            this.transform.position = targetPos;
         }
         else
         {
-            targetPos = _light.shadow.targetPosition + new Vector3(0, 0.528f, 0);
-            StartCoroutine(TransferPlayerInDodge(_dodgePositionDelay));
+            Vector3 targetPos = _light.shadow.targetPosition + new Vector3(0, 0.528f, 0);
+            this.transform.position = targetPos;
         }
     }
 
     private void ActivateRollAnimation()
     {
+        Vector2 moveInput = InputManager.Instance.PlayerInputActions.Player.Move.ReadValue<Vector2>();
+
+        // Check for horizontal movement
+        if (moveInput.x > 0)
+        {
+            Player.Instance.playerSpriteRenderer.flipX = false;
+        }
+        else if (moveInput.x < 0)
+        {
+            FlipXNormal();
+        }
         Player.Instance.playerAnimation.RollAnimation();
+    }
+
+    public void FlipXNormal()
+    {
+        Player.Instance.playerSpriteRenderer.flipX = true;
     }
 
     private void OnAttack()

@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rg2d;
     private Player player;
-    public bool CanMove = true;
 
     private void Awake()
     {
@@ -23,13 +22,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (CanMove)
-            ReadMovement();
+        ReadMovement();
     }
 
     private void FixedUpdate()
     {
-        if (CanMove)
         Move();
     }
 

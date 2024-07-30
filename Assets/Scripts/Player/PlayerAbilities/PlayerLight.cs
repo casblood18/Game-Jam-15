@@ -20,13 +20,7 @@ public class PlayerLight : MonoBehaviour
     {
         lightSource.enabled = true;
         _enabled = true;
-        _shadow.Activate();
-    }
-    public void Deactivate()
-    {
-        lightSource.enabled = false;
-        _enabled = false;
-        _shadow.Deactivate();
+        _shadow.Activate(transform);
     }
     public void Deactivate()
     {
