@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class UpgradeTable : Interactable
 {
+    public override void Start()
+    {
+    }
+
     public override void Interact()
     {
         Debug.Log("interact with upgrade table");

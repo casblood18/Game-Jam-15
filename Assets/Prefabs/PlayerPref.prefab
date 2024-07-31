@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lightSourceTransform: {fileID: 3457824892584059003}
-  _offset: 2.76
+  _offset: 4
 --- !u!1 &7441113644733763663
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +688,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIsDead: 0
+  _playBuff: 1
   _HUD: {fileID: 0}
+  _TriggerBoss: {fileID: 0}
   spriteRenderer: {fileID: 3753358771726374305}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   damageColor: {r: 1, g: 0.17299783, b: 0.17299783, a: 1}

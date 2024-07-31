@@ -27,6 +27,7 @@ public enum Audio
     respawn,
     enemyDamage,
     bossAttack,
+    playerHurt,
     None
 }
 

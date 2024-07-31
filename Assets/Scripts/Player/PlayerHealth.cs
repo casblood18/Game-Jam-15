@@ -52,7 +52,10 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     public void DamageTaken(float damage)
     {
         if (CanBeDamaged && !PlayerIsDead)
+        {
             _playerHealth -= damage * _playBuff;
+            SoundManager.Instance.PlaySoundOnce(Audio.playerHurt);
+        }
         _HUD.OnPlayerHealthChanged(_playerHealth);
 
         UpdatePlayerStat();

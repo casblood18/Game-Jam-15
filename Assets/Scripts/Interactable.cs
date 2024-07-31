@@ -12,7 +12,7 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] private GameObject _interactionBox;
     [SerializeField] private TextMeshProUGUI interactionText;
 
-    void Start()
+    public virtual void Start()
     {
         InteractionText = interactionText;
         

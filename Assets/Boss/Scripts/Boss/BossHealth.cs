@@ -32,11 +32,22 @@ public class BossHealth : MonoBehaviour
         currentHealth = maxHealth;
         HUD.Instance.ActivateBossHealth(maxHealth);
     }
+    Animator animator;
+    private bool newAnimationStage = true;
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void TakeDamage(float amount)
     {
-        
+     
         currentHealth -= amount;
+        if (currentHealth <= 300 && newAnimationStage == true)
+        {
+            animator.SetBool("Stage", true);
+            newAnimationStage = false;
+        }
         SoundManager.Instance.PlaySoundOnce(Audio.enemyDamage);
         HUD.Instance.UpdateBossHealth(currentHealth);
         Debug.Log("boss health: " + currentHealth);
