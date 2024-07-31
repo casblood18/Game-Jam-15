@@ -126,13 +126,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  resetRadius: 4
+  resetRadius: 9
   detectionRadius: 6
   attackRadius: 5
   moveSpeed: 3
   projectilePrefab: {fileID: 4026472253752420869, guid: b21a7bce427239347b814de808aedbe7, type: 3}
-  shootDelay: 0.5
-  health: 100
+  shootDelay: 0.35
+  health: 56
+  _healthBar: {fileID: 0}
 --- !u!70 &7136263741416785700
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

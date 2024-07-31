@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8df2d1296990d24abd9433fb736d7e0, type: 3}
   m_Name: PlayerStat
   m_EditorClassIdentifier: 
-  Health: 10
-  MaxHealth: 10
+  Health: 17
+  MaxHealth: 25
+  Teleport: 1
   Mana: 10
   MaxMana: 10

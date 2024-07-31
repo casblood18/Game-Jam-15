@@ -188,7 +188,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MedusaStage2_0004_0: -7562306140714643465
+      MedusaStage2_0004_1: -7349514297485205591
+      MedusaStage2_0004_2: -3792845282277784298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
