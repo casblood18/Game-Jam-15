@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
     public bool PlayerIsDead;
     [SerializeField] HUD _HUD;
+    [SerializeField] TriggerBoss _TriggerBoss;
 
     [Space(10)]
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -58,6 +59,7 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
         if (_playerHealth <= 0f)
         {
+            if (_TriggerBoss._boss != null) _TriggerBoss.DestroyBoss();
             PlayerDeath();
         }
     }

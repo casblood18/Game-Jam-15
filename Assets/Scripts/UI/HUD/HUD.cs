@@ -121,6 +121,7 @@ public class HUD : Singleton<HUD>
     public void DeactivateBossHealth()
     {
         _bossHealthBar.style.display = DisplayStyle.None;
+        _bossHealthBar.value = _bossHealthBar.highValue;
     }
 
 

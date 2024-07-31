@@ -28,7 +28,7 @@ public class SoundTrigger : MonoBehaviour
             }
             else
             {
-                if (_isStart) _currAudio = _startAudio;
+                if (SoundManager.Instance.CurrBackgroundMusic == _endAudio) _currAudio = _startAudio;
                 else _currAudio = _endAudio;
                 _isStart = !_isStart;
             }

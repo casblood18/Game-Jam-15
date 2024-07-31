@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class TriggerBoss : SoundTrigger
 {
-    [SerializeField] private GameObject _boss;
-   
+    [SerializeField] private GameObject _bossPref;
+
+    [HideInInspector] public GameObject _boss;
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);
@@ -11,11 +12,17 @@ public class TriggerBoss : SoundTrigger
         if (collision.transform.CompareTag("Player"))
         {
             if (_currAudio == Audio.bossBattleMusic)
-                _boss.SetActive(true);
+                _boss = Instantiate(_bossPref);
             else
             {
-                _boss.SetActive(false);
+                DestroyBoss();
             }
         }
+    }
+
+    public void DestroyBoss()
+    {
+        HUD.Instance.DeactivateBossHealth();
+        Destroy(_boss.gameObject);
     }
 }
