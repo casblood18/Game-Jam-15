@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Stage4", menuName = "BossStage/Stage4", order = 1)]

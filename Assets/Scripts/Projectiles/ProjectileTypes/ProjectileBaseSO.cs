@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 
@@ -14,7 +12,7 @@ public abstract class ProjectileBaseSO : ScriptableObject
 
     [Space(10)]
 
-    public AnimatorController ProjectileAnimator;
+    public RuntimeAnimatorController ProjectileAnimator;
     public float Size;
 
 

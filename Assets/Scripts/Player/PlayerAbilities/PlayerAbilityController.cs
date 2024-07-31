@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using static UnityEngine.Rendering.DebugUI;
-using UnityEditor;
 
 public class PlayerAbilityController : MonoBehaviour
 {
