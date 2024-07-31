@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DodgeIcon_0: 4112071966115300312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] Canvas canvas;
+    private Canvas canvas;
     private Image _healthBarImage;
     private float _maxHealth;
 
