@@ -37,6 +37,7 @@ public class BossHealth : MonoBehaviour
     {
         
         currentHealth -= amount;
+        SoundManager.Instance.PlaySoundOnce(Audio.enemyDamage);
         HUD.Instance.UpdateBossHealth(currentHealth);
         Debug.Log("boss health: " + currentHealth);
         StartCoroutine(DamageSprite());

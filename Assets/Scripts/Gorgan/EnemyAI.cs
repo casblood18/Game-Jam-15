@@ -148,6 +148,7 @@ public class EnemyAI : MonoBehaviour
     public void DamageTaken(float damage)
     {
         health -= damage;
+        SoundManager.Instance.PlaySoundOnce(Audio.enemyDamage);
         _healthBar.UpdateHealthBar(health);
 
 

@@ -74,7 +74,6 @@ public class PlayerAbilityController : MonoBehaviour
             if (teleportNum == 0) return;
 
             Debug.Log("Teleport");
-            SoundManager.Instance.PlaySoundOnce(Audio.teleport);
             _HUD.OnTeleport();
             _teleportObject.transform.position = this.transform.position;
             UpdateTeleportNum(teleportNum-1);
@@ -84,7 +83,6 @@ public class PlayerAbilityController : MonoBehaviour
             Debug.Log("Teleporting");
             MovingAbilityPreparation();
             Player.Instance.playerAnimation.TeleportInAnimation();
-            SoundManager.Instance.PlaySoundOnce(Audio.teleport);
             _HUD.OnTeleport();
         }
 
@@ -95,7 +93,6 @@ public class PlayerAbilityController : MonoBehaviour
     public void TeleportOut()
     {
         Debug.Log("Teleport second animation");
-        SoundManager.Instance.PlaySoundOnce(Audio.teleport);
         _HUD.OnTeleport();
         this.transform.position = _teleportObject.transform.position;
     }
@@ -219,10 +216,9 @@ public class PlayerAbilityController : MonoBehaviour
     private void OnAttack()
     {
         if (_HUD._attackFreeze) return;
+        Player.Instance.playerAnimation.SetAttackAnimation();
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
-
-        CheckAttackAnimation(mousePosition);
 
         Vector2 direction = (mousePosition - transform.position).normalized;
 
@@ -231,7 +227,7 @@ public class PlayerAbilityController : MonoBehaviour
         Projectile proj = projectile.GetComponent<Projectile>();
         proj.direction = direction;
 
-        SoundManager.Instance.PlaySoundOnce(Audio.attack);
+        
     }
 
     private void CheckAttackAnimation(Vector3 mousePosition)

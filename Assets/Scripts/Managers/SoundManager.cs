@@ -1,17 +1,33 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering;
+using static UnityEngine.Rendering.DebugUI;
 
 public enum Audio
 {
+    #region player
     footstep,
     attack,
-    teleport,
+    teleportIn,
+    teleportOut,
     dodge,
     interact,
-    dialogue
+    dialogue,
+    dead,
+    #endregion
+    #region background
+    wind,
+    townMusic,
+    mobFightMusic,
+    bossBattleMusic,
+    #endregion
+    #region Mob
+    #endregion
+    respawn,
+    enemyDamage,
+    bossAttack,
+    None
 }
 
 public class SoundManager : Singleton<SoundManager>
@@ -22,6 +38,7 @@ public class SoundManager : Singleton<SoundManager>
     public Dictionary<Audio, AudioSource> AudioDic;
     AudioSource audioSource;
 
+    public Audio CurrBackgroundMusic;
     protected override void Awake()
     {
         base.Awake();
@@ -30,11 +47,16 @@ public class SoundManager : Singleton<SoundManager>
     }
     private void Start()
     {
-        foreach (Audio value in Enum.GetValues(typeof(Audio)))
+        var values = Enum.GetValues(typeof(Audio)).Cast<Audio>().ToArray();
+
+        foreach (Audio value in values.Take(values.Length - 1))
         {
             AudioDic.Add(value, _audioList[(int)value]);
         }
-        
+
+        PlayBgSoundLooped(Audio.wind);
+
+
     }
     public void PlaySoundOnce(Audio audio)
     {
@@ -51,7 +73,17 @@ public class SoundManager : Singleton<SoundManager>
         AudioDic[audio].loop = true;
         AudioDic[audio].Play(0);
     }
+    public void PlayBgSoundLooped(Audio audio)
+    {
+        CurrBackgroundMusic = audio;
+        AudioDic[audio].loop = true;
+        AudioDic[audio].Play(0);
+    }
 
+    public void StopBgSound()
+    {
+        AudioDic[CurrBackgroundMusic].Stop();
+    }
     public void PlaySoundLooped(Audio audio, float volume)
     {
         AudioDic[audio].loop = true;

@@ -33,9 +33,12 @@ public class RespawnManager : Singleton<RespawnManager>
     }
     public void RespawnPlayer()
     {
+        if (SoundManager.Instance.CurrBackgroundMusic != Audio.None) SoundManager.Instance.StopBgSound();
+        SoundManager.Instance.PlayBgSoundLooped(Audio.townMusic);
         Debug.Log("respawn player");
         Player.Instance.ResetPlayer();
         Player.Instance.transform.position = _respawnDestination.position;
+        SoundManager.Instance.PlaySoundOnce(Audio.respawn);
     }
     
 }

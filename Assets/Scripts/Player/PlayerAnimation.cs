@@ -29,6 +29,7 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void SetDeadAnimation()
     {
+        SoundManager.Instance.PlaySoundOnce(Audio.dead);
         animator.SetTrigger(dead);
     }
 
@@ -55,18 +56,21 @@ public class PlayerAnimation : MonoBehaviour
 
     public void TeleportInAnimation()
     {
+        SoundManager.Instance.PlaySoundOnce(Audio.teleportIn);
         animator.Play("Teleport In");
     }
 
     public void TeleportOut()
     {
         Debug.Log("teleport out");
+        SoundManager.Instance.PlaySoundOnce(Audio.teleportOut);
         animator.Play("TeleportOut");
         playerAbilityController.TeleportOut();
     }
 
     public void SetAttackAnimation()
     {
+        SoundManager.Instance.PlaySoundOnce(Audio.attack);
         //animator.SetTrigger(attack);
     }
 
@@ -87,6 +91,7 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void DeadAnimationFinished()
     {
+        SoundManager.Instance.StopSound(Audio.dead);
         Debug.Log("finishAnimationFrom Action");
         Player.Instance.playerAbilityController.MovingAbilityFinish();
     }
