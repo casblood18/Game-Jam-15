@@ -29,12 +29,15 @@ public class BossHealth : MonoBehaviour
     private void Awake()
     {
         currentHealth = maxHealth;
+        HUD.Instance.ActivateBossHealth(maxHealth);
     }
 
     private void TakeDamage(float amount)
     {
+        
         currentHealth -= amount;
-
+        HUD.Instance.UpdateBossHealth(currentHealth);
+        Debug.Log("boss health: " + currentHealth);
         StartCoroutine(DamageSprite());
 
         if (currentHealth > 0f)
@@ -42,13 +45,14 @@ public class BossHealth : MonoBehaviour
             BossAI.OnCheckStage?.Invoke(currentHealth);
             return;
         }
-
         Death();
     }
 
     private void Death()
     {
-
+        Debug.Log("boss dead");
+        HUD.Instance.DeactivateBossHealth();
+        Destroy(this.gameObject);
     }
 
 

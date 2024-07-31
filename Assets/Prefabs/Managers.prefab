@@ -822,7 +822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a15e02603e29145a3d2d9db900b67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHealthOffsetOnY: 90
+  _playerHealthOffsetOnY: 30
+  _playerHealthOffsetOnX: -100
   _coolDownAttack: 0.2
   _coolDownTeleport: 1
   _coolDownDodge: 1

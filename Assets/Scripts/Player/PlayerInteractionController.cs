@@ -25,6 +25,7 @@ public class PlayerInteractionController : MonoBehaviour
     {
         other.TryGetComponent<Interactable>(out interactingItem);
     }
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {

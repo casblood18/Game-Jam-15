@@ -92,12 +92,6 @@ public class PlayerAbilityController : MonoBehaviour
         _isTeleporting = !_isTeleporting;
     }
 
-    public void MovingAbilityPreparation()
-    {
-        Player.Instance.playerMovement.CanMove = false;
-        _light.shadow.Deactivate();
-    }
-
     public void TeleportOut()
     {
         Debug.Log("Teleport second animation");
@@ -160,6 +154,14 @@ public class PlayerAbilityController : MonoBehaviour
         Debug.Log("EnableDodgeAfterAnimation");
     }
 
+    public void MovingAbilityPreparation()
+    {
+        Player.Instance.playerHealth.SetDamageable(false);
+        InputManager.Instance.DisableInput();
+        Player.Instance.playerMovement.CanMove = false;
+        _light.shadow.Deactivate();
+    }
+
     public void MovingAbilityFinish()
     {
         StartCoroutine(WaitForCameraRange());
@@ -174,6 +176,8 @@ public class PlayerAbilityController : MonoBehaviour
         }
         if (_isDodgeGet) _light.shadow.Activate();
 
+        Player.Instance.playerHealth.SetDamageable(true);
+        InputManager.Instance.EnableInput();
         Player.Instance.playerMovement.CanMove = true;
         Debug.Log("finishAnimation");
     }

@@ -3,13 +3,15 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class HUD : MonoBehaviour
+public class HUD : Singleton<HUD>
 {
     private float _enlargeSize = 1.2f;
     private bool _isAttack, _isTeleport, _isDodge;
+    private float _bossMaxHealth;
     private int _teleportNum => Player.Instance.GetComponent<PlayerAbilityController>().teleportNum;
     //test
-    [SerializeField] private float _playerHealthOffsetOnY = 90f;
+    [SerializeField] private float _playerHealthOffsetOnY = 30f;
+    [SerializeField] private float _playerHealthOffsetOnX = -100f;
     [SerializeField] private float _coolDownAttack = 0.2f;
     [SerializeField] private float _coolDownTeleport = 1f;
     [SerializeField] private float _coolDownDodge =1f;
@@ -48,7 +50,7 @@ public class HUD : MonoBehaviour
     private VisualElement _teleportUI;
     private VisualElement _dodgeUI;
     private VisualElement _dialogueUI;
-    private VisualElement _bossHealthBar;
+    private ProgressBar _bossHealthBar;
     private Label _dialogueText;
     private Label _dialogueName;
     private VisualElement _NPCSprite;
@@ -68,14 +70,15 @@ public class HUD : MonoBehaviour
         InputManager.Instance.OnDodgeInput -= OnDodge;
     }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _root = _uiDocument.rootVisualElement;
         _attackUI = _root.Q<VisualElement>(UINames.ATTACK);
         _teleportUI = _root.Q<VisualElement>(UINames.TELEPORT);
         _dodgeUI = _root.Q<VisualElement>(UINames.DODGE);
         _dialogueUI = _root.Q<VisualElement>(className: UIClassNames.DIALOGUE);
-        _bossHealthBar = _root.Q<VisualElement>(className: UIClassNames.BOSS_HEALTH_BAR);
+        _bossHealthBar = _root.Q<ProgressBar>(className: UIClassNames.BOSS_HEALTH_BAR);
         _dialogueText = _root.Q<Label>(className: UIClassNames.DIALOGUE_TEXT);
         _dialogueName = _root.Q<Label>(className: UIClassNames.DIALOGUE_NAME);
         _NPCSprite = _root.Q<VisualElement>(UINames.NPC_SPRITE);
@@ -93,12 +96,34 @@ public class HUD : MonoBehaviour
     {
         SetDialogueUI(false);
         _bossHealthBar.style.display = DisplayStyle.None;
+        Debug.Log(_bossHealthBar.name);
+        _bossHealthBar.lowValue= 0;
+        
         var container = _bossHealthBar.Q<VisualElement>(className: "unity-progress-bar__container");
         container.style.width = 700f;
         container.style.maxHeight = StyleKeyword.None;
         container.style.height = 50f;
-
     }
+
+    public void ActivateBossHealth(float maxHealth)
+    {
+        _bossHealthBar.highValue = maxHealth;
+        _bossHealthBar.value = _bossHealthBar.highValue;
+        _bossHealthBar.title = _bossHealthBar.value + "/" + _bossHealthBar.highValue.ToString();
+        _bossHealthBar.style.display = DisplayStyle.Flex;
+        _bossMaxHealth = maxHealth;
+    }
+    public void UpdateBossHealth(float currHealth)
+    {
+        _bossHealthBar.value = currHealth/ _bossMaxHealth * _bossHealthBar.highValue;
+    }
+    public void DeactivateBossHealth()
+    {
+        _bossHealthBar.style.display = DisplayStyle.None;
+    }
+
+
+
     public void OnPlayerInit()
     {
         _playerHealthBar.highValue = Player.Instance.Stats.MaxHealth;
@@ -133,7 +158,7 @@ public class HUD : MonoBehaviour
         Vector2 uiPosition = new Vector2(screenPosition.x, Screen.height - screenPosition.y);
 
         // Update the health bar's position
-        _playerHealthBarStick.style.left = uiPosition.x - _playerHealthBarStick.resolvedStyle.width/2;
+        _playerHealthBarStick.style.left = uiPosition.x - _playerHealthBarStick.resolvedStyle.width/2 + _playerHealthOffsetOnX;
         _playerHealthBarStick.style.top = uiPosition.y - _playerHealthBarStick.resolvedStyle.height / 2 + _playerHealthOffsetOnY;
     }
 

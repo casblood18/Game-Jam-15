@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     [SerializeField] Color normalColor;
     [SerializeField] Color damageColor;
 
+    public bool CanBeDamaged = true;
+
     private void Awake()
     {
         player = GetComponent<Player>();
@@ -38,8 +40,13 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
         OnDamagePlayer -= DamageTaken;
     }
 
+    public void SetDamageable(bool value)
+    {
+        CanBeDamaged = value;
+    }
     public void DamageTaken(float damage)
     {
+        if (CanBeDamaged && !PlayerIsDead)
         _playerHealth -= damage;
         _HUD.OnPlayerHealthChanged(_playerHealth);
 
