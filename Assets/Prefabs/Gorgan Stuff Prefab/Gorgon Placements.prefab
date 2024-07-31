@@ -201,6 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8624985307112140464}
+  - component: {fileID: 429214911242965876}
   m_Layer: 0
   m_Name: Gorgan1  (2)
   m_TagString: Untagged
@@ -225,6 +226,19 @@ Transform:
   - {fileID: 3818440856760031627}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &429214911242965876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786114617887596910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 2474953371501601927}
 --- !u!1 &1974067484048826015
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5534318703997611762}
+  - component: {fileID: 4491562069889220042}
   m_Layer: 0
   m_Name: Gorgan1  (6)
   m_TagString: Untagged
@@ -258,6 +273,19 @@ Transform:
   - {fileID: 7303219200472016033}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4491562069889220042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974067484048826015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 2650853518319015293}
 --- !u!1 &2082362405402845518
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4760718997010143225}
+  - component: {fileID: 5335144796078411028}
   m_Layer: 0
   m_Name: Gorgan1  (3)
   m_TagString: Untagged
@@ -449,6 +478,19 @@ Transform:
   - {fileID: 8865733867916522061}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5335144796078411028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3342164124466975808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 2553104529789222903}
 --- !u!1 &4218088590240481176
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2431915322753101320}
+  - component: {fileID: 7198083806387295500}
   m_Layer: 0
   m_Name: Gorgan1  (1)
   m_TagString: Untagged
@@ -544,6 +587,19 @@ Transform:
   - {fileID: 7465910333505520214}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7198083806387295500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908288553517985181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 2883540282873802579}
 --- !u!1 &5462971343018613159
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 11842116379742396}
+  - component: {fileID: 8778790784929583177}
   m_Layer: 0
   m_Name: Gorgan1  (4)
   m_TagString: Untagged
@@ -577,6 +634,19 @@ Transform:
   - {fileID: 8250644386354212311}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8778790784929583177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462971343018613159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 1081520682947835161}
 --- !u!1 &5741149994496924473
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7177654217281681754}
+  - component: {fileID: 7077979710570487428}
   m_Layer: 0
   m_Name: 'Gorgan1 '
   m_TagString: Untagged
@@ -641,6 +712,19 @@ Transform:
   - {fileID: 1351501932682320868}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7077979710570487428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799855339480104216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 1213751838995294567}
 --- !u!1 &6196774903363418958
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4275407139305462655}
+  - component: {fileID: 5797652336757949770}
   m_Layer: 0
   m_Name: Gorgan1  (4)
   m_TagString: Untagged
@@ -801,6 +886,19 @@ Transform:
   - {fileID: 3657128764240425611}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5797652336757949770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250896561256855549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 2792145960998577859}
 --- !u!1 &7544661562752605016
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +1042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8396267480346515348}
+  - component: {fileID: 7948279803336046894}
   m_Layer: 0
   m_Name: Gorgan1  (5)
   m_TagString: Untagged
@@ -968,6 +1067,19 @@ Transform:
   - {fileID: 8991231101841229345}
   m_Father: {fileID: 2551037924041734469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7948279803336046894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459161279400707423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8656cc85d1bfeba588a4d909c7f2c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorgonGO: {fileID: 3099576666280543915}
 --- !u!1 &8707312667780672739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1188,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &1213751838995294567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 202608687115541514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8081206743865258720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
@@ -1158,6 +1275,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &1081520682947835161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 2095728597698560116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8069464540767137438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
@@ -1240,6 +1362,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &2474953371501601927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 3481035810900709866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4802779562081320704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
@@ -1322,6 +1449,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &2553104529789222903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 3565056845827689114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4868489469140411504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
@@ -1400,6 +1532,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &2792145960998577859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 3794391192661660590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5062498563376971076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
@@ -1478,6 +1615,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &2650853518319015293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 3953714483592650768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4915559492833316602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
@@ -1556,6 +1698,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &3099576666280543915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 4112978144310948806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5475747006593047852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
@@ -1638,6 +1785,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+--- !u!1 &2883540282873802579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+  m_PrefabInstance: {fileID: 4184890544068778558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5258602334793381076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280423377328041706, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}

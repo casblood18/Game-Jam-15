@@ -21,11 +21,17 @@ public class EnemyAI : MonoBehaviour
     public float health = 100;
 
     [SerializeField] HealthBar _healthBar;
+
+    void OnEnable()
+    {
+        _healthBar.InitHealthBar(health);
+    }
+
     void Start()
     {
         _healthBar.InitHealthBar(health);
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
         if (waypoints.Length > 0)
         {
             MoveToWaypoint();
@@ -74,7 +80,7 @@ public class EnemyAI : MonoBehaviour
         if (!isChasing)
         {
             MoveToWaypoint();
-            animator.SetBool("IsWalking", true); 
+            animator.SetBool("IsWalking", true);
         }
     }
 
@@ -143,10 +149,12 @@ public class EnemyAI : MonoBehaviour
     {
         health -= damage;
         _healthBar.UpdateHealthBar(health);
-        Debug.Log("health:" + health);
+
+
         if (health <= 0)
         {
-            Destroy(gameObject);
+            canShoot = true;
+            this.gameObject.SetActive(false);
         }
     }
 }
