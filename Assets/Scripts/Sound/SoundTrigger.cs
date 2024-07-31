@@ -20,7 +20,7 @@ public class SoundTrigger : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             if (SoundManager.Instance.CurrBackgroundMusic != Audio.None) SoundManager.Instance.StopBgSound();
-
+            
             //sensitive to mob trigger one
             if (_startAudio == Audio.mobFightMusic)
             {

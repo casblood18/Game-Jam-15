@@ -119,6 +119,7 @@ public class ProjectilePrefab : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            SoundManager.Instance.PlaySoundOnce(Audio.bossAttack);
             DamagePlayer();
         }
         else if (!IsMixing && other.CompareTag("Projectile"))

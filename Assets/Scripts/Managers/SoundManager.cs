@@ -14,6 +14,7 @@ public enum Audio
     dodge,
     interact,
     dialogue,
+    dead,
     #endregion
     #region background
     wind,
@@ -21,6 +22,11 @@ public enum Audio
     mobFightMusic,
     bossBattleMusic,
     #endregion
+    #region Mob
+    #endregion
+    respawn,
+    enemyDamage,
+    bossAttack,
     None
 }
 

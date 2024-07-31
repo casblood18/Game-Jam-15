@@ -29,6 +29,7 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void SetDeadAnimation()
     {
+        SoundManager.Instance.PlaySoundOnce(Audio.dead);
         animator.SetTrigger(dead);
     }
 
@@ -90,6 +91,7 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void DeadAnimationFinished()
     {
+        SoundManager.Instance.StopSound(Audio.dead);
         Debug.Log("finishAnimationFrom Action");
         Player.Instance.playerAbilityController.MovingAbilityFinish();
     }
