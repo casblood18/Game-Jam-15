@@ -9,10 +9,14 @@ public class Projectile : MonoBehaviour
     public float damage;
     public float destroyTime = 4f;
 
+    private void Start()
+    {
+        StartCoroutine(DestroyAfterTime(destroyTime));
+    }
+
     private void Update()
     {
         transform.Translate(direction * (speed * Time.deltaTime));
-        StartCoroutine(DestroyAfterTime(destroyTime));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
