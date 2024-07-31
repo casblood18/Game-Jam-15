@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     private float _playerHealthMax;
 
     public bool PlayerIsDead;
+
+    public float _playBuff = 1;
     [SerializeField] HUD _HUD;
     [SerializeField] TriggerBoss _TriggerBoss;
 
@@ -50,7 +52,7 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     public void DamageTaken(float damage)
     {
         if (CanBeDamaged && !PlayerIsDead)
-            _playerHealth -= damage;
+            _playerHealth -= damage * _playBuff;
         _HUD.OnPlayerHealthChanged(_playerHealth);
 
         UpdatePlayerStat();
@@ -59,8 +61,9 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
 
         if (_playerHealth <= 0f)
         {
-            if (_TriggerBoss._boss != null) _TriggerBoss.DestroyBoss();
+            
             PlayerDeath();
+            if (_TriggerBoss._boss != null) _TriggerBoss.DestroyBoss();
         }
     }
     private void UpdatePlayerStat()

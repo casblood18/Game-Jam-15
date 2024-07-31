@@ -96,7 +96,7 @@ public class PlayerAbilityController : MonoBehaviour
         _HUD.OnTeleport();
         this.transform.position = _teleportObject.transform.position;
     }
-    private void UpdateTeleportNum(int value)
+    public void UpdateTeleportNum(int value)
     {
         teleportNum = value;
         _HUD.UpdateTeleportUI(teleportNum);
