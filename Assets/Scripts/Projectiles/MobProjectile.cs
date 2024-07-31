@@ -48,6 +48,7 @@ public class MobProjectile : MonoBehaviour
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
+                SoundManager.Instance.PlaySoundOnce(Audio.bossAttack);
                 playerHealth.DamageTaken(damage);
             }
             Destroy(gameObject);
