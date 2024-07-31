@@ -16,9 +16,19 @@ public class BossStage0 : StageBaseSO
     [SerializeField] private ushort simpleAttackAmount = 3;
 
     private bool isNewWave = false;
+    private bool canAttack = false;
+    private Transform currentDestination;
+
+    private void OnEnable()
+    {
+        currentDestination = null;
+        canAttack = false;
+    }
 
     public override IEnumerator Attack(BossAI boss)
     {
+        yield return new WaitUntil(() => canAttack);
+
         //first 3 "longer" waves - projectiles can't be mixed
         yield return PerformAttack(boss, longerAttackDelay, simpleAttackAmount, projectilesAmount, false);
 
@@ -28,8 +38,6 @@ public class BossStage0 : StageBaseSO
 
     private IEnumerator PerformAttack(BossAI boss, float attackDelay, ushort attackAmount, int projectilesAmount, bool canBeMixed)
     {
-        yield return new WaitForSeconds(attackDelay);
-
         while (attackAmount > 0)
         {
             Vector3 center = boss.BossTransform.position;
@@ -71,6 +79,21 @@ public class BossStage0 : StageBaseSO
 
     public override void Movement(BossAI boss)
     {
-        //stage 0: stay in the spot?
+        if (currentDestination == null || Vector3.Distance(boss.BossTransform.position, currentDestination.position) <= 0.1f)
+        {
+            currentDestination = WallRunPath.Instance.MoveToNextCirclePoint();
+        }
+
+        if ( !canAttack && Vector3.Distance(boss.BossTransform.position, Player.Instance.transform.position) <= 4f)
+        {
+            Debug.Log("can attack");
+            canAttack = true;
+        }
+
+        if (currentDestination != null)
+        {
+            float step = boss.MovementSpeed * Time.deltaTime;
+            boss.BossTransform.position = Vector3.MoveTowards(boss.BossTransform.position, currentDestination.position, step);
+        }
     }
 }
