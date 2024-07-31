@@ -1,0 +1,3124 @@
+fileFormatVersion: 2
+guid: c5527bbf44e56f2419607e2e03849731
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2345008950683686677
+    second: Athenas Gift_0
+  - first:
+      213: 1771663716321969697
+    second: Athenas Gift_1
+  - first:
+      213: 6641416940947323884
+    second: Athenas Gift_2
+  - first:
+      213: 3957587184620660954
+    second: Athenas Gift_3
+  - first:
+      213: 6398712168491760418
+    second: Athenas Gift_4
+  - first:
+      213: 3562629129321286675
+    second: Athenas Gift_5
+  - first:
+      213: -5138188554736674356
+    second: Athenas Gift_6
+  - first:
+      213: 1067387567705150484
+    second: Athenas Gift_7
+  - first:
+      213: -3481098147904420486
+    second: Athenas Gift_8
+  - first:
+      213: 7460671071742985754
+    second: Athenas Gift_9
+  - first:
+      213: -4382750215205097525
+    second: Athenas Gift_10
+  - first:
+      213: 1636518475359373410
+    second: Athenas Gift_11
+  - first:
+      213: -5478468682610211291
+    second: Athenas Gift_12
+  - first:
+      213: -1736972204452379711
+    second: Athenas Gift_13
+  - first:
+      213: -7825950274050615256
+    second: Athenas Gift_14
+  - first:
+      213: 8260614690911877711
+    second: Athenas Gift_15
+  - first:
+      213: -8683653711387651826
+    second: Athenas Gift_16
+  - first:
+      213: -9207361831600910620
+    second: Athenas Gift_17
+  - first:
+      213: 7477423882253912706
+    second: Athenas Gift_18
+  - first:
+      213: 4963028837919746021
+    second: Athenas Gift_19
+  - first:
+      213: 609087838430400112
+    second: Athenas Gift_20
+  - first:
+      213: -8751576766160662938
+    second: Athenas Gift_21
+  - first:
+      213: -6265941885575948086
+    second: Athenas Gift_22
+  - first:
+      213: -1098619759865923044
+    second: Athenas Gift_23
+  - first:
+      213: 8668561154881550778
+    second: Athenas Gift_24
+  - first:
+      213: -1737035940459417881
+    second: Athenas Gift_25
+  - first:
+      213: 7435395368924253616
+    second: Athenas Gift_26
+  - first:
+      213: 8577297637364529357
+    second: Athenas Gift_27
+  - first:
+      213: -473008891188632151
+    second: Athenas Gift_28
+  - first:
+      213: -7799699734392187740
+    second: Athenas Gift_29
+  - first:
+      213: -220782702808794738
+    second: Athenas Gift_30
+  - first:
+      213: -7606499861040080917
+    second: Athenas Gift_31
+  - first:
+      213: -1373042612545860795
+    second: Athenas Gift_32
+  - first:
+      213: -4670429790216755157
+    second: Athenas Gift_33
+  - first:
+      213: 7041413548045056651
+    second: Athenas Gift_34
+  - first:
+      213: 7190744611194660322
+    second: Athenas Gift_35
+  - first:
+      213: -8959815114013087388
+    second: Athenas Gift_36
+  - first:
+      213: 7332674407747406558
+    second: Athenas Gift_37
+  - first:
+      213: 4127937580721265020
+    second: Athenas Gift_38
+  - first:
+      213: -8592161830137597026
+    second: Athenas Gift_39
+  - first:
+      213: -2437068741841138340
+    second: Athenas Gift_40
+  - first:
+      213: -6025020019653008706
+    second: Athenas Gift_41
+  - first:
+      213: -6011515721980159719
+    second: Athenas Gift_42
+  - first:
+      213: -7080432533278267620
+    second: Athenas Gift_43
+  - first:
+      213: -3432849976218066832
+    second: Athenas Gift_44
+  - first:
+      213: 6777116134642955496
+    second: Athenas Gift_45
+  - first:
+      213: 9128640345258777142
+    second: Athenas Gift_46
+  - first:
+      213: -8974998949306100447
+    second: Athenas Gift_47
+  - first:
+      213: 7413817234622395940
+    second: Athenas Gift_48
+  - first:
+      213: -6447676510462603160
+    second: Athenas Gift_49
+  - first:
+      213: 8465721978299417731
+    second: Athenas Gift_50
+  - first:
+      213: -8134626821226889157
+    second: Athenas Gift_51
+  - first:
+      213: -2164874921794508087
+    second: Athenas Gift_52
+  - first:
+      213: -2054782046490660527
+    second: Athenas Gift_53
+  - first:
+      213: 4828678716627297847
+    second: Athenas Gift_54
+  - first:
+      213: -2806721899850793169
+    second: Athenas Gift_55
+  - first:
+      213: -8405186051265773124
+    second: Athenas Gift_56
+  - first:
+      213: -4234921089200034792
+    second: Athenas Gift_57
+  - first:
+      213: -41244675398433786
+    second: Athenas Gift_58
+  - first:
+      213: -6261860095796446962
+    second: Athenas Gift_59
+  - first:
+      213: -6251436801827875618
+    second: Athenas Gift_60
+  - first:
+      213: 5899989654653245314
+    second: Athenas Gift_61
+  - first:
+      213: 6882868626643575787
+    second: Athenas Gift_62
+  - first:
+      213: 7882579882022592292
+    second: Athenas Gift_63
+  - first:
+      213: -3667738439043909871
+    second: Athenas Gift_64
+  - first:
+      213: -4485174253212391708
+    second: Athenas Gift_65
+  - first:
+      213: -118578945820071752
+    second: Athenas Gift_66
+  - first:
+      213: -8094929631457585823
+    second: Athenas Gift_67
+  - first:
+      213: -5999386497401060512
+    second: Athenas Gift_68
+  - first:
+      213: 5393656397752003535
+    second: Athenas Gift_69
+  - first:
+      213: 4775127098704577019
+    second: Athenas Gift_70
+  - first:
+      213: -6066671179562718074
+    second: Athenas Gift_71
+  - first:
+      213: 3997938705346722586
+    second: Athenas Gift_72
+  - first:
+      213: -2444293249583623443
+    second: Athenas Gift_73
+  - first:
+      213: 3988343711531147381
+    second: Athenas Gift_74
+  - first:
+      213: 4508540942703510624
+    second: Athenas Gift_75
+  - first:
+      213: 6847129118793864912
+    second: Athenas Gift_76
+  - first:
+      213: 1277041726760111164
+    second: Athenas Gift_77
+  - first:
+      213: -3103596041515629449
+    second: Athenas Gift_78
+  - first:
+      213: -2204612068085607791
+    second: Athenas Gift_79
+  - first:
+      213: 3818084090656610044
+    second: Athenas Gift_80
+  - first:
+      213: 2114844292885501067
+    second: Athenas Gift_81
+  - first:
+      213: 7391787543306206430
+    second: Athenas Gift_82
+  - first:
+      213: -3658848691297710272
+    second: Athenas Gift_83
+  - first:
+      213: -1220221404975729370
+    second: Athenas Gift_84
+  - first:
+      213: -5034168402424894318
+    second: Athenas Gift_85
+  - first:
+      213: 6172530527698019976
+    second: Athenas Gift_86
+  - first:
+      213: 4120712463175076618
+    second: Athenas Gift_87
+  - first:
+      213: -966163925113249108
+    second: Athenas Gift_88
+  - first:
+      213: 5824914254915082701
+    second: Athenas Gift_89
+  - first:
+      213: -386613276475894905
+    second: Athenas Gift_90
+  - first:
+      213: -864640399077940484
+    second: Athenas Gift_91
+  - first:
+      213: 5131087810699605430
+    second: Athenas Gift_92
+  - first:
+      213: -6002378118860666552
+    second: Athenas Gift_93
+  - first:
+      213: -7761397852942524282
+    second: Athenas Gift_94
+  - first:
+      213: -1379390136020344122
+    second: Athenas Gift_95
+  - first:
+      213: 448998374595031136
+    second: Athenas Gift_96
+  - first:
+      213: 5285409257701594103
+    second: Athenas Gift_97
+  - first:
+      213: 4408936869672573772
+    second: Athenas Gift_98
+  - first:
+      213: -5237475221307513685
+    second: Athenas Gift_99
+  - first:
+      213: -568192003817385052
+    second: Athenas Gift_100
+  - first:
+      213: 888063429772654337
+    second: Athenas Gift_101
+  - first:
+      213: 6152490152532558347
+    second: Athenas Gift_102
+  - first:
+      213: 2327619855052684059
+    second: Athenas Gift_103
+  - first:
+      213: 5927222335703650355
+    second: Athenas Gift_104
+  - first:
+      213: 2856235207365294957
+    second: Athenas Gift_105
+  - first:
+      213: -5707948101892175239
+    second: Athenas Gift_106
+  - first:
+      213: 2407544400239057220
+    second: Athenas Gift_107
+  - first:
+      213: -5954389964676430468
+    second: Athenas Gift_108
+  - first:
+      213: -3366758851417028466
+    second: Athenas Gift_109
+  - first:
+      213: 4348437760088693228
+    second: Athenas Gift_110
+  - first:
+      213: -6975421607059713252
+    second: Athenas Gift_111
+  - first:
+      213: 3333471243307530435
+    second: Athenas Gift_112
+  - first:
+      213: -1663238207300213982
+    second: Athenas Gift_113
+  - first:
+      213: 1437720152889431553
+    second: Athenas Gift_114
+  - first:
+      213: 8591147979707730809
+    second: Athenas Gift_115
+  - first:
+      213: 1281152600380123378
+    second: Athenas Gift_116
+  - first:
+      213: -4422200952626695868
+    second: Athenas Gift_117
+  - first:
+      213: 8480678958843794857
+    second: Athenas Gift_118
+  - first:
+      213: 4971854511458878739
+    second: Athenas Gift_119
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Athenas Gift_0
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 873
+        width: 88
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be82363a8cad47fd0800000000000000
+      internalID: -2345008950683686677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_1
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 876
+        width: 51
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126c1d863c6369810800000000000000
+      internalID: 1771663716321969697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 904
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb3d62258d0b2c50800000000000000
+      internalID: 6641416940947323884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_3
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 933
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8e3f2839c2ce630800000000000000
+      internalID: 3957587184620660954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_4
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 930
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bbbeeb0daccc850800000000000000
+      internalID: 6398712168491760418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_5
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 937
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c87a74150017130800000000000000
+      internalID: 3562629129321286675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_6
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 935
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc951f59bbc71b8b0800000000000000
+      internalID: -5138188554736674356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_7
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 932
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 414dbba665f10de00800000000000000
+      internalID: 1067387567705150484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_8
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 922
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7503e99da7a0bfc0800000000000000
+      internalID: -3481098147904420486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_9
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 922
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a160649bfc0a98760800000000000000
+      internalID: 7460671071742985754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_10
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 873
+        width: 126
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfee6b66e75d23c0800000000000000
+      internalID: -4382750215205097525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_11
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 916
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268c828f1e416b610800000000000000
+      internalID: 1636518475359373410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_12
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 898
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5268ae362c198f3b0800000000000000
+      internalID: -5478468682610211291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_13
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 928
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c383e0abf805e7e0800000000000000
+      internalID: -1736972204452379711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_14
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 920
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828975d70b3a46390800000000000000
+      internalID: -7825950274050615256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_15
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 923
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4afc267b4993a270800000000000000
+      internalID: 8260614690911877711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_16
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 920
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e019c3c15f67d7780800000000000000
+      internalID: -8683653711387651826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_17
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 926
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee00f46231e83080800000000000000
+      internalID: -9207361831600910620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_18
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 911
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a44c0676525c760800000000000000
+      internalID: 7477423882253912706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_19
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 906
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7e93ece6830e440800000000000000
+      internalID: 4963028837919746021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_20
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 915
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e87a6792ae37800800000000000000
+      internalID: 609087838430400112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_21
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 920
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e8e6c8c472c8680800000000000000
+      internalID: -8751576766160662938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_22
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 905
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8110fad07ea09a0800000000000000
+      internalID: -6265941885575948086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_23
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 913
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a77fd262be0c0f0800000000000000
+      internalID: -1098619759865923044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_24
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 913
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9f67e317aec4870800000000000000
+      internalID: 8668561154881550778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_25
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 912
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee64dee30fc4e7e0800000000000000
+      internalID: -1737035940459417881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_26
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 915
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd805191b4df2760800000000000000
+      internalID: 7435395368924253616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_27
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 913
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8f8e7b1cea80770800000000000000
+      internalID: 8577297637364529357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_28
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 914
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5a9196be88f69f0800000000000000
+      internalID: -473008891188632151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_29
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 919
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a458d88a66e1c390800000000000000
+      internalID: -7799699734392187740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_30
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 915
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e89f7823d4f9fecf0800000000000000
+      internalID: -220782702808794738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_31
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 910
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7d5a66da8407690800000000000000
+      internalID: -7606499861040080917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_32
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 919
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54bcab1c409f1fce0800000000000000
+      internalID: -1373042612545860795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_33
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 915
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b286abdc9dc4f2fb0800000000000000
+      internalID: -4670429790216755157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_34
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 873
+        width: 94
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a39df905028b160800000000000000
+      internalID: 7041413548045056651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_35
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 873
+        width: 73
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5efcc2028aac360800000000000000
+      internalID: 7190744611194660322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_36
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 896
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469e21cff9758a380800000000000000
+      internalID: -8959815114013087388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_37
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 892
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edac16f0684e2c560800000000000000
+      internalID: 7332674407747406558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_38
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 906
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7950e1eb51694930800000000000000
+      internalID: 4127937580721265020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_39
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 906
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e937af5b65282c880800000000000000
+      internalID: -8592161830137597026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_40
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 906
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dc95534eacd2ed0800000000000000
+      internalID: -2437068741841138340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_41
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 896
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb227fbc634d26ca0800000000000000
+      internalID: -6025020019653008706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_42
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 901
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91952bd1d4ec29ca0800000000000000
+      internalID: -6011515721980159719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_43
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 894
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1764ddef104dbd90800000000000000
+      internalID: -7080432533278267620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_44
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 899
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070605872211c50d0800000000000000
+      internalID: -3432849976218066832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_45
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 893
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e436feb7372d0e50800000000000000
+      internalID: 6777116134642955496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_46
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 895
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ad27547027fae70800000000000000
+      internalID: 9128640345258777142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_47
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 891
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1251b17d106627380800000000000000
+      internalID: -8974998949306100447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_48
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 906
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426365bae7b23e660800000000000000
+      internalID: 7413817234622395940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_49
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 902
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8601f3fff504586a0800000000000000
+      internalID: -6447676510462603160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_50
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 894
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38401c339494c7570800000000000000
+      internalID: 8465721978299417731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_51
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 906
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30086451000c1f80800000000000000
+      internalID: -8134626821226889157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_52
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 898
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca69478ab1d4f1e0800000000000000
+      internalID: -2164874921794508087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_53
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 895
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151f21c8d92fb73e0800000000000000
+      internalID: -2054782046490660527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_54
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 891
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7362f0795b9e20340800000000000000
+      internalID: 4828678716627297847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_55
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 886
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f75108d458c09d0800000000000000
+      internalID: -2806721899850793169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_56
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 880
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb14c37a1d7ca5b80800000000000000
+      internalID: -8405186051265773124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_57
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 894
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ceb6af4b98a35c0800000000000000
+      internalID: -4234921089200034792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_58
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 894
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604000eaf287d6ff0800000000000000
+      internalID: -41244675398433786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_59
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 893
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09fbdc6b676919a0800000000000000
+      internalID: -6261860095796446962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_60
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 891
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4de3ba95f6e39a0800000000000000
+      internalID: -6251436801827875618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_61
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 885
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2871618d459f0e150800000000000000
+      internalID: 5899989654653245314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_62
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 883
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be365c68c8cd48f50800000000000000
+      internalID: 6882868626643575787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_63
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 886
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42fd89593ac846d60800000000000000
+      internalID: 7882579882022592292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_64
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 889
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117fdbb7253991dc0800000000000000
+      internalID: -3667738439043909871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_65
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 885
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e62c89b7c571c1c0800000000000000
+      internalID: -4485174253212391708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_66
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 873
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8ed88b319ba5ef0800000000000000
+      internalID: -118578945820071752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_67
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 879
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165df23936809af80800000000000000
+      internalID: -8094929631457585823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_68
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 885
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063822844c5edbca0800000000000000
+      internalID: -5999386497401060512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_69
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 883
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb658cbaed1ada40800000000000000
+      internalID: 5393656397752003535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_70
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 885
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1c0abebc8a44240800000000000000
+      internalID: 4775127098704577019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_71
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 882
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c601d64badecba0800000000000000
+      internalID: -6066671179562718074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_72
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 879
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1bf9fd02188b7730800000000000000
+      internalID: 3997938705346722586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_73
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 884
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2deab6d30241ed0800000000000000
+      internalID: -2444293249583623443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_74
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 876
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5702af77971795730800000000000000
+      internalID: 3988343711531147381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_75
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 883
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064c521a91e819e30800000000000000
+      internalID: 4508540942703510624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_76
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 875
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d611f8e7a3e50f50800000000000000
+      internalID: 6847129118793864912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_77
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 876
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c43e63fa6f8b110800000000000000
+      internalID: 1277041726760111164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_78
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 877
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774072308dfcde4d0800000000000000
+      internalID: -3103596041515629449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_79
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 882
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192d73e2105a761e0800000000000000
+      internalID: -2204612068085607791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_80
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 876
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6582a504f8cf430800000000000000
+      internalID: 3818084090656610044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_81
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 879
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84d3b0fdaf695d10800000000000000
+      internalID: 2114844292885501067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_82
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 878
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc7ce57b97e49660800000000000000
+      internalID: 7391787543306206430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_83
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 876
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f0c4c2088293dc0800000000000000
+      internalID: -3658848691297710272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_84
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 873
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625f711e817e01fe0800000000000000
+      internalID: -1220221404975729370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_85
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 877
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ce7f9928a032ab0800000000000000
+      internalID: -5034168402424894318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_86
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 869
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886e1bcbfcb39a550800000000000000
+      internalID: 6172530527698019976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_87
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 877
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b431d1726bf2930800000000000000
+      internalID: 4120712463175076618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_88
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 882
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2e3d0770f7792f0800000000000000
+      internalID: -966163925113249108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_89
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 873
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9925337a046d050800000000000000
+      internalID: 5824914254915082701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_90
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 867
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783543ef54972aaf0800000000000000
+      internalID: -386613276475894905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_91
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 879
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2e18a532e2004f0800000000000000
+      internalID: -864640399077940484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_92
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 65
+        width: 943
+        height: 813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5361c9d29453740800000000000000
+      internalID: 5131087810699605430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_93
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 869
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8498bb127e443bca0800000000000000
+      internalID: -6002378118860666552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_94
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 869
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680a1ee36c9f94490800000000000000
+      internalID: -7761397852942524282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_95
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 866
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c264d7cafb6bdce0800000000000000
+      internalID: -1379390136020344122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_96
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 872
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060f67e84a92b3600800000000000000
+      internalID: 448998374595031136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_97
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 863
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f35dd177bb895940800000000000000
+      internalID: 5285409257701594103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_98
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 872
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4bd4f139b0bf2d30800000000000000
+      internalID: 4408936869672573772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_99
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 873
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba42e0a1900c057b0800000000000000
+      internalID: -5237475221307513685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_100
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 865
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a35f3802606d18f0800000000000000
+      internalID: -568192003817385052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_101
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 869
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1073d95fbf8035c00800000000000000
+      internalID: 888063429772654337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_102
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 867
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02cac94239026550800000000000000
+      internalID: 6152490152532558347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_103
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 867
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1bbf880ded5d4020800000000000000
+      internalID: 2327619855052684059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_104
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 870
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33090608f49b14250800000000000000
+      internalID: 5927222335703650355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_105
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 860
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6bf8f1c9c263a720800000000000000
+      internalID: 2856235207365294957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_106
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 865
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a0a5e717b49c0b0800000000000000
+      internalID: -5707948101892175239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_107
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 872
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449da3550e0596120800000000000000
+      internalID: 2407544400239057220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_108
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 873
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c758f45ffd1cd5da0800000000000000
+      internalID: -5954389964676430468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_109
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 870
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88c2e899aed641d0800000000000000
+      internalID: -3366758851417028466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_110
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 854
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce95bf19a11c85c30800000000000000
+      internalID: 4348437760088693228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_111
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 873
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c131f987103523f90800000000000000
+      internalID: -6975421607059713252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_112
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 867
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8335e2f6ed24e20800000000000000
+      internalID: 3333471243307530435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_113
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 868
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2236305a9adfae8e0800000000000000
+      internalID: -1663238207300213982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_114
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 868
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10615679cdec3f310800000000000000
+      internalID: 1437720152889431553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_115
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 863
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b4b47d193e93770800000000000000
+      internalID: 8591147979707730809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_116
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 866
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8a9b0908197c110800000000000000
+      internalID: 1281152600380123378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_117
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 860
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441ba45d9af21a2c0800000000000000
+      internalID: -4422200952626695868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_118
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 864
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5930c949c61b570800000000000000
+      internalID: 8480678958843794857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Athenas Gift_119
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 338
+        width: 242
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3150e6e06539ff440800000000000000
+      internalID: 4971854511458878739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Athenas Gift_0: -2345008950683686677
+      Athenas Gift_1: 1771663716321969697
+      Athenas Gift_10: -4382750215205097525
+      Athenas Gift_100: -568192003817385052
+      Athenas Gift_101: 888063429772654337
+      Athenas Gift_102: 6152490152532558347
+      Athenas Gift_103: 2327619855052684059
+      Athenas Gift_104: 5927222335703650355
+      Athenas Gift_105: 2856235207365294957
+      Athenas Gift_106: -5707948101892175239
+      Athenas Gift_107: 2407544400239057220
+      Athenas Gift_108: -5954389964676430468
+      Athenas Gift_109: -3366758851417028466
+      Athenas Gift_11: 1636518475359373410
+      Athenas Gift_110: 4348437760088693228
+      Athenas Gift_111: -6975421607059713252
+      Athenas Gift_112: 3333471243307530435
+      Athenas Gift_113: -1663238207300213982
+      Athenas Gift_114: 1437720152889431553
+      Athenas Gift_115: 8591147979707730809
+      Athenas Gift_116: 1281152600380123378
+      Athenas Gift_117: -4422200952626695868
+      Athenas Gift_118: 8480678958843794857
+      Athenas Gift_119: 4971854511458878739
+      Athenas Gift_12: -5478468682610211291
+      Athenas Gift_13: -1736972204452379711
+      Athenas Gift_14: -7825950274050615256
+      Athenas Gift_15: 8260614690911877711
+      Athenas Gift_16: -8683653711387651826
+      Athenas Gift_17: -9207361831600910620
+      Athenas Gift_18: 7477423882253912706
+      Athenas Gift_19: 4963028837919746021
+      Athenas Gift_2: 6641416940947323884
+      Athenas Gift_20: 609087838430400112
+      Athenas Gift_21: -8751576766160662938
+      Athenas Gift_22: -6265941885575948086
+      Athenas Gift_23: -1098619759865923044
+      Athenas Gift_24: 8668561154881550778
+      Athenas Gift_25: -1737035940459417881
+      Athenas Gift_26: 7435395368924253616
+      Athenas Gift_27: 8577297637364529357
+      Athenas Gift_28: -473008891188632151
+      Athenas Gift_29: -7799699734392187740
+      Athenas Gift_3: 3957587184620660954
+      Athenas Gift_30: -220782702808794738
+      Athenas Gift_31: -7606499861040080917
+      Athenas Gift_32: -1373042612545860795
+      Athenas Gift_33: -4670429790216755157
+      Athenas Gift_34: 7041413548045056651
+      Athenas Gift_35: 7190744611194660322
+      Athenas Gift_36: -8959815114013087388
+      Athenas Gift_37: 7332674407747406558
+      Athenas Gift_38: 4127937580721265020
+      Athenas Gift_39: -8592161830137597026
+      Athenas Gift_4: 6398712168491760418
+      Athenas Gift_40: -2437068741841138340
+      Athenas Gift_41: -6025020019653008706
+      Athenas Gift_42: -6011515721980159719
+      Athenas Gift_43: -7080432533278267620
+      Athenas Gift_44: -3432849976218066832
+      Athenas Gift_45: 6777116134642955496
+      Athenas Gift_46: 9128640345258777142
+      Athenas Gift_47: -8974998949306100447
+      Athenas Gift_48: 7413817234622395940
+      Athenas Gift_49: -6447676510462603160
+      Athenas Gift_5: 3562629129321286675
+      Athenas Gift_50: 8465721978299417731
+      Athenas Gift_51: -8134626821226889157
+      Athenas Gift_52: -2164874921794508087
+      Athenas Gift_53: -2054782046490660527
+      Athenas Gift_54: 4828678716627297847
+      Athenas Gift_55: -2806721899850793169
+      Athenas Gift_56: -8405186051265773124
+      Athenas Gift_57: -4234921089200034792
+      Athenas Gift_58: -41244675398433786
+      Athenas Gift_59: -6261860095796446962
+      Athenas Gift_6: -5138188554736674356
+      Athenas Gift_60: -6251436801827875618
+      Athenas Gift_61: 5899989654653245314
+      Athenas Gift_62: 6882868626643575787
+      Athenas Gift_63: 7882579882022592292
+      Athenas Gift_64: -3667738439043909871
+      Athenas Gift_65: -4485174253212391708
+      Athenas Gift_66: -118578945820071752
+      Athenas Gift_67: -8094929631457585823
+      Athenas Gift_68: -5999386497401060512
+      Athenas Gift_69: 5393656397752003535
+      Athenas Gift_7: 1067387567705150484
+      Athenas Gift_70: 4775127098704577019
+      Athenas Gift_71: -6066671179562718074
+      Athenas Gift_72: 3997938705346722586
+      Athenas Gift_73: -2444293249583623443
+      Athenas Gift_74: 3988343711531147381
+      Athenas Gift_75: 4508540942703510624
+      Athenas Gift_76: 6847129118793864912
+      Athenas Gift_77: 1277041726760111164
+      Athenas Gift_78: -3103596041515629449
+      Athenas Gift_79: -2204612068085607791
+      Athenas Gift_8: -3481098147904420486
+      Athenas Gift_80: 3818084090656610044
+      Athenas Gift_81: 2114844292885501067
+      Athenas Gift_82: 7391787543306206430
+      Athenas Gift_83: -3658848691297710272
+      Athenas Gift_84: -1220221404975729370
+      Athenas Gift_85: -5034168402424894318
+      Athenas Gift_86: 6172530527698019976
+      Athenas Gift_87: 4120712463175076618
+      Athenas Gift_88: -966163925113249108
+      Athenas Gift_89: 5824914254915082701
+      Athenas Gift_9: 7460671071742985754
+      Athenas Gift_90: -386613276475894905
+      Athenas Gift_91: -864640399077940484
+      Athenas Gift_92: 5131087810699605430
+      Athenas Gift_93: -6002378118860666552
+      Athenas Gift_94: -7761397852942524282
+      Athenas Gift_95: -1379390136020344122
+      Athenas Gift_96: 448998374595031136
+      Athenas Gift_97: 5285409257701594103
+      Athenas Gift_98: 4408936869672573772
+      Athenas Gift_99: -5237475221307513685
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

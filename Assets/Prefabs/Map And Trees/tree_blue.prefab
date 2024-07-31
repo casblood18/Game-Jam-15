@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 422397363569434276}
   - component: {fileID: 6418381546848280547}
   - component: {fileID: 4245348661514557231}
+  - component: {fileID: -3660311087238799131}
+  - component: {fileID: -5107780332539508215}
   m_Layer: 7
   m_Name: tree_blue
   m_TagString: Untagged
@@ -121,3 +123,37 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.02, y: -0.75}
   m_Radius: 0.59
+--- !u!95 &-3660311087238799131
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674942749149153865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: debad25a192f9954e95f1386df94f086, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5107780332539508215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674942749149153865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae712622b4d53a4bb79d9804730a7f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
