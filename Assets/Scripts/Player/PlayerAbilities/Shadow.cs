@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Shadow : MonoBehaviour
@@ -7,7 +8,7 @@ public class Shadow : MonoBehaviour
     public Vector3 targetPosition { get; private set; }
     private bool _enabled;
 
-
+    private float _maxScaleOnY = 2.6f;
     public void Activate()
     {
         _shadowSprite.enabled = true;
@@ -51,7 +52,8 @@ public class Shadow : MonoBehaviour
         //else _shadowSprite.flipY = false;
         //Scale
         Vector3 _localScale = this.transform.localScale;
-        _localScale.y = _distanceToLight / _offset;
+        _localScale.y = Math.Min(_distanceToLight / _offset, _maxScaleOnY);
+        
         this.transform.localScale = _localScale;
 
         //Rotation
