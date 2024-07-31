@@ -1012,6 +1012,14 @@ PrefabInstance:
       value: Gorgan Mob
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1084,6 +1092,14 @@ PrefabInstance:
     - target: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: m_Name
       value: Gorgan Mob
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
@@ -1160,6 +1176,14 @@ PrefabInstance:
       value: Gorgan Mob
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 8240915374160124313}
@@ -1232,6 +1256,14 @@ PrefabInstance:
     - target: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: m_Name
       value: Gorgan Mob
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
@@ -1308,6 +1340,14 @@ PrefabInstance:
       value: Gorgan Mob
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1376,6 +1416,14 @@ PrefabInstance:
     - target: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: m_Name
       value: Gorgan Mob
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: waypoints.Array.size
@@ -1448,6 +1496,14 @@ PrefabInstance:
       value: Gorgan Mob
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1516,6 +1572,14 @@ PrefabInstance:
     - target: {fileID: 1303743004659725677, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: m_Name
       value: Gorgan Mob
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: shootDelay
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
+      propertyPath: resetRadius
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3564210742686963055, guid: f04a0afcf0413634ba13f5b76686d048, type: 3}
       propertyPath: 'waypoints.Array.data[0]'

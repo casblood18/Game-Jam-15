@@ -15,7 +15,7 @@ MonoBehaviour:
   ProjectileType: 4
   CanBeMixed: 1
   Speed: 10
-  Damage: 10
+  Damage: 4
   ProjectileAnimator: {fileID: 9100000, guid: 40f0e564facd5ca67830d79c071a50ac, type: 2}
   Size: 0.8
   purpleBeamPrefab: {fileID: 11400000, guid: 39d54b7dfdfc4bc808233a9ba5f764c0, type: 2}

@@ -58,7 +58,7 @@ public class BossAI : MonoBehaviour
         currentStageIndex = 0;
         currentStage = stagesList.Stages[currentStageIndex];
 
-        playerTransform = GameObject.FindWithTag("Player").transform;
+        playerTransform = Player.Instance.transform;
 
         StartCoroutine(currentStage.Attack(this));
     }
@@ -70,7 +70,11 @@ public class BossAI : MonoBehaviour
 
     private void CheckStage(float health)
     {
-        StageBaseSO nextStage = stagesList.Stages[currentStageIndex + 1];
+        int nextStageIndex = currentStageIndex + 1;
+
+        if (nextStageIndex >= stagesList.Stages.Count) return;
+
+        StageBaseSO nextStage = stagesList.Stages[nextStageIndex];
 
         if (health > nextStage.MinimumHealth) return;
 

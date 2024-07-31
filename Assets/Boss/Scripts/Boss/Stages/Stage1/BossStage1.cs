@@ -37,7 +37,7 @@ public class BossStage1 : StageBaseSO
 
                 GameObject instance = ProjectilePooling.Instance.GetProjectile(spawnPosition, rotation);
                 ProjectileBaseSO randomProjectile = GetRandomProjectile(boss, numberOfProjectiles, true);
-                randomProjectile.CanBeMixed = false;
+
                 instance.GetComponent<ProjectilePrefab>().SetCurrentProjectile(randomProjectile, true);
 
                 if (instance.TryGetComponent<Rigidbody2D>(out var rb))

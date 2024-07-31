@@ -63,14 +63,11 @@ public class ProjectilePrefab : MonoBehaviour
         this.customProjectileSpeed = customProjectileSpeed;
         this.canBeDestroyed = canBeDestroyed;
 
-        IsMixing = false;
+        IsMixing = true;
 
         animatorController.runtimeAnimatorController = currentProjectile.ProjectileAnimator;
 
-        transform.localScale = new Vector3(currentProjectile.Size, currentProjectile.Size, 1);
-
-        CanBackshotMix = false;
-
+        transform.localScale = new Vector3(currentProjectile.Size / 4, currentProjectile.Size / 4, 1);
 
         if (path != null)
         {
@@ -124,19 +121,7 @@ public class ProjectilePrefab : MonoBehaviour
         {
             DamagePlayer();
         }
-        else if (other.CompareTag("Projectile") && CanBackshotMix && !IsMixing)
-        {
-            ProjectilePrefab projectilePrefab = other.GetComponent<ProjectilePrefab>();
-
-            projectilePrefab.currentProjectile.CanBeMixed = true;
-            this.currentProjectile.CanBeMixed = true;
-
-            if (projectilePrefab.SignedNumber == this.signedNumber)
-            {
-                MixProjectile(projectilePrefab);
-            }
-        }
-        else if (!IsMixing && other.CompareTag("Projectile") && !CanBackshotMix)
+        else if (!IsMixing && other.CompareTag("Projectile"))
         {
             ProjectilePrefab projectilePrefab = other.GetComponent<ProjectilePrefab>();
 
@@ -144,7 +129,18 @@ public class ProjectilePrefab : MonoBehaviour
 
             MixProjectile(projectilePrefab);
         }
+    }
 
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (!IsMixing && other.CompareTag("Projectile"))
+        {
+            ProjectilePrefab projectilePrefab = other.GetComponent<ProjectilePrefab>();
+
+            if (projectilePrefab.IsMixing) return;
+
+            MixProjectile(projectilePrefab);
+        }
     }
 
     private void DamagePlayer()
@@ -176,7 +172,7 @@ public class ProjectilePrefab : MonoBehaviour
     private IEnumerator EnableMixing()
     {
         yield return new WaitForSeconds(mixingDelay);
-        currentProjectile.CanBeMixed = true;
+        IsMixing = false;
     }
 
     private void MoveAlongPath()

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a1c191619c43321a725e9cb4e9ca40, type: 3}
   m_Name: Stage2
   m_EditorClassIdentifier: 
-  MinimumHealth: 65
+  MinimumHealth: 200
   attackDelay: 2
   projectilesAmount: 18
