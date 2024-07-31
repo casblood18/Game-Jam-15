@@ -692,6 +692,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3753358771726374305}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   damageColor: {r: 1, g: 0.17299783, b: 0.17299783, a: 1}
+  CanBeDamaged: 1
 --- !u!114 &2800463468023938328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,6 +779,6 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.013748169, y: -0.050411224}
-  m_Size: {x: 0.38084412, y: 0.89917755}
+  m_Offset: {x: 0.0097465515, y: -0.050411224}
+  m_Size: {x: 0.4350586, y: 0.89917755}
   m_Direction: 0

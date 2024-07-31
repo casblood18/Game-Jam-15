@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour, IDamageTaken
 {
     public static Action<float> OnDamagePlayer;
+    public static Action OnPlayerDeath;
+
     private Player player;
     private float _playerHealth;
     private float _playerHealthMax;
@@ -22,7 +24,7 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     private void Awake()
     {
         player = GetComponent<Player>();
-        
+
         _playerHealth = player.Stats.MaxHealth;
         _playerHealthMax = player.Stats.MaxHealth;
     }
@@ -47,13 +49,13 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
     public void DamageTaken(float damage)
     {
         if (CanBeDamaged && !PlayerIsDead)
-        _playerHealth -= damage;
+            _playerHealth -= damage;
         _HUD.OnPlayerHealthChanged(_playerHealth);
 
         UpdatePlayerStat();
 
         StartCoroutine(DamageSprite());
-        
+
         if (_playerHealth <= 0f)
         {
             PlayerDeath();
@@ -72,6 +74,8 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
         Player.Instance.playerAnimation.SetDeadAnimation();
         //go to alchemy table
         RespawnManager.Instance.RespawnPlayer();
+
+        OnPlayerDeath?.Invoke();
     }
 
     private void ResetPlayerHealth()
@@ -81,8 +85,8 @@ public class PlayerHealth : MonoBehaviour, IDamageTaken
         _playerHealth = player.Stats.Health;
         _HUD.OnPlayerHealthChanged(_playerHealth);
     }
-    
-private IEnumerator DamageSprite()
+
+    private IEnumerator DamageSprite()
     {
         spriteRenderer.color = damageColor;
         yield return new WaitForSeconds(0.07f);

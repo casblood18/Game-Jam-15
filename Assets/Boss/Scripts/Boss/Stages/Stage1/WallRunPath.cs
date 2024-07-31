@@ -7,7 +7,9 @@ public class WallRunPath : MonoBehaviour
     //please, for the gamejam sakes im creating singletons, but in real life, your game shouldnt be depended on singletons
     public static WallRunPath Instance;
 
-    [SerializeField] private List<GameObject> points;
+    [SerializeField] private List<GameObject> wallRunPoints;
+    [SerializeField] private List<GameObject> circlePathPoints;
+
 
     private short currentPointIndex = -1;
 
@@ -18,10 +20,19 @@ public class WallRunPath : MonoBehaviour
 
     public Transform MoveToNextPoint()
     {
-        currentPointIndex = (short)((currentPointIndex + 1) % points.Count);
+        currentPointIndex = (short)((currentPointIndex + 1) % wallRunPoints.Count);
 
-        return points[currentPointIndex].transform;
+        return wallRunPoints[currentPointIndex].transform;
     }
 
-    public List<GameObject> GetPoints() => points;
+    public Transform MoveToNextCirclePoint()
+    {
+        currentPointIndex = (short)((currentPointIndex + 1) % circlePathPoints.Count);
+
+        return circlePathPoints[currentPointIndex].transform;
+    }
+
+    public List<GameObject> GetPoints() => wallRunPoints;
+
+    public List<GameObject> GetCirclePoints() => circlePathPoints;
 }

@@ -14,7 +14,7 @@ public class HUD : Singleton<HUD>
     [SerializeField] private float _playerHealthOffsetOnX = -100f;
     [SerializeField] private float _coolDownAttack = 0.2f;
     [SerializeField] private float _coolDownTeleport = 1f;
-    [SerializeField] private float _coolDownDodge =1f;
+    [SerializeField] private float _coolDownDodge = 1f;
 
     public bool _attackFreeze;
     public bool _teleportFreeze;
@@ -97,8 +97,8 @@ public class HUD : Singleton<HUD>
         SetDialogueUI(false);
         _bossHealthBar.style.display = DisplayStyle.None;
         Debug.Log(_bossHealthBar.name);
-        _bossHealthBar.lowValue= 0;
-        
+        _bossHealthBar.lowValue = 0;
+
         var container = _bossHealthBar.Q<VisualElement>(className: "unity-progress-bar__container");
         container.style.width = 700f;
         container.style.maxHeight = StyleKeyword.None;
@@ -115,7 +115,8 @@ public class HUD : Singleton<HUD>
     }
     public void UpdateBossHealth(float currHealth)
     {
-        _bossHealthBar.value = currHealth/ _bossMaxHealth * _bossHealthBar.highValue;
+        _bossHealthBar.value = currHealth / _bossMaxHealth * _bossHealthBar.highValue;
+        _bossHealthBar.title = _bossHealthBar.value + "/" + _bossHealthBar.highValue.ToString();
     }
     public void DeactivateBossHealth()
     {
@@ -143,8 +144,8 @@ public class HUD : Singleton<HUD>
     #region Updates
     private void FixedUpdate()
     {
-        if (Player.Instance != null) 
-        UpdateSprite();
+        if (Player.Instance != null)
+            UpdateSprite();
     }
     private void Update()
     {
@@ -158,14 +159,14 @@ public class HUD : Singleton<HUD>
         Vector2 uiPosition = new Vector2(screenPosition.x, Screen.height - screenPosition.y);
 
         // Update the health bar's position
-        _playerHealthBarStick.style.left = uiPosition.x - _playerHealthBarStick.resolvedStyle.width/2 + _playerHealthOffsetOnX;
+        _playerHealthBarStick.style.left = uiPosition.x - _playerHealthBarStick.resolvedStyle.width / 2 + _playerHealthOffsetOnX;
         _playerHealthBarStick.style.top = uiPosition.y - _playerHealthBarStick.resolvedStyle.height / 2 + _playerHealthOffsetOnY;
     }
 
     private void UpdateSprite()
     {
-        StyleBackground newSprite =  new StyleBackground(Player.Instance.playerSpriteRenderer.sprite);
-        
+        StyleBackground newSprite = new StyleBackground(Player.Instance.playerSpriteRenderer.sprite);
+
         if (_playerAvatar.style.backgroundImage != newSprite)
             _playerAvatar.style.backgroundImage = newSprite;
     }
@@ -183,7 +184,7 @@ public class HUD : Singleton<HUD>
         _playerHealthBar.title = _playerHealthBar.value + "/" + _playerHealthBar.highValue;
         _playerHealthBarStick.title = _playerHealthBar.value + "/" + _playerHealthBar.highValue;
     }
-    
+
     #region Ability
     private void OnAttack()
     {
@@ -245,7 +246,7 @@ public class HUD : Singleton<HUD>
         }
         currentValue = 0;
         radialElement.value = currentValue;
-       // Debug.Log("TeleportFinish");
+        // Debug.Log("TeleportFinish");
         _teleportFreeze = false;
     }
     private IEnumerator AnimateDodge()

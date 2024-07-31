@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
+    public static Action OnBossDeath;
     public static Action<float> OnDamageBoss;
 
     [SerializeField] private float maxHealth;
@@ -52,6 +53,9 @@ public class BossHealth : MonoBehaviour
     private void Death()
     {
         Debug.Log("boss dead");
+
+        OnBossDeath?.Invoke();
+        
         HUD.Instance.DeactivateBossHealth();
         Destroy(this.gameObject);
     }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -10,17 +9,13 @@ public class ProjectilePooling : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileLifetime;
     private ObjectPool<GameObject> projectilePool;
+    private List<GameObject> activeProjectiles;
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
+
+        activeProjectiles = new List<GameObject>();
 
         projectilePool = new ObjectPool<GameObject>(
             createFunc: CreatePooledItem,
@@ -32,7 +27,16 @@ public class ProjectilePooling : MonoBehaviour
             maxSize: 150
         );
     }
+    void OnEnable()
+    {
+        BossHealth.OnBossDeath += ReleaseAllProjectiles;
+    }
 
+    void OnDisable()
+    {
+        BossHealth.OnBossDeath -= ReleaseAllProjectiles;
+    }
+    
     private GameObject CreatePooledItem()
     {
         return Instantiate(projectilePrefab);
@@ -41,11 +45,13 @@ public class ProjectilePooling : MonoBehaviour
     private void OnTakeFromPool(GameObject projectile)
     {
         projectile.SetActive(true);
+        activeProjectiles.Add(projectile);
     }
 
     private void OnReturnedToPool(GameObject projectile)
     {
         projectile.SetActive(false);
+        activeProjectiles.Remove(projectile);
     }
 
     private void OnDestroyPoolObject(GameObject projectile)
@@ -56,15 +62,20 @@ public class ProjectilePooling : MonoBehaviour
     public GameObject GetProjectile(Vector3 position, Quaternion rotation)
     {
         GameObject projectile = projectilePool.Get();
-
         projectile.transform.SetPositionAndRotation(position, rotation);
         return projectile;
     }
-
 
     public void ReleaseProjectile(GameObject projectile)
     {
         projectilePool.Release(projectile);
     }
 
+    public void ReleaseAllProjectiles()
+    {
+        foreach (GameObject projectile in new List<GameObject>(activeProjectiles))
+        {
+            ReleaseProjectile(projectile);
+        }
+    }
 }
