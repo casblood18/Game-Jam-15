@@ -55,18 +55,21 @@ public class PlayerAnimation : MonoBehaviour
 
     public void TeleportInAnimation()
     {
+        SoundManager.Instance.PlaySoundOnce(Audio.teleportIn);
         animator.Play("Teleport In");
     }
 
     public void TeleportOut()
     {
         Debug.Log("teleport out");
+        SoundManager.Instance.PlaySoundOnce(Audio.teleportOut);
         animator.Play("TeleportOut");
         playerAbilityController.TeleportOut();
     }
 
     public void SetAttackAnimation()
     {
+        SoundManager.Instance.PlaySoundOnce(Audio.attack);
         //animator.SetTrigger(attack);
     }
 

@@ -1,17 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerBoss : MonoBehaviour
+public class TriggerBoss : SoundTrigger
 {
     [SerializeField] private GameObject _boss;
    
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
+        base.OnTriggerEnter2D(collision);
+
         if (collision.transform.CompareTag("Player"))
         {
-            _boss.SetActive(true);
-            Destroy(this.gameObject);
+            if (_currAudio == Audio.bossBattleMusic)
+                _boss.SetActive(true);
+            else
+            {
+                _boss.SetActive(false);
+            }
         }
     }
 }
