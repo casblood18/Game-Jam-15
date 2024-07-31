@@ -15,6 +15,7 @@ public class Player : Singleton<Player>
     [HideInInspector] public Animator playerAnimator => _playerAnimator;
     [HideInInspector] public PlayerMovement playerMovement => this.GetComponent<PlayerMovement>();
     [HideInInspector] public PlayerAbilityController playerAbilityController => this.GetComponent<PlayerAbilityController>();
+    [HideInInspector] public PlayerHealth playerHealth => this.GetComponent<PlayerHealth>();
     protected override void Awake()
     {
         base.Awake();

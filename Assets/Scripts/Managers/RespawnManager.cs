@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 public enum table
 {
@@ -28,10 +26,10 @@ public class RespawnManager : Singleton<RespawnManager>
         _respawnDestination = alchemyTableDic[table.forestTable];
     }
 
-    public void SetRespawnTable(table value)
+    public void SetRespawnTable(AlchemyTable value)
     {
         Debug.Log("set respawn table to " + value.ToString());
-        _respawnDestination = alchemyTableDic[value];
+        _respawnDestination = value.transform;
     }
     public void RespawnPlayer()
     {

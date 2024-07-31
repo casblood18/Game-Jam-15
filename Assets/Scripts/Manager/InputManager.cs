@@ -17,7 +17,14 @@ public class InputManager : Singleton<InputManager>
     {
         LoadInput();
         PlayerInputActions.Enable();
+    }
 
+    private void Start()
+    {
+        EnableInput();
+    }
+    public void EnableInput()
+    {
         PlayerInputActions.Player.Attack.performed += OnAttack;
         PlayerInputActions.Player.Teleport.performed += OnTeleport;
         PlayerInputActions.Player.Heal.performed += OnHeal;
@@ -28,7 +35,11 @@ public class InputManager : Singleton<InputManager>
     private void OnDisable()
     {
         PlayerInputActions.Disable();
+        DisableInput();
+    }
 
+    public void DisableInput()
+    {
         PlayerInputActions.Player.Teleport.performed -= OnTeleport;
         PlayerInputActions.Player.Heal.performed -= OnHeal;
         PlayerInputActions.Player.Interact.performed -= OnInteract;

@@ -31,13 +31,6 @@ public abstract class Interactable : MonoBehaviour
         _interactionBox.SetActive(true);
     }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (!other.CompareTag("Player")) return;
-
-        InRadius = true;
-
-    }
 
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
